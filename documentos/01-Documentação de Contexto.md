@@ -37,13 +37,14 @@ Uma aplicação de controle de jornada de trabalho resolve o problema da falta d
 
 ## Relação com a Extensão Universitária
 
-Relacionar a situação-problema da organização com o impacto social esperado com a implantação do sistema sociotécnico.
+A modernização de uma empresa pequena pode trazer diversos benefícios sociais para a comunidade onde ela está inserida, sendo assim ao implementarmos um sistema de controle de jornada de maneira digital e tecnológica nós não estamos apenas gerando impacto e mudanças significativas na empresa mas sim em sua comunidade como um todo, tendo vista que se a qualidade de vida no trabalho,produtividade e segurança tanto dos funcionários quanto do proprietário da empresa aumentam isso reflete nos seus clientes e fornecedores que por si só refletirá na qualidade de vida de suas famílias assim gerando impacto social positivo em toda sua comunidade.
 
 ## Descrição do Parceiro
 
-Apresente uma descrição resumida sobre a organização onde o projeto será desenvolvido para que possa ser compreendido o cenário sistema sociotécnico.
-
-
+Nosso parceiro se chama Luis Paulo Ribeiro Varandas, proprietário da empresa Laticinios Triunfo,
+sediada na Cidade de Guarulhos-SP a empresa do ramo alimentício foi fundada por seu pai Alexandre a mais de 40 anos e possui uma história muito bonita em sua comunidade recheada de tradição, trabalho, memorias momentos, lutas e sucesso.
+Um de seus maiores desafios foi permanecer em atividade no mercado 
+frente ao distanciamento social provocado pela pandemia de Covid-19, mesmo em frente a dificuldades e a toda crise que o mundo sofreu nessa época a empresa se manteve firme e até hoje é um pilar importantíssimo de sua comunidade. 
 
 
 
