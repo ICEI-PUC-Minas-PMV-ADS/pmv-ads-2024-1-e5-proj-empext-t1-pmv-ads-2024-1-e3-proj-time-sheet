@@ -1,6 +1,6 @@
 # Introdução
 
-A gestão eficaz da jornada de trabalho dos colaboradores é fundamental para o sucesso e a produtividade de uma empresa. O controle de jornada de trabalho dos funcionários é uma obrigação legal e uma ferramenta de gestão para as empresas. Por meio dele, é possível verificar o cumprimento das normas trabalhistas, evitar fraudes, otimizar processos e aumentar a produtividade. No entanto, o método tradicional de registro de ponto, seja manual ou mecânico, apresenta diversas desvantagens, como imprecisão, vulnerabilidade, lentidão e custos elevados. O controle adequado desse aspecto não apenas assegura o cumprimento das horas estipuladas no contrato de trabalho, mas também impacta diretamente na qualidade do trabalho, na satisfação dos funcionários e na eficiência operacional. Ao implementar um sistema eficiente de controle de jornada, a empresa não apenas cumpre suas obrigações legais, mas também cria um ambiente de trabalho mais organizado e transparente.
+A gestão eficaz da jornada de trabalho dos colaboradores é fundamental para o sucesso e a produtividade de uma empresa. O controle de jornada de trabalho dos funcionários é uma obrigação legal e também é uma ferramenta de gestão para as empresas. Por meio dele, é possível verificar o cumprimento das normas trabalhistas, evitar fraudes, otimizar processos e aumentar a produtividade. No entanto, o método tradicional de registro de ponto, seja manual ou mecânico, apresenta diversas desvantagens, como imprecisão, vulnerabilidade, lentidão e custos elevados. O controle adequado desse aspecto não apenas assegura o cumprimento das horas estipuladas no contrato de trabalho, mas também impacta diretamente na qualidade do trabalho, na satisfação dos funcionários e na eficiência operacional. Ao implementar um sistema eficiente de controle de jornada, a empresa não apenas cumpre suas obrigações legais, mas também cria um ambiente de trabalho mais organizado e transparente.
 
 ## Problema
 
@@ -24,11 +24,16 @@ O objetivo geral deste projeto é desenvolver um aplicativo para controle de pon
 Como objetivos específicos, destacamos:
 
 - Permitir que o cliente gerencie os horários de trabalho de seus funcionários apartir de uma interface intuitiva e eficiente.
+  
 - Disponibilizar funcionalidades que auxiliem o funcionário a ter uma rotina de trabalho mais bem definida.
+ 
+- Minimizar erros e possíveis formas de se fraudar o controle de jornada de trabalho protegendo a empresa de pagamentos e processos indevidos.
+
+- Aumentar a produtividade, o ganho de tempo a acertividade e a eficiência na contabilidade da empresa como um todo, visto que o pagamento dos funcionários e a gestão dessas pessoas é uma das partes mais importantes que compõe um negócio. 
 
 ## Justificativa
 
-Uma aplicação de controle de jornada de trabalho resolve o problema da falta de precisão e confiabilidade nos registros de horas trabalhadas. Automatizando esse processo, a aplicação reduz significativamente as chances de erros humanos, garantindo que os registros reflitam de maneira precisa o tempo efetivamente dedicado às atividades laborais. Além disso, ela contribui para o cumprimento das normativas legais, evitando potenciais problemas jurídicos relacionados a horas extras, intervalos e outros aspectos regulamentares.
+Uma aplicação de controle de jornada de trabalho resolve o problema da falta de precisão e confiabilidade nos registros de horas trabalhadas. Automatizando esse processo, a aplicação reduz significativamente as chances de erros humanos, garantindo que os registros reflitam de maneira precisa o tempo efetivamente dedicado às atividades laborais, otimiza o tempo e a produtividade dos gestores e dos colaboradores, reduz custos á empresa e melhora a transparencia e a confianca nas relações de trabalho. Além disso, um sistema de controle de jornada contribui para o cumprimento das normativas legais, evitando potenciais problemas jurídicos relacionados a horas extras, intervalos e outros aspectos regulamentares.
 
 ## Relação com a Extensão Universitária
 
