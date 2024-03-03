@@ -16,7 +16,7 @@ Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A sol
 
 ## Integrantes
 
-| [<img src="https://avatars.githubusercontent.com/u/82043220?v=4" width=115><br><sub>Raul Shinaede</sub>](https://github.com/RaulShinaede) | [<img src="https://avatars.githubusercontent.com/u/102563767?v=4" width=115><br><sub>Bruno Sellas</sub>](https://github.com/brunosellas) | [<img src="https://avatars.githubusercontent.com/u/97347735?v=4" width=115><br><sub>Edglei Marques</sub>](https://github.com/EdgleiMarques) | [<img src="https://avatars.githubusercontent.com/u/100081087?v=4" width=115><br><sub>Rayane dos Santos</sub>](https://github.com/aneray) | [<img src="https://avatars.githubusercontent.com/u/103972585?v=4" width=115><br><sub>Walber Gomes</sub>](https://github.com/walbergomes) | [<img src="https://avatars.githubusercontent.com/u/104041600?v=4" width=115><br><sub>Pedro Juliana Madureira</sub>](https://github.com/jummadureira) |
+| [<img src="https://avatars.githubusercontent.com/u/82043220?v=4" width=115><br><sub>Raul Shinaede</sub>](https://github.com/RaulShinaede) | [<img src="https://avatars.githubusercontent.com/u/102563767?v=4" width=115><br><sub>Bruno Sellas</sub>](https://github.com/brunosellas) | [<img src="https://avatars.githubusercontent.com/u/97347735?v=4" width=115><br><sub>Edglei Marques</sub>](https://github.com/EdgleiMarques) | [<img src="https://avatars.githubusercontent.com/u/100081087?v=4" width=115><br><sub>Rayane dos Santos</sub>](https://github.com/aneray) | [<img src="https://avatars.githubusercontent.com/u/103972585?v=4" width=115><br><sub>Walber Gomes</sub>](https://github.com/walbergomes) | [<img src="https://avatars.githubusercontent.com/u/104041600?v=4" width=115><br><sub> Juliana Madureira</sub>](https://github.com/jummadureira) |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 
 ## Orientador
@@ -35,11 +35,11 @@ Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A sol
 # Documentação
 
 <ol>
-<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="docs/03-Projeto de Interface.md"> Projeto de Interface</a></li>
-<li><a href="docs/04-Testes de Software.md"> Testes de Software</a></li>
-<li><a href="docs/05-Implantação.md"> Implantação</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/01-Documenta%C3%A7%C3%A3o%20de%20Contexto.md"> Documentação de Contexto</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/03-Projeto%20de%20Interface.md"> Projeto de Interface</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/04-Testes%20de%20Software.md"> Testes de Software</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/05-Implanta%C3%A7%C3%A3o.md"> Implantação</a></li>
 </ol>
 
 # Código
