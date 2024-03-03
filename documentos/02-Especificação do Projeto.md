@@ -198,3 +198,8 @@ CREATE TABLE jornada_de_trabalho (
   FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
 );
 ```
+
+O modelo completo pode ser encontrado em:
+- `pmv-ads-2024-1-e5-proj-time-sheet/time-sheat.sql/`
+
+Ou acessando o Link: [time-sheet.sql](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/tree/main/time-sheat.sql)
