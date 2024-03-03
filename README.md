@@ -1,27 +1,36 @@
-# TÍTULO DO PROJETO
 
-`CURSO`
 
-`DISCIPLINA`
+![Ingresso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/aafe3765-287e-4883-ab7c-13cf7660da0d)
 
-`SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+<h6 align="right">Criado em 28 de fevereiro de 2024<br><a href="https://www.pucminas.br/PucVirtual/Paginas/default.aspx">PUC Minas Virtual</a></h6>
+
+`Análise e Desenvolvimento de Sistemas`
+
+`Projeto: Análise e Projeto de Sistemas de Software`
+
+`Quinto Semestre`
+
+## Descrição
+Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A solução ideal para seu pequeno/médio negócio.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+| [<img src="https://avatars.githubusercontent.com/u/82043220?v=4" width=115><br><sub>Raul Shinaede</sub>](https://github.com/RaulShinaede) | [<img src="https://avatars.githubusercontent.com/u/102563767?v=4" width=115><br><sub>Bruno Sellas</sub>](https://github.com/brunosellas) | [<img src="https://avatars.githubusercontent.com/u/97347735?v=4" width=115><br><sub>Edglei Marques</sub>](https://github.com/EdgleiMarques) | [<img src="https://avatars.githubusercontent.com/u/100081087?v=4" width=115><br><sub>Rayane dos Santos</sub>](https://github.com/aneray) | [<img src="https://avatars.githubusercontent.com/u/103972585?v=4" width=115><br><sub>Walber Gomes</sub>](https://github.com/walbergomes) | [<img src="https://avatars.githubusercontent.com/u/104041600?v=4" width=115><br><sub>Pedro Juliana Madureira</sub>](https://github.com/jummadureira) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 ## Orientador
 
-* Nome completo do professor 1
+| [<img src="https://avatars.githubusercontent.com/u/80353812?v=4" width=115><br><sub>Will Sandra Silveira</sub>](https://github.com/silveirasandra) |
+| :---: |
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+// TODO:
+
+- ✅ Como baixar
+- 📦 Como compilar
+- 🚀 Como executar 
 
 # Documentação
 
@@ -38,5 +47,3 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="src/README.md"> Código Fonte</a></li>
 
 # Apresentação
-
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
