@@ -164,7 +164,38 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ![ModeloER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/db349cb6-50c4-4e43-b1d2-bb444bf05769)
 
-
 ## Projeto da Base de Dados
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
+
+
+``` sql
+CREATE TABLE `admin` (
+  `id` integer autoincrement,
+  `nome` varchar,
+  `email` varchar,
+  `senha` varchar,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `funcionarios` (
+  `id` integer autoincrement,
+  `nome` varchar,
+  `cargo` varchar,
+  `email` varchar,
+  `senha` varchar,
+  `tempo_almoco` datetime,
+  `tempo_jornada` datetime,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `jornada_de_trabalho` (
+  `id` integer autoincrement,
+  `id_funcionario` integer,
+  `hora_de_inicio` datetime,
+  `hora_de_termino` datetime,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`id_funcionario`) REFERENCES `funcionarios`(`id`)
+);
+
+```
