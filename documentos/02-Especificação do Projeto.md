@@ -162,40 +162,39 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Modelo ER (Projeto Conceitual)
 
-![ModeloER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/db349cb6-50c4-4e43-b1d2-bb444bf05769)
+![ModeloER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/83a9f34d-295b-4d13-853b-fd230bfd046c)
+
 
 ## Projeto da Base de Dados
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
+O script de criação do banco foi gerador usando Esquema Relacional a partir da ferramenta [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier3_mixed_search_brand_exact_&km_CPC_CampaignId=1484560207&km_CPC_AdGroupID=60168114191&km_CPC_Keyword=lucidchart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=354596054350&km_CPC_TargetID=kwd-33511936169&km_CPC_Country=1001571&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gad_source=1&gclid=CjwKCAiA3JCvBhA8EiwA4kujZg8ql8O1ScU864fGcDUwnRCIuzQ3bFoTnHskVFn56BoEgcsFqenSqBoC-cwQAvD_BwE). Ele se destina ao banco de dados relacional `Postgres` e é gerado com a seguinte estrutura:
+
 
 ``` sql
-CREATE TABLE `admin` (
-  `id` integer autoincrement,
-  `nome` varchar,
-  `email` varchar,
-  `senha` varchar,
-  PRIMARY KEY (`id`)
+CREATE TABLE admin (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR,
+  email VARCHAR,
+  senha VARCHAR
 );
 
-CREATE TABLE `funcionarios` (
-  `id` integer autoincrement,
-  `nome` varchar,
-  `cargo` varchar,
-  `email` varchar,
-  `senha` varchar,
-  `tempo_almoco` datetime,
-  `tempo_jornada` datetime,
-  PRIMARY KEY (`id`)
+CREATE TABLE funcionarios (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR,
+  cargo VARCHAR,
+  email VARCHAR,
+  senha VARCHAR,
+  tempo_almoco TIMESTAMP,
+  tempo_jornada TIMESTAMP
 );
 
-CREATE TABLE `jornada_de_trabalho` (
-  `id` integer autoincrement,
-  `id_funcionario` integer,
-  `hora_de_inicio` datetime,
-  `hora_de_termino` datetime,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_funcionario`) REFERENCES `funcionarios`(`id`)
+CREATE TABLE jornada_de_trabalho (
+  id SERIAL PRIMARY KEY,
+  id_funcionario INTEGER,
+  hora_de_inicio TIMESTAMP,
+  hora_de_termino TIMESTAMP,
+  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
 );
-
 ```
