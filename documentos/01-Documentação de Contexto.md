@@ -41,7 +41,7 @@ A modernização de uma empresa pequena pode trazer diversos benefícios sociais
 
 ## Descrição do Parceiro
 
-Nosso parceiro se chama Luis Paulo Ribeiro Varandas, proprietário da empresa Laticinios Triunfo,
+Nosso parceiro se chama Luis Paulo Ribeiro Varandas, proprietário da empresa <a href='https://encurtador.com.br/hmvGJ'>Laticinios Triunfo</a>
 sediada na Cidade de Guarulhos-SP a empresa do ramo alimentício foi fundada por seu pai Alexandre a mais de 40 anos e possui uma história muito bonita em sua comunidade recheada de tradição, trabalho, memorias momentos, lutas e sucesso.
 Um de seus maiores desafios foi permanecer em atividade no mercado 
 frente ao distanciamento social provocado pela pandemia de Covid-19, mesmo em frente a dificuldades e a toda crise que o mundo sofreu nessa época a empresa se manteve firme e até hoje é um pilar importantíssimo de sua comunidade. 
