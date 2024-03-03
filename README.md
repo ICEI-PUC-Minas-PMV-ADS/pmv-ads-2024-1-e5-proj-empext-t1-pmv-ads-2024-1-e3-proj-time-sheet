@@ -44,6 +44,6 @@ Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A sol
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/tree/main/codigo-fonte"> Código Fonte</a></li>
 
 # Apresentação
