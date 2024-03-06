@@ -162,7 +162,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Modelo ER (Projeto Conceitual)
 
-![ModeloER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/83a9f34d-295b-4d13-853b-fd230bfd046c)
+![ModeloER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/75936fe5-e5b8-4ef6-b7bb-1ab7957fa869)
+
 
 
 ## Projeto da Base de Dados
