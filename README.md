@@ -26,7 +26,6 @@ Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A sol
 
 ## Instruções de utilização
 
-// TODO:
 
 - ✅ Como baixar
 - 📦 Como compilar
