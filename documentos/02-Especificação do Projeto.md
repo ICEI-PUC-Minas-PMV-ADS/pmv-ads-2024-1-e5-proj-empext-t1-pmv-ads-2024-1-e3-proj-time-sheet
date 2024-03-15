@@ -129,21 +129,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| O admin deve conseguir cadastrar e excluir novos funcionários | ALTA | 
-|RF-002| O admin deve conseguir informar o tempo de almoço do funcionário | MÉDIA |
-|RF-003| O admin deve conseguir informar o tempo de jornada do trabalho do funcionário  | BAIXA |
-|RF-004| O admin deve conseguir gerar um relatório de horas que o funcionário fez  | MÉDIA |
-|RF-005| O funcionário deve conseguir logar na plataforma  | ALTA |
-|RF-006| O funcionário deve conseguir registrar o inicio da jornada de trabalho   | ALTA |
-|RF-007| O funcionário deve conseguir registrar o finalizar da jornada de trabalho   | ALTA |
+|RF-002| O admin deve conseguir definir o tempo de almoço do funcionário no sistema | MÉDIA |
+|RF-003| O admin deve conseguir definir o tempo de jornada de trabalhado do funcionário no sistema  | MÉDIA |
+|RF-004| O admin deve conseguir desabilitar um funcionário no sistema  | MÉDIA |
+|RF-005| O admin deve conseguir listar todos os pontos dos funcionários  | ALTA |
+|RF-006| O admin deve conseguir acrescentar ou remover pontos do funcionário   | ALTA |
+|RF-007| O funcionário deve conseguir logar na plataforma  | ALTA |
+|RF-008| O funcionário deve conseguir registrar o ponto de início e final da jornada de trabalho  | ALTA |
+|RF-009| O funcionário deve conseguir registrar o ponto de saída e volta do almoço  | ALTA |
+|RF-010| O funcionário deve conseguir listar todos seus registros de pontos  | ALTA |
+|RF-010| o admin deve conseguir gerar relatórios com os registros de pontos  | ALTA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA |
-|RNF-003| O Sistema deve estar disponível durante o horário comercial |  ALTA | 
-|RNF-004| O Sistema deve garantir que registros não sejam perdidos se o servidor desligar |  ALTA | 
+|RNF-001| O sistema deve ter uma versão web | ALTA | 
+|RNF-002| O sistema deve ter uma versão mobile |  ALTA |
+|RNF-003| O sistema deve autenticar os usuários via token |  ALTA | 
+|RNF-004| O token de autenticação do usuário deve expirar em 12 horas | MÉDIA | 
+|RNF-005| O sistema deve processar requisições do usuário em no máximo 3s | MÉDIA |
+|RNF-006| O sistema deve estar disponível durante o período de 18 horas no mínimo | MÉDIA |
+|RNF-007| O sistema deve garantir a persistência dos dados durante um eventual desligamento dos servidores | ALTA |
 
 ## Restrições
 
@@ -153,6 +160,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| O projeto precisa ser desenvolvida por integrantes do grupo apenas |
+|03| O projeto precisa rodar no ambiente local do cliente |
 
 ## Diagrama de Casos de Uso
 
