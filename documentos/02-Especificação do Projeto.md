@@ -138,7 +138,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008| O funcionário deve conseguir registrar o ponto de início e final da jornada de trabalho  | ALTA |
 |RF-009| O funcionário deve conseguir registrar o ponto de saída e volta do almoço  | ALTA |
 |RF-010| O funcionário deve conseguir listar todos seus registros de pontos  | ALTA |
-|RF-010| o admin deve conseguir gerar relatórios com os registros de pontos  | ALTA |
+|RF-011| o admin deve conseguir gerar relatórios com os registros de pontos  | ALTA |
 
 ### Requisitos não Funcionais
 
