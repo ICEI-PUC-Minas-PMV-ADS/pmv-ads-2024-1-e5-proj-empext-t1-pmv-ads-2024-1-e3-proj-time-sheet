@@ -122,15 +122,16 @@ Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um p
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito, como mostrado na figura a seguir:
 
-![diagrama-de-priorização](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/1974c125-4e4d-4053-97de-cc43e4acbeac)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/2bc28d31-2340-481c-9755-9da32fd11ec3)
+
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| O admin deve conseguir cadastrar e excluir novos funcionários | ALTA | 
-|RF-002| O admin deve conseguir definir o tempo de almoço do funcionário no sistema | MÉDIA |
-|RF-003| O admin deve conseguir definir o tempo de jornada de trabalhado do funcionário no sistema  | MÉDIA |
+|RF-002| O admin deve conseguir definir o tempo de almoço do funcionário no sistema | BAIXA |
+|RF-003| O admin deve conseguir definir o tempo de jornada de trabalhado do funcionário no sistema  | BAIXA |
 |RF-004| O admin deve conseguir desabilitar um funcionário no sistema  | MÉDIA |
 |RF-005| O admin deve conseguir listar todos os pontos dos funcionários  | ALTA |
 |RF-006| O admin deve conseguir acrescentar ou remover pontos do funcionário   | ALTA |
@@ -138,7 +139,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008| O funcionário deve conseguir registrar o ponto de início e final da jornada de trabalho  | ALTA |
 |RF-009| O funcionário deve conseguir registrar o ponto de saída e volta do almoço  | ALTA |
 |RF-010| O funcionário deve conseguir listar todos seus registros de pontos  | ALTA |
-|RF-011| o admin deve conseguir gerar relatórios com os registros de pontos  | ALTA |
+|RF-011| o admin deve conseguir gerar relatórios com os registros de pontos  | MÉDIA |
 
 ### Requisitos não Funcionais
 
