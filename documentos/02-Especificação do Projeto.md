@@ -206,6 +206,8 @@ CREATE TABLE jornada_de_trabalho (
   id_funcionario INTEGER,
   hora_de_inicio TIMESTAMP,
   hora_de_termino TIMESTAMP,
+  saida_almoco TIMESTAMP,
+  volta_almoco TIMESTAMP,
   FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
 );
 ```
