@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSheet", "TimeSheet\TimeSheet.csproj", "{71114873-960A-49FC-85DD-C55A4D82133D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSheet.UnitTests", "TimeSheet.UnitTests\TimeSheet.UnitTests.csproj", "{323138C6-FAE4-4026-98DB-D7E857AADE77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71114873-960A-49FC-85DD-C55A4D82133D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71114873-960A-49FC-85DD-C55A4D82133D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71114873-960A-49FC-85DD-C55A4D82133D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71114873-960A-49FC-85DD-C55A4D82133D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323138C6-FAE4-4026-98DB-D7E857AADE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323138C6-FAE4-4026-98DB-D7E857AADE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323138C6-FAE4-4026-98DB-D7E857AADE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323138C6-FAE4-4026-98DB-D7E857AADE77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F72D436-F0D7-49CE-B5CE-73454CF470AB}
+	EndGlobalSection
+EndGlobal
