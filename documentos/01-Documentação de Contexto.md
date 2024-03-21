@@ -41,13 +41,14 @@ Ao implementarmos um sistema de controle de jornada de maneira digital e tecnol�
 
 **Como colaboradores da Laticínios Triunfo**: O sistema transforma o método tradicional de ponto de horas manual em um sistema fácil, integrado, eficiente, confiável, permitindo que toda a jornada de trabalho dos funcionários seja gerenciada através de uma interface intuitiva. Uma vez que não será mais utilizado papel para controle de ponto, temos uma forma eficiente e sustentável de gerenciar nosso negócio, pensando no melhor para os funcionários e para a comunidade.
 
-**Como equipe de desenvolvimento envolvida: O sistema é uma forma de evidenciar todo o esforço da equipe em entregar produtos que agreguem valor ao cliente e à comunidade. É uma oportunidade de ter uma experiência real, onde colocaremos todo o nosso conhecimento e dedicação, fortalecendo assim as bases necessárias para sermos verdadeiros arquitetos de software
+**Como equipe de desenvolvimento envolvida**: O sistema é uma forma de evidenciar todo o esforço da equipe em entregar produtos que agreguem valor ao cliente e à comunidade. É uma oportunidade de ter uma experiência real, onde colocaremos todo o nosso conhecimento e dedicação, fortalecendo assim as bases necessárias para sermos verdadeiros arquitetos de software.
 
+**Como comunidade e Universidade**: O sistema proposto é um projeto socio-tecnológico destinado a promover a inclusão digital de pequenas empresas, evidenciando o impacto social que a extensão universitária tem na comunidade. O sistema de ponto eletrônico também traz benefícios para o meio ambiente, uma vez que reduz a necessidade do uso de papel. Isso demonstra a preocupação da universidade em contribuir com a sociedade e em formar profissionais capacitados para o mercado.
 
 ## Descrição do Parceiro
 
 Nosso parceiro se chama Luis Paulo Ribeiro Varandas, proprietário da empresa <a href='https://encurtador.com.br/hmvGJ'>Laticinios Triunfo</a>
-sediada na Cidade de Guarulhos-SP a empresa do ramo alimentício foi fundada por seu pai Alexandre a mais de 40 anos e possui uma história muito bonita em sua comunidade recheada de tradição, trabalho, memorias momentos, lutas e sucesso.
+sediada na Cidade de Guarulhos-SP a empresa do ramo alimentício foi fundada por seu pai Alexandre a mais de 40 anos e possui uma história muito bonita em sua comunidade recheada de tradição, trabalho, memórias, momentos, lutas e sucesso.
 Um de seus maiores desafios foi permanecer em atividade no mercado 
 frente ao distanciamento social provocado pela pandemia de Covid-19, mesmo em frente a dificuldades e a toda crise que o mundo sofreu nessa época a empresa se manteve firme e até hoje é um pilar importantíssimo de sua comunidade. 
 
