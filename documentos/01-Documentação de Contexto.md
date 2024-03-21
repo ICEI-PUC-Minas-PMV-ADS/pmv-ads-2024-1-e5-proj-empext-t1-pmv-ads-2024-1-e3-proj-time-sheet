@@ -37,7 +37,12 @@ Uma aplicação de controle de jornada de trabalho resolve o problema da falta d
 
 ## Relação com a Extensão Universitária
 
-A modernização de uma empresa pequena pode trazer diversos benefícios sociais para a comunidade onde ela está inserida, sendo assim ao implementarmos um sistema de controle de jornada de maneira digital e tecnológica nós não estamos apenas gerando impacto e mudanças significativas na empresa mas sim em sua comunidade como um todo, tendo vista que se a qualidade de vida no trabalho,produtividade e segurança tanto dos funcionários quanto do proprietário da empresa aumentam isso reflete nos seus clientes e fornecedores que por si só refletirá na qualidade de vida de suas famílias assim gerando impacto social positivo em toda sua comunidade.
+Ao implementarmos um sistema de controle de jornada de maneira digital e tecnológica, não estamos apenas gerando impacto e mudanças significativas na empresa, mas sim em sua comunidade como um todo. Cliente, funcionários e estudantes envolvidos no projeto acabam se beneficiando com novas experiências e oportunidades de aprendizado. E para cada parte envolvida no projeto, podemos destacar o seguinte:
+
+**Como colaboradores da Laticínios Triunfo**: O sistema transforma o método tradicional de ponto de horas manual em um sistema fácil, integrado, eficiente, confiável, permitindo que toda a jornada de trabalho dos funcionários seja gerenciada através de uma interface intuitiva. Uma vez que não será mais utilizado papel para controle de ponto, temos uma forma eficiente e sustentável de gerenciar nosso negócio, pensando no melhor para os funcionários e para a comunidade.
+
+**Como equipe de desenvolvimento envolvida: O sistema é uma forma de evidenciar todo o esforço da equipe em entregar produtos que agreguem valor ao cliente e à comunidade. É uma oportunidade de ter uma experiência real, onde colocaremos todo o nosso conhecimento e dedicação, fortalecendo assim as bases necessárias para sermos verdadeiros arquitetos de software
+
 
 ## Descrição do Parceiro
 
