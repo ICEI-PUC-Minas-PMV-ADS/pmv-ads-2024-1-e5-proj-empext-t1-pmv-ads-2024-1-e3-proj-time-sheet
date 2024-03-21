@@ -171,8 +171,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Modelo ER (Projeto Conceitual)
 
-![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/05c1d21e-14e9-403a-a275-f3e93a9cf3c0)
-
+![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/65fbbde5-6136-4fea-b567-943dcbc2bb15)
 
 
 
@@ -197,8 +196,8 @@ CREATE TABLE funcionarios (
   cargo VARCHAR,
   email VARCHAR,
   senha VARCHAR,
-  tempo_almoco TIMESTAMP,
-  tempo_jornada TIMESTAMP
+  tempo_almoco DOUBLE,
+  tempo_jornada DOUBLE
 );
 
 CREATE TABLE jornada_de_trabalho (
