@@ -164,8 +164,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |03| O projeto precisa rodar no ambiente local do cliente |
 
 ## Diagrama de Casos de Uso
-
-![Diagrama-Caso-de-Uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/4dee1c2d-150f-485b-bbf0-f7edeaaae4a5)
+![Diagrama de caso de uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/0e3cbb3e-1a8f-48e9-bbee-1e363c46a771)
 
 
 
