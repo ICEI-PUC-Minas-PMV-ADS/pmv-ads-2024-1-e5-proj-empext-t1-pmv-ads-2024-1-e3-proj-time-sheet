@@ -116,7 +116,7 @@ Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um p
 ## Project Model Canvas
 
 
-![Project Model Canvas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/img/Canvas.JPG)
+![Project Model Canvas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/img/CanvasV1.JPG)
 
 ## Requisitos
 
@@ -164,15 +164,13 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |03| O projeto precisa rodar no ambiente local do cliente |
 
 ## Diagrama de Casos de Uso
-
-![Diagrama-Caso-de-Uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/4dee1c2d-150f-485b-bbf0-f7edeaaae4a5)
+![Diagrama de caso de uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/0e3cbb3e-1a8f-48e9-bbee-1e363c46a771)
 
 
 
 ## Modelo ER (Projeto Conceitual)
 
-![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/05c1d21e-14e9-403a-a275-f3e93a9cf3c0)
-
+![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/65fbbde5-6136-4fea-b567-943dcbc2bb15)
 
 
 
@@ -197,8 +195,8 @@ CREATE TABLE funcionarios (
   cargo VARCHAR,
   email VARCHAR,
   senha VARCHAR,
-  tempo_almoco TIMESTAMP,
-  tempo_jornada TIMESTAMP
+  tempo_almoco DOUBLE,
+  tempo_jornada DOUBLE
 );
 
 CREATE TABLE jornada_de_trabalho (
