@@ -14,5 +14,17 @@
         public static bool HasMaxLength(string property, int maxLength) {
             return property.Length <= maxLength;
         }
+        public static bool IsGreater(int value1, int value2) {
+            return value1 > value2;
+        }
+        public static bool IsLower(int value1, int value2) {
+            return value1 < value2;
+        }
+        public static bool IsGreater(double value1, double value2) {
+            return value1 > value2;
+        }
+        public static bool IsLower(double value1, double value2) {
+            return value1 < value2;
+        }
     }
 }

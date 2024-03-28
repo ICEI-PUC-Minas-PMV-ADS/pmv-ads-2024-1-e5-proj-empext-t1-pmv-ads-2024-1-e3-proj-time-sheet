@@ -1,11 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text;
+using TimeSheet.Configuration;
 using TimeSheet.Infrastructure;
 using TimeSheet.Models;
+using TimeSheet.Services;
 
 namespace TimeSheet.UnitTests {
     public static class DevSettings {
-
+        public static AppOptions GetAppOptions() {
+            return new AppOptions {
+                ConnectionString = string.Empty,
+                JwtBearer = new JwtBearerOptions {
+                    ValidateAudience = false,
+                    ValidateIssuer = false,
+                    SecretKey = "115d6db863da2f536f8534e8c7f84ee0f5925a38e8c029a0140d6cfa45e6713c",
+                    Expires = 8
+                }
+            };
+        }
         private static TimeSheetContext InMemoryContextInstance;
         public static TimeSheetContext GetInMemoryContext() {
 
@@ -33,19 +45,22 @@ namespace TimeSheet.UnitTests {
             context.ChangeTracker.Clear();
         }
         private static List<User> DefaultUsers() {
+
+            var passwordService = new PasswordService();
+
             return new List<User> {
                 new User() {
                     Id = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"),
                     FirstName = "Bruce",
                     LastName = "Wayne",
                     Email = "batman@mail.com",
-                    Password = "Teste@123" },
+                    Password = passwordService.EncryptPassword("Teste@123") },
                 new User() {
                     Id = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a"),
                     FirstName = "Robin",
                     LastName = "Francis",
                     Email = "robin@mail.com",
-                    Password = "Teste@123" },
+                    Password = passwordService.EncryptPassword("Teste@123") },
             };
         }
     }

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Container from "../components/Container";
-import { Alert } from '../../../../node_modules/react-bootstrap/esm/index';
 export default function Home() {
 
     const [firstName, setFirstName] = useState(null);

@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace TimeSheet.Common.CQRS {
+﻿namespace TimeSheet.Common.CQRS {
     public sealed class CommandHandler {
 
         private readonly IServiceProvider _serviceProvider;
