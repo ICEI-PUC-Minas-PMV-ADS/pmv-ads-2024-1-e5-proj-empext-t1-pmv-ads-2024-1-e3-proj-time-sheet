@@ -162,6 +162,26 @@ namespace TimeSheet.Builders {
 
             return this;
         }
+
+        public UserBuilder WithWorkJourney(double TotalTime, double LunchTime)
+        {
+            if (_result is null || _user is null)
+            {
+                throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
+            }
+
+            if (PropertyValidations.IsLower(TotalTime, 8.0))
+            {
+                _result.WithError("A Jornada de não pode ser menor que 8 horas.");
+                return this;
+            }
+            _user.TotalTime = TotalTime;
+            _user.LunchTime = LunchTime;
+
+            return this;
+        }
+
+
         public Result<User> Build() {
 
             if (_result is null || _user is null) {
