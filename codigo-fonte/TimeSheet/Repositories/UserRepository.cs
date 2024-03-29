@@ -33,5 +33,17 @@ namespace TimeSheet.Repositories {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
         }
+        public async Task<User?> FindUser(Guid id)
+        {
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            return user;
+        }
+        public async Task SavedChange()
+        {
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace TimeSheet.Builders {
             _result = new Result<User>();
             _user = new User();
             _user.Id = Guid.NewGuid();
+            _user.State = UserStatus.Enable;
 
             return this;
         }

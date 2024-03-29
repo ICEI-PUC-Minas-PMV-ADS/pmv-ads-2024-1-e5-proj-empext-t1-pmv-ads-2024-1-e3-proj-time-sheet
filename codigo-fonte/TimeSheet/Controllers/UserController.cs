@@ -38,5 +38,23 @@ namespace TimeSheet.Controllers {
 
             return Ok(commandResult);
         }
+        [HttpPut]
+        [Route("disable")]
+        public async Task<IActionResult> DisableUser ([FromBody] DisableUserCommand command)
+        {
+
+            var commandResult = await _commandHandler
+                .Handle<DisableUserCommand, DisableUserCommandResult>(command);
+
+            if (commandResult.Status is DisableUserCommandResultState.UserNotFound)
+            {
+                return NotFound(commandResult);
+            }
+            if (commandResult.Status is DisableUserCommandResultState.UserAlreadyDisable) {
+                return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
     }
 }
