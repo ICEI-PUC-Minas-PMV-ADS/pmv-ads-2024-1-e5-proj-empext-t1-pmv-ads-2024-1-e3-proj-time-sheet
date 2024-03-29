@@ -7,6 +7,8 @@
         public string Password { get; set; } = null!;
         public UserRole Role { get; set; }
         public UserStatus State { get; set; }
+        public double TotalTime  { get; set; }
+        public double LunchTime { get; set; }
     }
 
     public enum UserRole {
