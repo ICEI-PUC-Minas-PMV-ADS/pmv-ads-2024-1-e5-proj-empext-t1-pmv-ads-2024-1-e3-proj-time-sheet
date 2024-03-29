@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TimeSheet.Commands;
 using TimeSheet.Queries;
 
@@ -15,6 +16,7 @@ namespace TimeSheet.Controllers {
             _queryHandler = queryHandler;
         }
 
+        [Authorize]
         [HttpGet]
         [Route("all")]
         public async Task<IActionResult> All() {
@@ -34,6 +36,20 @@ namespace TimeSheet.Controllers {
 
             if (commandResult.Status is not CreateUserCommandResult.CommandResultStatus.UserCreated) {
                 return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpPost]
+        [Route("authenticate")]
+        public async Task<IActionResult> Authenticate([FromBody] AuthenticateCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<AuthenticateCommand, AuthenticateCommandResult>(command);
+
+            if (commandResult.Status is not AuthenticateCommandStatus.UserAuthenticated) {
+                return Unauthorized(commandResult);
             }
 
             return Ok(commandResult);

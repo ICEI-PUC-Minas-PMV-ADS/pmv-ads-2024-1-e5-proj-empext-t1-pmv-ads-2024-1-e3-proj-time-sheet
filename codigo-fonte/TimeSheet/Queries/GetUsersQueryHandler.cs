@@ -11,9 +11,14 @@ namespace TimeSheet.Queries {
         public async Task<GetUsersQueryResult> Handle(GetUsersQuery query) {
 
             var users = await _repository.GetAll();
+            var usersWithoutPassword = users.ToList();
+
+            usersWithoutPassword.ForEach(user => {
+                user.Password = string.Empty;
+            });
 
             return new GetUsersQueryResult {
-                Users = users,
+                Users = usersWithoutPassword,
             };
         }
     }
