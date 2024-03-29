@@ -22,6 +22,7 @@ namespace TimeSheet.Commands {
                 .WithFirstName(command.FirstName)
                 .WithLastName(command.LastName)
                 .WithEmail(command.Email)
+                .WithWorkJourney(command.TotalTime, command.LunchTime)
                 .WithPassword(command.Password)
                 .EncryptPassword()
                 .Build();
