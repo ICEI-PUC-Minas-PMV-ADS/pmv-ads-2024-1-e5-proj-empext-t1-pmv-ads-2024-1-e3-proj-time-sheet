@@ -31,7 +31,7 @@ namespace TimeSheet.Commands {
 
                 user.Status = Models.UserStatus.Active;
 
-                await _repository.SavedChange();
+                await _repository.SaveChanges();
 
                 return new EnableUserCommandResult {
                     Message = "Usuário ativado com sucesso.",
