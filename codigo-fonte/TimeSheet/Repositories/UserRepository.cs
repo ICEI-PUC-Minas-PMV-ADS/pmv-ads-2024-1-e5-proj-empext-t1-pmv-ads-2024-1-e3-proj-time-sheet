@@ -41,7 +41,7 @@ namespace TimeSheet.Repositories {
 
             return user;
         }
-        public async Task SavedChange()
+        public async Task SaveChanges()
         {
             await _context.SaveChangesAsync();
         }

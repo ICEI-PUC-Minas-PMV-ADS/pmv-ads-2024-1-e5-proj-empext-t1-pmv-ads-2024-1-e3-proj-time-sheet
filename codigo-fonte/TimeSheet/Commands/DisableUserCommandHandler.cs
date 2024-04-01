@@ -26,7 +26,7 @@ namespace TimeSheet.Commands {
 
             user.Status = Models.UserStatus.Inactive;
 
-            await _repository.SavedChange();
+            await _repository.SaveChanges();
 
             return new DisableUserCommandResult {
                 Message = "Usuário desabilitado com sucesso.",
