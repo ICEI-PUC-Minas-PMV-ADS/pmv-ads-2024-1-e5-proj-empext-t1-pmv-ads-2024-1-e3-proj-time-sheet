@@ -62,11 +62,12 @@ namespace TimeSheet.Controllers {
             var commandResult = await _commandHandler
                 .Handle<DisableUserCommand, DisableUserCommandResult>(command);
 
-            if (commandResult.Status is DisableUserCommandResultState.UserNotFound)
+            if (commandResult.Status is DisableUserCommandResultStatus.UserNotFound)
             {
                 return NotFound(commandResult);
             }
-            if (commandResult.Status is DisableUserCommandResultState.UserAlreadyDisable) {
+
+            if (commandResult.Status is DisableUserCommandResultStatus.UserAlreadyDisabled) {
                 return BadRequest(commandResult);
             }
 

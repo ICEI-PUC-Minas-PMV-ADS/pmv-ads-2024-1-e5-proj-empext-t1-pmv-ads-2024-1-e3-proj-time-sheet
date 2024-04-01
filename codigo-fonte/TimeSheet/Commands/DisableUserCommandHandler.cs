@@ -1,37 +1,37 @@
 ﻿using TimeSheet.Repositories;
 
-namespace TimeSheet.Commands
-{
-    public class DisableUserCommandHandler : ICommandHandler<DisableUserCommand, DisableUserCommandResult>
-    {
+namespace TimeSheet.Commands {
+    public class DisableUserCommandHandler : ICommandHandler<DisableUserCommand, DisableUserCommandResult> {
         private readonly UserRepository _repository;
-        public DisableUserCommandHandler(UserRepository repository)
-
-        {
+        public DisableUserCommandHandler(UserRepository repository) {
             _repository = repository;
         }
 
-        public async Task<DisableUserCommandResult> Handle(DisableUserCommand command)
-        {
+        public async Task<DisableUserCommandResult> Handle(DisableUserCommand command) {
+
             var user = await _repository.FindUser(command.UserId);
-             if(user == null)
-            {
-                return new DisableUserCommandResult { Message = "Usuário Não encontrado", Status = DisableUserCommandResultState.UserNotFound };
+
+            if (user == null) {
+                return new DisableUserCommandResult {
+                    Message = "Usuário não encontrado.",
+                    Status = DisableUserCommandResultStatus.UserNotFound
+                };
             }
-            if (user.State == Models.UserStatus.Disable)
-            {
-                return new DisableUserCommandResult { Message = "Usuário Já desabilitado", Status = DisableUserCommandResultState.UserAlreadyDisable };
+            if (user.Status == Models.UserStatus.Inactive) {
+                return new DisableUserCommandResult {
+                    Message = "Usuário já desabilitado.",
+                    Status = DisableUserCommandResultStatus.UserAlreadyDisabled
+                };
             }
 
-            user.State = Models.UserStatus.Disable;
+            user.Status = Models.UserStatus.Inactive;
+
             await _repository.SavedChange();
-            return new DisableUserCommandResult { Message = "Usuário desabilitado Com sucesso", Status = DisableUserCommandResultState.Disable };
 
-
-
-
-
+            return new DisableUserCommandResult {
+                Message = "Usuário desabilitado com sucesso.",
+                Status = DisableUserCommandResultStatus.UserDisabled
+            };
         }
-
     }
 }
