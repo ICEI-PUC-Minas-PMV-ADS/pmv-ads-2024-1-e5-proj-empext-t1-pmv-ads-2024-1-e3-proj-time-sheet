@@ -21,6 +21,7 @@ namespace TimeSheet.Commands {
                 .CreateNew()
                 .WithName(command.Name)
                 .WithCPF(command.CPF)
+                .WithWorkJourney(command.TotalTime, command.LunchTime)
                 .WithPassword(command.Password)
                 .WithRole(command.Role)
                 .EncryptPassword()

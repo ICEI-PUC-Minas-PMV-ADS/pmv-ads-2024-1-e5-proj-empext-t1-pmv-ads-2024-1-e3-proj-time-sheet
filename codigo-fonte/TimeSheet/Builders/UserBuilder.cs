@@ -138,6 +138,50 @@ namespace TimeSheet.Builders {
 
             return this;
         }
+
+        public UserBuilder WithWorkJourney(double TotalTime, double LunchTime)
+        {
+            if (_result is null || _user is null)
+            {
+                throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
+            }
+
+            if (PropertyValidations.IsLower(TotalTime, 1.0))
+            {
+                _result.WithError("A Jornada de não pode ser menor que 8 horas.");
+                return this;
+            }
+
+            if (PropertyValidations.IsGreater(TotalTime, 23.0))
+            {
+                _result.WithError("A Jornada de não pode ser maior que 23 horas.");
+                return this;
+            }
+
+            if (PropertyValidations.IsLower(LunchTime, 1.0))
+            {
+                _result.WithError("O horário de almoço não pode ser menor que 1 hora.");
+                return this;
+            }
+
+            if (PropertyValidations.IsGreater(LunchTime, 23.0))
+            {
+                _result.WithError("O horario de almoço não pode ser maior que 23 horas.");
+                return this;
+            }
+
+            if (PropertyValidations.IsGreater(LunchTime, TotalTime))
+            {
+                _result.WithError("O horario de almoço não pode ser maior que a jornada de trabalho.");
+                return this;
+            }
+            _user.TotalTime = TotalTime;
+            _user.LunchTime = LunchTime;
+
+            return this;
+        }
+
+
         public Result<User> Build() {
 
             if (_result is null || _user is null) {

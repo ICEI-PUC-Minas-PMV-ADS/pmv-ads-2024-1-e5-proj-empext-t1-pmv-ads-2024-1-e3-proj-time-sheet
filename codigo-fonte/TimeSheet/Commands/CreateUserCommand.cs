@@ -6,5 +6,7 @@ namespace TimeSheet.Commands {
         public string CPF { get; set; } = null!;
         public string Password { get; set; } = null!;
         public UserRole Role { get; set; }
+        public double TotalTime { get; set; }
+        public double LunchTime { get; set; }
     }
 }
