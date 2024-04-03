@@ -22,7 +22,8 @@ namespace TimeSheet.UnitTests.Commands {
             var command = new CreateUserCommand {
                 Name = "a",
                 CPF = "11111111111",
-                Password = "c"
+                Password = "c",
+                Role = Models.UserRole.Employee
             };
 
             var commandResult = _handler.Handle(command).RunSync();
@@ -36,7 +37,8 @@ namespace TimeSheet.UnitTests.Commands {
             var command = new CreateUserCommand {
                 Name = "Bruce Wayne",
                 CPF = "04037535033",
-                Password = "Teste@123"
+                Password = "Teste@123",
+                Role = Models.UserRole.Administrator
             };
 
             var commandResult = _handler.Handle(command).RunSync();
@@ -50,7 +52,8 @@ namespace TimeSheet.UnitTests.Commands {
             var command = new CreateUserCommand {
                 Name = "Raul Oliveira",
                 CPF = "36133786043",
-                Password = "Teste@123"
+                Password = "Teste@123",
+                Role = Models.UserRole.Employee
             };
 
             var commandResult = _handler.Handle(command).RunSync();

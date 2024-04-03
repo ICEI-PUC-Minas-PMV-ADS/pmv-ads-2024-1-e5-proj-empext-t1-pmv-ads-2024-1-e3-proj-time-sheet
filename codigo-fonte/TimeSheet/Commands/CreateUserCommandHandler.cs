@@ -22,6 +22,7 @@ namespace TimeSheet.Commands {
                 .WithName(command.Name)
                 .WithCPF(command.CPF)
                 .WithPassword(command.Password)
+                .WithRole(command.Role)
                 .EncryptPassword()
                 .Build();
 
