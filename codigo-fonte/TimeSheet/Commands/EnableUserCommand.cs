@@ -1,5 +1,5 @@
 ﻿namespace TimeSheet.Commands {
-    public class DisableUserCommand : ICommand {
+    public class EnableUserCommand : ICommand {
         public Guid UserId { get; set; }
     }
 }

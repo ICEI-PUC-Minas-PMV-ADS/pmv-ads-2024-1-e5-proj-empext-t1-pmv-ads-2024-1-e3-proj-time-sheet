@@ -28,6 +28,8 @@ builder.Services.AddScoped<TokenService>();
 builder.Services.UseQueries();
 builder.Services.UseCommands();
 
+builder.Services.RegisterCommandHandler<EnableUserCommand, EnableUserCommandHandler, EnableUserCommandResult>();
+builder.Services.RegisterCommandHandler<DisableUserCommand, DisableUserCommandHandler, DisableUserCommandResult>();
 builder.Services.RegisterCommandHandler<AuthenticateCommand, AuthenticateCommandHandler, AuthenticateCommandResult>();
 builder.Services.RegisterCommandHandler<CreateUserCommand, CreateUserCommandHandler, CreateUserCommandResult>();
 builder.Services.RegisterQueryHandler<GetUsersQuery, GetUsersQueryHandler, GetUsersQueryResult>();

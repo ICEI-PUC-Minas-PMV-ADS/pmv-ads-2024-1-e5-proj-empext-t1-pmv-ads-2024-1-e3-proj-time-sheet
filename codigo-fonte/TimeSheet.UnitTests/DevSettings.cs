@@ -54,13 +54,19 @@ namespace TimeSheet.UnitTests {
                     FirstName = "Bruce",
                     LastName = "Wayne",
                     Email = "batman@mail.com",
-                    Password = passwordService.EncryptPassword("Teste@123") },
+                    Password = passwordService.EncryptPassword("Teste@123"),
+                    Role = UserRole.Administrator,
+                    Status = UserStatus.Active
+                },
                 new User() {
                     Id = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a"),
                     FirstName = "Robin",
                     LastName = "Francis",
                     Email = "robin@mail.com",
-                    Password = passwordService.EncryptPassword("Teste@123") },
+                    Password = passwordService.EncryptPassword("Teste@123"),
+                    Role  = UserRole.Employee,
+                    Status = UserStatus.Inactive
+                },
             };
         }
     }

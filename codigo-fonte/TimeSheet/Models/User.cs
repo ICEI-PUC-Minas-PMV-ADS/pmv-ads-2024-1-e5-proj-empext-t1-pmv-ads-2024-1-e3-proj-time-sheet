@@ -6,18 +6,19 @@
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
         public UserRole Role { get; set; }
-        public UserStatus State { get; set; }
+      
+        public UserStatus Status { get; set; }
         public double TotalTime  { get; set; }
         public double LunchTime { get; set; }
+        
     }
 
     public enum UserRole {
         Employee,
         Administrator
     }
-    public enum UserStatus
-    {
-        Enable,
-        Disable
+    public enum UserStatus {
+        Active,
+        Inactive
     }
 }

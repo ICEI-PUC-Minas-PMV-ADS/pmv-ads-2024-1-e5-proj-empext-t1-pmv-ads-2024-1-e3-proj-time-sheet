@@ -45,7 +45,6 @@ namespace TimeSheet.UnitTests.Commands {
             var command = new AuthenticateCommand { Email = "batman@mail.com", Password = "Teste@123" };
             var commandResult = _handler.Handle(command).RunSync();
 
-
             Assert.IsNotNull(commandResult);
             Assert.AreEqual(commandResult.Status, AuthenticateCommandStatus.UserAuthenticated);
         }

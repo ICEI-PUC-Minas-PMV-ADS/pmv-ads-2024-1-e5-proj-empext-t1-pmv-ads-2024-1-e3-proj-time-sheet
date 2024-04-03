@@ -1,16 +1,16 @@
 ﻿using System.Text.Json.Serialization;
 
 namespace TimeSheet.Commands {
-    public class DisableUserCommandResult : ICommandResult {
+    public class EnableUserCommandResult : ICommandResult {
         public string Message { get; set; } = null!;
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
-        public DisableUserCommandResultStatus Status { get; set; }
+        public EnableUserCommandResultStatus Status { get; set; }
     }
-    public enum DisableUserCommandResultStatus {
-        UserAlreadyDisabled,
+    public enum EnableUserCommandResultStatus {
+        UserAlreadyEnabled,
         UserNotFound,
-        UserDisabled,
+        UserEnabled,
         Error
     }
 }
