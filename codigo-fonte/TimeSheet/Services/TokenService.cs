@@ -79,7 +79,7 @@ namespace TimeSheet.Services {
         private SecurityTokenDescriptor CreateTokenDescriptor(User user) {
             return new SecurityTokenDescriptor {
                 Subject = new ClaimsIdentity(new[] {
-                new Claim(ClaimTypes.Name, user.Email),
+                new Claim(ClaimTypes.Name, user.CPF),
                 new Claim(ClaimTypes.Sid, user.Id.ToString())
             }),
                 Expires = DateTime.UtcNow.AddHours(_options.Expires),

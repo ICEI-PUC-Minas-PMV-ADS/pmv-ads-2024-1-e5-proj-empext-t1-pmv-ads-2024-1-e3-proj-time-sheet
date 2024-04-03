@@ -17,16 +17,16 @@ namespace TimeSheet.UnitTests.Builders {
         }
 
         [TestMethod]
-        public void WithFirstName_WithoutCallCreateNewMethod_ThrowInvalidOperationException() {
-            Assert.ThrowsException<InvalidOperationException>(() => _builder.WithFirstName(string.Empty));
+        public void WithName_WithoutCallCreateNewMethod_ThrowInvalidOperationException() {
+            Assert.ThrowsException<InvalidOperationException>(() => _builder.WithName(string.Empty));
         }
 
         [TestMethod]
-        public void WithFirstName_ArgumentNull_ReturnsFailureWithArgumentNullError() {
+        public void WithName_ArgumentNull_ReturnsFailureWithArgumentNullError() {
 
             var buildResult = _builder.
                 CreateNew().
-                WithFirstName(null).
+                WithName(null).
                 Build();
 
             Assert.IsTrue(buildResult.IsFailed);
@@ -34,11 +34,11 @@ namespace TimeSheet.UnitTests.Builders {
         }
 
         [TestMethod]
-        public void WithFirstName_BlankFirstName_ReturnsFailureWithPropertyIsBlankError() {
+        public void WithName_BlankName_ReturnsFailureWithPropertyIsBlankError() {
 
             var buildResult = _builder.
                 CreateNew().
-                WithFirstName(string.Empty).
+                WithName(string.Empty).
                 Build();
 
             Assert.IsTrue(buildResult.IsFailed);
@@ -46,11 +46,11 @@ namespace TimeSheet.UnitTests.Builders {
         }
 
         [TestMethod]
-        public void WithFirstName_FirstNameLengthTooShort_ReturnsFailureWithPropertyLengthTooShortError() {
+        public void WithName_NameLengthTooShort_ReturnsFailureWithPropertyLengthTooShortError() {
 
             var buildResult = _builder.
                 CreateNew().
-                WithFirstName("a").
+                WithName("a").
                 Build();
 
             Assert.IsTrue(buildResult.IsFailed);
@@ -58,11 +58,11 @@ namespace TimeSheet.UnitTests.Builders {
         }
 
         [TestMethod]
-        public void WithFirstName_FirstNameLengthTooLong_ReturnsFailureWithPropertyLengthTooLongError() {
+        public void WithName_NameLengthTooLong_ReturnsFailureWithPropertyLengthTooLongError() {
 
             var buildResult = _builder.
                 CreateNew().
-                WithFirstName(StringUtils.CreateLongString("aa", 30)).
+                WithName(StringUtils.CreateLongString("aa", 30)).
                 Build();
 
             Assert.IsTrue(buildResult.IsFailed);
@@ -70,93 +70,28 @@ namespace TimeSheet.UnitTests.Builders {
         }
 
         [TestMethod]
-        public void WithFirstName_ValidFirstName_ReturnsSuccess() {
+        public void WithName_ValidName_ReturnsSuccess() {
 
             var buildResult = _builder.
                 CreateNew().
-                WithFirstName("Batman").
+                WithName("Batman").
                 Build();
 
             Assert.IsTrue(buildResult.IsSuccess);
-            Assert.AreEqual(buildResult.Value.FirstName, "Batman");
+            Assert.AreEqual(buildResult.Value.Name, "Batman");
         }
 
         [TestMethod]
-        public void WithLastName_WithoutCallCreateNewMethod_ThrowInvalidOperationException() {
-            Assert.ThrowsException<InvalidOperationException>(() => _builder.WithLastName(string.Empty));
+        public void WithCPF_WithoutCallCreateNewMethod_ThrowInvalidOperationException() {
+            Assert.ThrowsException<InvalidOperationException>(() => _builder.WithCPF(""));
         }
 
         [TestMethod]
-        public void WithLastName_ArgumentNull_ReturnsFailureWithArgumentNullError() {
-
-            var buildResult = _builder.
-                CreateNew().
-                WithLastName(null).
-                Build();
-
-            Assert.IsTrue(buildResult.IsFailed);
-            Assert.IsInstanceOfType(buildResult.Errors[0], typeof(ArgumentNullError));
-        }
-
-        [TestMethod]
-        public void WithLastName_BlankLastName_ReturnsFailureWithPropertyIsBlankError() {
-
-            var buildResult = _builder.
-                CreateNew().
-                WithLastName(string.Empty).
-                Build();
-
-            Assert.IsTrue(buildResult.IsFailed);
-            Assert.IsInstanceOfType(buildResult.Errors[0], typeof(PropertyIsBlankError));
-        }
-
-        [TestMethod]
-        public void WithLastName_LastNameLengthTooShort_ReturnsFailureWithPropertyLengthTooShortError() {
-
-            var buildResult = _builder.
-                CreateNew().
-                WithLastName("a").
-                Build();
-
-            Assert.IsTrue(buildResult.IsFailed);
-            Assert.IsInstanceOfType(buildResult.Errors[0], typeof(PropertyLengthTooShortError));
-        }
-
-        [TestMethod]
-        public void WithLastName_LastNameLengthTooLong_ReturnsFailureWithPropertyLengthTooLongError() {
-
-            var buildResult = _builder.
-                CreateNew().
-                WithLastName(StringUtils.CreateLongString("aa", 30)).
-                Build();
-
-            Assert.IsTrue(buildResult.IsFailed);
-            Assert.IsInstanceOfType(buildResult.Errors[0], typeof(PropertyLengthTooLongError));
-        }
-
-        [TestMethod]
-        public void WithLastName_ValidLastName_ReturnsSuccess() {
-
-            var buildResult = _builder.
-                CreateNew().
-                WithLastName("Robson").
-                Build();
-
-            Assert.IsTrue(buildResult.IsSuccess);
-            Assert.AreEqual(buildResult.Value.LastName, "Robson");
-        }
-
-        [TestMethod]
-        public void WithEmail_WithoutCallCreateNewMethod_ThrowInvalidOperationException() {
-            Assert.ThrowsException<InvalidOperationException>(() => _builder.WithEmail(""));
-        }
-
-        [TestMethod]
-        public void WithEmail_ArgumentNull_ReturnsFailureWithArgumentNullError() {
+        public void WithCPF_ArgumentNull_ReturnsFailureWithArgumentNullError() {
 
             var result = _builder.
                 CreateNew().
-                WithEmail(null).
+                WithCPF(null).
                 Build();
 
             Assert.IsTrue(result.IsFailed);
@@ -164,41 +99,66 @@ namespace TimeSheet.UnitTests.Builders {
         }
 
         [TestMethod]
-        public void WithEmail_BlankEmail_ReturnsFailureWithEmailIsBlankError() {
+        public void WithCPF_BlankCPF_ReturnsFailureWithCPFIsBlankError() {
 
             var result = _builder.
                 CreateNew().
-                WithEmail(string.Empty).
+                WithCPF(string.Empty).
                 Build();
 
             Assert.IsTrue(result.IsFailed);
-            Assert.IsInstanceOfType(result.Errors[0], typeof(EmailIsBlankError));
+            Assert.IsInstanceOfType(result.Errors[0], typeof(CPFIsBlankError));
         }
 
         [TestMethod]
-        [DataRow("abc.com")]
-        [DataRow("email @teste.com")]
-        [DataRow("email@gento")]
-        [DataRow("@teste.com")]
-        [DataRow("@teste@.com")]
-        public void WithEmail_InvalidEmail_ReturnsFailureWithEmailIsInvalidError(string email) {
+        [DataRow("11111111111111111111")]
+        [DataRow("22")]
+        public void WithCPF_InvalidLength_ReturnsFailureWithCPFLengthError(string cpf) {
 
             var result = _builder.
                 CreateNew().
-                WithEmail(email).
+                WithCPF(cpf).
                 Build();
 
             Assert.IsTrue(result.IsFailed);
-            Assert.IsInstanceOfType(result.Errors[0], typeof(EmailIsInvalidError));
+            Assert.IsInstanceOfType(result.Errors[0], typeof(CPFLengthError));
         }
 
         [TestMethod]
-        [DataRow("email@domain.com")]
-        public void WithEmail_ValidEmail_ReturnsSuccess(string email) {
+        [DataRow("11111111111")]
+        [DataRow("22222222222")]
+        public void WithCPF_CPFWithAllDigitsSame_ReturnsFailureWithCPFAllDigitsSameError(string cpf) {
 
             var result = _builder.
                 CreateNew().
-                WithEmail(email).
+                WithCPF(cpf).
+                Build();
+
+            Assert.IsTrue(result.IsFailed);
+            Assert.IsInstanceOfType(result.Errors[0], typeof(CPFAllDigitsSameError));
+        }
+
+        [TestMethod]
+        [DataRow("98765432109")]
+        [DataRow("12345678900")]
+        public void WithCPF_InvalidCPF_ReturnsFailureWithCPFIsInvalidError(string cpf) {
+
+            var result = _builder.
+                CreateNew().
+                WithCPF(cpf).
+                Build();
+
+            Assert.IsTrue(result.IsFailed);
+            Assert.IsInstanceOfType(result.Errors[0], typeof(CPFIsInvalidError));
+        }
+
+        [TestMethod]
+        [DataRow("79007129090")]
+        public void WithCPF_ValidCPF_ReturnsSuccess(string cpf) {
+
+            var result = _builder.
+                CreateNew().
+                WithCPF(cpf).
                 Build();
 
             Assert.IsTrue(result.IsSuccess);

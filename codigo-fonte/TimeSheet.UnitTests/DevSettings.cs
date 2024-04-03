@@ -51,18 +51,16 @@ namespace TimeSheet.UnitTests {
             return new List<User> {
                 new User() {
                     Id = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"),
-                    FirstName = "Bruce",
-                    LastName = "Wayne",
-                    Email = "batman@mail.com",
+                    Name = "Bruce Wayne",
+                    CPF = "04037535033",
                     Password = passwordService.EncryptPassword("Teste@123"),
                     Role = UserRole.Administrator,
                     Status = UserStatus.Active
                 },
                 new User() {
                     Id = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a"),
-                    FirstName = "Robin",
-                    LastName = "Francis",
-                    Email = "robin@mail.com",
+                    Name = "Robin Francis",
+                    CPF = "12995490041",
                     Password = passwordService.EncryptPassword("Teste@123"),
                     Role  = UserRole.Employee,
                     Status = UserStatus.Inactive

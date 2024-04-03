@@ -19,94 +19,70 @@ namespace TimeSheet.Builders {
 
             return this;
         }
-        public UserBuilder WithFirstName(string firstName) {
+        public UserBuilder WithName(string name) {
 
             if (_result is null || _user is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
             }
 
-            if (firstName is null) {
-                _result.WithError(new ArgumentNullError(nameof(firstName)));
+            if (name is null) {
+                _result.WithError(new ArgumentNullError(nameof(name)));
                 return this;
             }
 
-            PropertyValidations.Normalize(ref firstName);
+            PropertyValidations.Normalize(ref name);
 
-            if (PropertyValidations.IsBlank(firstName)) {
-                _result.WithError(new PropertyIsBlankError(nameof(firstName)));
+            if (PropertyValidations.IsBlank(name)) {
+                _result.WithError(new PropertyIsBlankError(nameof(name)));
                 return this;
             }
 
-            if (!PropertyValidations.HasMinLength(firstName, 3)) {
-                _result.WithError(new PropertyLengthTooShortError(nameof(firstName), 3));
+            if (!PropertyValidations.HasMinLength(name, 3)) {
+                _result.WithError(new PropertyLengthTooShortError(nameof(name), 3));
                 return this;
             }
 
-            if (!PropertyValidations.HasMaxLength(firstName, 50)) {
-                _result.WithError(new PropertyLengthTooLongError(nameof(firstName), 50));
+            if (!PropertyValidations.HasMaxLength(name, 50)) {
+                _result.WithError(new PropertyLengthTooLongError(nameof(name), 50));
                 return this;
             }
 
-            _user.FirstName = firstName;
+            _user.Name = name;
 
             return this;
         }
-        public UserBuilder WithLastName(string lastName) {
+        public UserBuilder WithCPF(string cpf) {
 
             if (_result is null || _user is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
             }
 
-            if (lastName is null) {
-                _result.WithError(new ArgumentNullError(nameof(lastName)));
+            if (cpf is null) {
+                _result.WithError(new ArgumentNullError(nameof(cpf)));
                 return this;
             }
 
-            PropertyValidations.Normalize(ref lastName);
+            CPFValidations.Normalize(ref cpf);
 
-            if (PropertyValidations.IsBlank(lastName)) {
-                _result.WithError(new PropertyIsBlankError(nameof(lastName)));
+            if (PropertyValidations.IsBlank(cpf)) {
+                _result.WithError<CPFIsBlankError>();
                 return this;
             }
 
-            if (!PropertyValidations.HasMinLength(lastName, 3)) {
-                _result.WithError(new PropertyLengthTooShortError(nameof(lastName), 3));
+            if (!CPFValidations.IsValidLength(cpf)) {
+                _result.WithError<CPFLengthError>();
                 return this;
             }
 
-            if (!PropertyValidations.HasMaxLength(lastName, 50)) {
-                _result.WithError(new PropertyLengthTooLongError(nameof(lastName), 50));
-                return this;
+            if (CPFValidations.IsAllDigitsSame(cpf)) {
+                _result.WithError<CPFAllDigitsSameError>();
             }
 
-            _user.LastName = lastName;
-
-            return this;
-        }
-        public UserBuilder WithEmail(string email) {
-
-            if (_result is null || _user is null) {
-                throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
+            if (!CPFValidations.ValidateCpf(cpf)) {
+                _result.WithError<CPFIsInvalidError>();
             }
 
-            if (email is null) {
-                _result.WithError(new ArgumentNullError(nameof(email)));
-                return this;
-            }
-
-            EmailValidations.Normalize(ref email);
-
-            if (EmailValidations.IsBlank(email)) {
-                _result.WithError<EmailIsBlankError>();
-                return this;
-            }
-
-            if (EmailValidations.IsInvalidEmail(email)) {
-                _result.WithError(new EmailIsInvalidError(email));
-                return this;
-            }
-
-            _user.Email = email;
+            _user.CPF = cpf;
 
             return this;
         }

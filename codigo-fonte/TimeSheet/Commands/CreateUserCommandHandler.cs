@@ -19,9 +19,8 @@ namespace TimeSheet.Commands {
 
             var buildUserResult = _builder
                 .CreateNew()
-                .WithFirstName(command.FirstName)
-                .WithLastName(command.LastName)
-                .WithEmail(command.Email)
+                .WithName(command.Name)
+                .WithCPF(command.CPF)
                 .WithPassword(command.Password)
                 .EncryptPassword()
                 .Build();
@@ -36,7 +35,7 @@ namespace TimeSheet.Commands {
             var user = buildUserResult.Value;
 
             if (await _repository
-                .FindUser(user.Email) is not null) {
+                .FindUser(user.CPF) is not null) {
                 return new CreateUserCommandResult {
                     Message = "Usuário já existe.",
                     Status = CreateUserCommandResult.CommandResultStatus.UserAlreadyExists

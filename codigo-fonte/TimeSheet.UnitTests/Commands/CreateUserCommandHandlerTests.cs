@@ -20,10 +20,9 @@ namespace TimeSheet.UnitTests.Commands {
         public void Handle_InvalidCommandData_ShouldReturnsErrorStatus() {
 
             var command = new CreateUserCommand {
-                FirstName = "a",
-                LastName = "b",
-                Email = "abacaxi",
-                Password = "c",
+                Name = "a",
+                CPF = "11111111111",
+                Password = "c"
             };
 
             var commandResult = _handler.Handle(command).RunSync();
@@ -35,9 +34,8 @@ namespace TimeSheet.UnitTests.Commands {
         [TestMethod]
         public void Handle_UserThatAlreadyExists_ShouldReturnsUserAlreadyExistsStatus() {
             var command = new CreateUserCommand {
-                FirstName = "Bruce",
-                LastName = "Wayne",
-                Email = "batman@mail.com",
+                Name = "Bruce Wayne",
+                CPF = "04037535033",
                 Password = "Teste@123"
             };
 
@@ -50,9 +48,8 @@ namespace TimeSheet.UnitTests.Commands {
         [TestMethod]
         public void Handle_NewUser_ShouldReturnsUserCreatedStatus() {
             var command = new CreateUserCommand {
-                FirstName = "Raul",
-                LastName = "Oliveira",
-                Email = "raul@mail.com",
+                Name = "Raul Oliveira",
+                CPF = "36133786043",
                 Password = "Teste@123"
             };
 
