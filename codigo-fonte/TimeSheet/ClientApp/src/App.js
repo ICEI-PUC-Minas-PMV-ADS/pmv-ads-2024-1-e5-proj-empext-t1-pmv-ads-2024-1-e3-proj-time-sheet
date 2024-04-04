@@ -3,13 +3,12 @@ import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import './custom.css';
 
+import { Login } from './pages/Login.jsx';
+
+import './styles/global.css'
+
 export default function App() {
     return (
-        <Routes>
-            {AppRoutes.map((route, index) => {
-                const { element, ...rest } = route;
-                return <Route key={index} {...rest} element={element} />;
-            })}
-        </Routes>
+        <Login />
     );
 }
