@@ -1,5 +1,7 @@
 import { FaRegUser } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <div className="w-full flex justify-between items-center px-3 py-3 bg-primary-800">
@@ -13,9 +15,9 @@ export function Header() {
         </div>
       </div>
 
-      <div>
-        <a href="#" className="text-xs text-white">Sair</a>
-      </div>
+      <Link to="/login" >
+        <span className="text-xs text-white">Sair</span>
+      </Link>
     </div>
   )
 }

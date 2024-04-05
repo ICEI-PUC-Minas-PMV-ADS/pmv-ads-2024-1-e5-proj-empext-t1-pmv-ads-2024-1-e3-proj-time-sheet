@@ -3,6 +3,8 @@ import { AdjustableModal } from "../components/AdjustableModal";
 import { Input } from "../components/Input";
 import { PrimaryButton } from "../components/PrimaryButton";
 
+import { Link } from "react-router-dom";
+
 import logoImg from "../assets/logo.svg";
 
 export function Login() {
@@ -38,7 +40,10 @@ export function Login() {
               <span className="text-base text-primary-200"> Alterar</span>
             </a>
 
-            <PrimaryButton title="Entrar" bgColor="primary-800"/>
+            <Link to="/" >
+              <PrimaryButton title="Entrar" bgColor="primary-800"/>
+            </Link>
+
           </div>
         </AdjustableModal>
       </div>

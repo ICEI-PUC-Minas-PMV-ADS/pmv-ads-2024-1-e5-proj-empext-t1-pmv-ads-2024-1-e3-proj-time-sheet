@@ -2,6 +2,8 @@ import { Employee } from "../components/Employee";
 import { EmployeeRegistrationButton } from "../components/EmployeeRegistrationButton";
 import { Header } from "../components/Header";
 
+import { Link } from "react-router-dom";
+
 export function ActiveUsers() {
   return (
     <div className="h-screen flex flex-col">
@@ -12,17 +14,17 @@ export function ActiveUsers() {
           <span class="material-symbols-outlined text-white">
             account_circle
           </span>
-          <a href="active-employees" className="text-white text-xs">
+          <span className="text-white text-xs">
             Usuários ativos
-          </a>
+          </span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <Link to="/users-disabled" className="flex items-center gap-2">
           <span class="material-symbols-outlined text-white">no_accounts</span>
-          <a href="inactive-employees" className="text-white text-xs">
+          <span className="text-white text-xs">
             Usuários inátivos
-          </a>
-        </div>
+          </span>
+        </Link>
       </nav>
 
       <Employee name="Matheus Silva" activated/>
