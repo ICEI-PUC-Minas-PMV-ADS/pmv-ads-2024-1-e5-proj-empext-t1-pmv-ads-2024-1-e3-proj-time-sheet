@@ -1,6 +1,6 @@
 export function Input({ title, type }) {
   return (
-    <div className="flex flex-col self-center mb-7 w-full">
+    <div className="flex flex-col self-center mb-3 w-full">
       <input
         type={type} 
         placeholder={title}
