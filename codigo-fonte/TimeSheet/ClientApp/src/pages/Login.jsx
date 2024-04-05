@@ -29,7 +29,7 @@ export function Login() {
               </p>
             </div>
 
-            <Input title="CPF" type="text" />
+            <Input title="CPF" type="text" mask="999.999.999-99"/>
             <Input title="Senha" type="password" />
             <ErrorMenssage errorMenssage="CPF ou senha inválidos"/>
 
