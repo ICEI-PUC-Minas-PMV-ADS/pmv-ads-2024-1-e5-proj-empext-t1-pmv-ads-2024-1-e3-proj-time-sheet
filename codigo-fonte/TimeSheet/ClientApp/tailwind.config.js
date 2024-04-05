@@ -42,6 +42,7 @@ module.exports = {
         'information-400': "#77F7F7",
         'information-600': "#0EE5E5",
         'information-800': "#2EC9C9",
+        'register': "#5F8062",
       }
     },
   },

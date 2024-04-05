@@ -5,7 +5,6 @@ import { PrimaryButton } from "../components/PrimaryButton";
 
 import logoImg from "../assets/logo.svg";
 
-
 export function Login() {
   return (
     <div className="w-full h-screen justify-between flex flex-col md:flex-row md:justify-normal">
@@ -31,7 +30,7 @@ export function Login() {
               </p>
             </div>
 
-            <Input title="CPF" type="number" />
+            <Input title="CPF" type="text" />
             <Input title="Senha" type="password" />
 
             <a href="#" className="text-base text-slate-600">
