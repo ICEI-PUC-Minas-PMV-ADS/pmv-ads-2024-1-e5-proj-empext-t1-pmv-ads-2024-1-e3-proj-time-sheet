@@ -1,9 +1,45 @@
 # Planos de Testes de Software
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+Teste das Páginas:
+- Home
+- Login
+  
+Testes das funcionalidades:
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+Criar um Usuário 
+ - dados invalidos
+ - novo usuário cadastrado com sucesso
+ - usuário cadastrado
+
+
+# Plano de Testes de Software - FRONTEND
  
-# Evidências de Testes de Software
+| **Caso de Teste** 	| **CT-01 - *TESTE* 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| **RF-001 -	*TESTE* |
+| Objetivo do Teste 	|   |
+| Passos 	| |
+|Critério de Êxito |  |
 
-Apresente imagens e/ou vídeos que comprovam que um determinado teste foi executado, e o resultado esperado foi obtido. Normalmente são screenshots de telas, ou vídeos do software em funcionamento.
+| **Caso de Teste** 	| **CT-01 - *TESTE* 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| **RF-001 -	*TESTE* |
+| Objetivo do Teste 	|   |
+| Passos 	| |
+|Critério de Êxito |  |
+
+# Plano de Testes de Software - BACKEND
+
+| **Caso de Teste** 	| **CT-01 - *TESTE* 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| **RF-001 -	*TESTE* |
+| Objetivo do Teste 	|   |
+| Passos 	| |
+|Critério de Êxito |  |
+
+| **Caso de Teste** 	| **CT-01 - *TESTE* 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| **RF-001 -	*TESTE* |
+| Objetivo do Teste 	|   |
+| Passos 	| |
+|Critério de Êxito |  |
