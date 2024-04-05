@@ -202,7 +202,7 @@ namespace TimeSheet.UnitTests.Builders {
         [DataRow("123")]
         [DataRow("@123")]
         [DataRow("Pass/123")]
-        public void WithPassword_InvalidPassword_ReturnFailureWithPasswordIsInvalidError(string password) {
+        public void WithPassword_InvalidPassword_ReturnsFailureWithPasswordIsInvalidError(string password) {
 
             var result = _builder.
                 CreateNew().
@@ -215,7 +215,7 @@ namespace TimeSheet.UnitTests.Builders {
 
         [TestMethod]
         [DataRow("Pass@123")]
-        public void WithPassword_ValidPassword_ReturnSuccess(string password) {
+        public void WithPassword_ValidPassword_ReturnsSuccess(string password) {
 
             var result = _builder.
                 CreateNew().
@@ -238,6 +238,60 @@ namespace TimeSheet.UnitTests.Builders {
                 .Build();
 
             Assert.IsTrue(result.IsFailed);
+        }
+
+        [TestMethod]
+        public void WithWorkJourney_WithoutCallCreateNewMethod_ThrowInvalidOperationException() {
+            Assert.ThrowsException<InvalidOperationException>(() => _builder.WithWorkJourney(0, 0));
+        }
+
+        [TestMethod]
+        [DataRow(-1)]
+        [DataRow(25)]
+        public void WithWorkJourney_TotalTimeOutsideTimeBounds_ReturnsFailureWithValueOutsideTimeBoundsError(double totalTime) {
+            var result = _builder
+                .CreateNew()
+                .WithWorkJourney(totalTime, lunchTime: 2)
+                .Build();
+
+            Assert.IsTrue(result.IsFailed);
+            Assert.IsInstanceOfType(result.Errors[0], typeof(ValueOutsideTimeBoundsError));
+        }
+
+        [TestMethod]
+        [DataRow(-1)]
+        [DataRow(25)]
+        public void WithWorkJourney_LunchTimeOutsideTimeBounds_ReturnsFailureWithValueOutsideTimeBoundsError(double lunchTime) {
+            var result = _builder
+                .CreateNew()
+                .WithWorkJourney(totalTime: 8, lunchTime)
+                .Build();
+
+            Assert.IsTrue(result.IsFailed);
+            Assert.IsInstanceOfType(result.Errors[0], typeof(ValueOutsideTimeBoundsError));
+        }
+
+        [TestMethod]
+        public void WithWorkJourney_LunchTimeLongerThanTotalTime_ReturnsFailureWithInconsistentLunchTimeError() {
+            var result = _builder
+                .CreateNew()
+                .WithWorkJourney(totalTime: 1, lunchTime: 8)
+                .Build();
+
+            Assert.IsTrue(result.IsFailed);
+            Assert.IsInstanceOfType(result.Errors[0], typeof(InconsistentLunchTimeError));
+        }
+
+        [TestMethod]
+        public void WithWorkJourney_ValidValues_ReturnsSuccess() {
+            var result = _builder
+                .CreateNew()
+                .WithWorkJourney(totalTime: 8, lunchTime: 1.30)
+                .Build();
+
+            Assert.IsTrue(result.IsSuccess);
+            Assert.AreEqual(result.Value.TotalTime, 8);
+            Assert.AreEqual(result.Value.LunchTime, 1.30);
         }
     }
 }

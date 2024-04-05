@@ -23,6 +23,8 @@ namespace TimeSheet.UnitTests.Commands {
                 Name = "a",
                 CPF = "11111111111",
                 Password = "c",
+                LunchTime = 5,
+                TotalTime = .30,
                 Role = Models.UserRole.Employee
             };
 
@@ -38,6 +40,8 @@ namespace TimeSheet.UnitTests.Commands {
                 Name = "Bruce Wayne",
                 CPF = "04037535033",
                 Password = "Teste@123",
+                TotalTime = 9,
+                LunchTime = 2,
                 Role = Models.UserRole.Administrator
             };
 
@@ -53,6 +57,8 @@ namespace TimeSheet.UnitTests.Commands {
                 Name = "Raul Oliveira",
                 CPF = "36133786043",
                 Password = "Teste@123",
+                TotalTime = 8,
+                LunchTime = 1.30,
                 Role = Models.UserRole.Employee
             };
 

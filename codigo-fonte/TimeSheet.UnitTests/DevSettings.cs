@@ -53,6 +53,8 @@ namespace TimeSheet.UnitTests {
                     Id = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"),
                     Name = "Bruce Wayne",
                     CPF = "04037535033",
+                    TotalTime = 9,
+                    LunchTime = 2,
                     Password = passwordService.EncryptPassword("Teste@123"),
                     Role = UserRole.Administrator,
                     Status = UserStatus.Active
@@ -61,6 +63,8 @@ namespace TimeSheet.UnitTests {
                     Id = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a"),
                     Name = "Robin Francis",
                     CPF = "12995490041",
+                    TotalTime = 8,
+                    LunchTime = 1.30,
                     Password = passwordService.EncryptPassword("Teste@123"),
                     Role  = UserRole.Employee,
                     Status = UserStatus.Inactive
