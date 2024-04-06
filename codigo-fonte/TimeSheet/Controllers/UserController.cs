@@ -6,6 +6,7 @@ using TimeSheet.Queries;
 namespace TimeSheet.Controllers {
 
     [ApiController]
+    [Authorize(Roles = "Administrator")]
     [Route("[controller]")]
     public class UserController : ControllerBase {
 
@@ -16,7 +17,6 @@ namespace TimeSheet.Controllers {
             _queryHandler = queryHandler;
         }
 
-        [Authorize]
         [HttpGet]
         [Route("all")]
         public async Task<IActionResult> All() {
@@ -42,6 +42,7 @@ namespace TimeSheet.Controllers {
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [Route("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] AuthenticateCommand command) {
 
@@ -54,21 +55,89 @@ namespace TimeSheet.Controllers {
 
             return Ok(commandResult);
         }
+
         [HttpPut]
         [Route("disable")]
-        public async Task<IActionResult> DisableUser ([FromBody] DisableUserCommand command)
-        {
+        public async Task<IActionResult> DisableUser([FromBody] DisableUserCommand command) {
 
             var commandResult = await _commandHandler
                 .Handle<DisableUserCommand, DisableUserCommandResult>(command);
 
-            if (commandResult.Status is DisableUserCommandResultStatus.UserNotFound)
-            {
+            if (commandResult.Status is DisableUserCommandResultStatus.UserNotFound) {
                 return NotFound(commandResult);
             }
 
             if (commandResult.Status is DisableUserCommandResultStatus.UserAlreadyDisabled) {
                 return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpPut]
+        [Route("enable")]
+        public async Task<IActionResult> EnableUser([FromBody] EnableUserCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<EnableUserCommand, EnableUserCommandResult>(command);
+
+            if (commandResult.Status is EnableUserCommandResultStatus.UserNotFound) {
+                return NotFound(commandResult);
+            }
+
+            if (commandResult.Status is EnableUserCommandResultStatus.UserAlreadyEnabled) {
+                return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpPut]
+        [Authorize]
+        [Route("changepassword")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangeUserPasswordCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<ChangeUserPasswordCommand, ChangeUserPasswordCommandResult>(command);
+
+            if (commandResult.Status is ChangeUserPasswordCommandResultStatus.UserNotFound) {
+                return NotFound(commandResult);
+            }
+
+            if (commandResult.Status is ChangeUserPasswordCommandResultStatus.InvalidPassword) {
+                return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpPut]
+        [Route("update")]
+        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<UpdateUserCommand, UpdateUserCommandResult>(command);
+
+            if (commandResult.Status is UpdateUserCommandResultStatus.UserNotFound) {
+                return NotFound(commandResult);
+            }
+
+            if (commandResult.Status is UpdateUserCommandResultStatus.InvalidUserData) {
+                return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpDelete]
+        [Route("delete")]
+        public async Task<IActionResult> DeleteUser([FromBody] DeleteUserCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<DeleteUserCommand, DeleteUserCommandResult>(command);
+
+            if (commandResult.Status is DeleteUserCommandResultStatus.UserNotFound) {
+                return NotFound(commandResult);
             }
 
             return Ok(commandResult);

@@ -30,6 +30,13 @@ namespace TimeSheet.Commands {
                 };
             }
 
+            if (user.Status is Models.UserStatus.Inactive) {
+                return new AuthenticateCommandResult {
+                    Message = "Usuário desabilitado",
+                    Status = AuthenticateCommandStatus.UserDisabled
+                };
+            }
+
             if (!_passwordService
                 .VerifyPassword(command.Password, user.Password)) {
                 return new AuthenticateCommandResult {

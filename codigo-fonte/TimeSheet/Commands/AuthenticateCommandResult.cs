@@ -12,6 +12,7 @@ namespace TimeSheet.Commands {
     public enum AuthenticateCommandStatus {
         UserAuthenticated,
         UserNotFound,
+        UserDisabled,
         Error
     }
 }

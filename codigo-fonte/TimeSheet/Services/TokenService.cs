@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json.Serialization;
 using TimeSheet.Configuration;
 using TimeSheet.Models;
 
@@ -77,9 +78,11 @@ namespace TimeSheet.Services {
             }
         }
         private SecurityTokenDescriptor CreateTokenDescriptor(User user) {
+
             return new SecurityTokenDescriptor {
                 Subject = new ClaimsIdentity(new[] {
                 new Claim(ClaimTypes.Name, user.CPF),
+                new Claim(ClaimTypes.Role, user.Role.convertToString()),
                 new Claim(ClaimTypes.Sid, user.Id.ToString())
             }),
                 Expires = DateTime.UtcNow.AddHours(_options.Expires),

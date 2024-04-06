@@ -22,9 +22,18 @@ namespace TimeSheet.UnitTests.Commands {
             var command = new AuthenticateCommand { CPF = "08784013001", Password = "password" };
             var commandResult = _handler.Handle(command).RunSync();
 
-
             Assert.IsNotNull(commandResult);
             Assert.AreEqual(commandResult.Status, AuthenticateCommandStatus.UserNotFound);
+        }
+
+        [TestMethod]
+        public void Handle_UserDisabled_ReturnsFailureWithUserDisabledStatus() {
+
+            var command = new AuthenticateCommand { CPF = "12995490041", Password = "password" };
+            var commandResult = _handler.Handle(command).RunSync();
+
+            Assert.IsNotNull(commandResult);
+            Assert.AreEqual(commandResult.Status, AuthenticateCommandStatus.UserDisabled);
         }
 
         [TestMethod]
@@ -37,7 +46,6 @@ namespace TimeSheet.UnitTests.Commands {
             Assert.IsNotNull(commandResult);
             Assert.AreEqual(commandResult.Status, AuthenticateCommandStatus.UserNotFound);
         }
-
 
         [TestMethod]
         public void Handle_ValidUserData_ReturnsFailureWithUserAuthenticatedStatus() {

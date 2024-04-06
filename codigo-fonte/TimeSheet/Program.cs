@@ -67,6 +67,16 @@ if (!app.Environment.IsDevelopment()) {
     app.UseHsts();
 }
 
+using (var scope = app.Services.CreateScope()) {
+
+    var provider = scope.ServiceProvider;
+    var appContext = provider.GetRequiredService<TimeSheetContext>();
+
+    TimeSheetContextSeed.SeedContext(appContext);
+
+    scope.Dispose();
+}
+
 app.UseCors();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
