@@ -20,14 +20,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
-    - name: Find solution file
-      run: |
-        cd $GITHUB_WORKSPACE
-        solution=$(find . -name "*.sln")
-        echo "Solution: $solution"
     - name: Restore dependencies
-      run: dotnet restore "$solution"
+      run: dotnet restore "codigo-fonte/time-sheet.sln"
     - name: Build
-      run: dotnet build --no-restore "$solution"
+      run: dotnet build --no-restore "codigo-fonte/time-sheet.sln"
     - name: Test
-      run: dotnet test --no-build --verbosity normal "$solution"
+      run: dotnet test --no-build --verbosity normal "codigo-fonte/time-sheet.sln"
