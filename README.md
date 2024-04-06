@@ -5,6 +5,8 @@
 
 <h6 align="right">Criado em 28 de fevereiro de 2024<br><a href="https://www.pucminas.br/PucVirtual/Paginas/default.aspx">PUC Minas Virtual</a></h6>
 
+![Build Status](https://img.shields.io/github/workflow/status/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/timesheet_workflow-Build?label=Build&logo=github)
+
 `Análise e Desenvolvimento de Sistemas`
 
 `Projeto: Análise e Projeto de Sistemas de Software`
@@ -25,7 +27,6 @@ Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A sol
 | :---: |
 
 ## Instruções de utilização
-
 
 - ✅ Como baixar
 - 📦 Como compilar
