@@ -21,7 +21,7 @@ namespace TimeSheet.Commands {
         public async Task<AuthenticateCommandResult> Handle(AuthenticateCommand command) {
 
             var user = await _repository
-                .FindUser(command.Email);
+                .FindUser(command.CPF);
 
             if (user is null) {
                 return new AuthenticateCommandResult {
@@ -44,7 +44,7 @@ namespace TimeSheet.Commands {
                 Id = user.Id,
                 Token = token,
                 Status = AuthenticateCommandStatus.UserAuthenticated,
-                Message = $"Usuário '{user.Email}' autenticado."
+                Message = $"Usuário '{user.Name}' autenticado."
             };
         }
     }

@@ -17,49 +17,55 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_InvalidCommandData_ShouldReturnsErrorStatus() {
+        public void Handle_InvalidCommandData_ReturnsFailureWithInvalidUserDataStatus() {
 
             var command = new CreateUserCommand {
-                FirstName = "a",
-                LastName = "b",
-                Email = "abacaxi",
+                Name = "a",
+                CPF = "11111111111",
                 Password = "c",
+                LunchTime = 5,
+                TotalTime = .30,
+                Role = Models.UserRole.Employee
             };
 
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
-            Assert.AreEqual(commandResult.Status, CreateUserCommandResult.CommandResultStatus.Error);
+            Assert.AreEqual(commandResult.Status, CommandResultStatus.InvalidUserData);
         }
 
         [TestMethod]
-        public void Handle_UserThatAlreadyExists_ShouldReturnsUserAlreadyExistsStatus() {
+        public void Handle_UserThatAlreadyExists_ReturnsFailureWithUserAlreadyExistsStatus() {
             var command = new CreateUserCommand {
-                FirstName = "Bruce",
-                LastName = "Wayne",
-                Email = "batman@mail.com",
-                Password = "Teste@123"
+                Name = "Bruce Wayne",
+                CPF = "04037535033",
+                Password = "Teste@123",
+                TotalTime = 9,
+                LunchTime = 2,
+                Role = Models.UserRole.Administrator
             };
 
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
-            Assert.AreEqual(commandResult.Status, CreateUserCommandResult.CommandResultStatus.UserAlreadyExists);
+            Assert.AreEqual(commandResult.Status, CommandResultStatus.UserAlreadyExists);
         }
 
         [TestMethod]
-        public void Handle_NewUser_ShouldReturnsUserCreatedStatus() {
+        public void Handle_NewUser_ReturnsSuccessWithUserCreatedStatus() {
             var command = new CreateUserCommand {
-                FirstName = "Raul",
-                LastName = "Oliveira",
-                Email = "raul@mail.com",
-                Password = "Teste@123"
+                Name = "Raul Oliveira",
+                CPF = "36133786043",
+                Password = "Teste@123",
+                TotalTime = 8,
+                LunchTime = 1.30,
+                Role = Models.UserRole.Employee
             };
 
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
-            Assert.AreEqual(commandResult.Status, CreateUserCommandResult.CommandResultStatus.UserCreated);
+            Assert.AreEqual(commandResult.Status, CommandResultStatus.UserCreated);
         }
     }
 }

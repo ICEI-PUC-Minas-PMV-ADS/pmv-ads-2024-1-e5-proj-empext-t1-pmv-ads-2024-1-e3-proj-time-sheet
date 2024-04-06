@@ -12,10 +12,12 @@ namespace TimeSheet.Repositories {
         public async Task<IEnumerable<User>> GetAll() {
             return await _context.Users.ToListAsync();
         }
-        public async Task<User?> FindUser(string email) {
+        public async Task<User?> FindUser(string cpf) {
+
+            CPFValidations.Normalize(ref cpf);
 
             var user = await _context.Users
-                .FirstOrDefaultAsync(x => x.Email == email);
+                .FirstOrDefaultAsync(x => x.CPF == cpf);
 
             return user;
         }
@@ -26,23 +28,26 @@ namespace TimeSheet.Repositories {
             }
 
             if (await _context.Users
-                .AnyAsync(x => x.Email == user.Email)) {
+                .AnyAsync(x => x.CPF == user.CPF)) {
                 throw new InvalidOperationException("Usuário já cadastrado.");
             }
 
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
         }
-        public async Task<User?> FindUser(Guid id)
-        {
+        public async Task<User?> FindUser(Guid id) {
 
             var user = await _context.Users
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             return user;
         }
-        public async Task SaveChanges()
-        {
+        public async Task DeleteUser(User user) {
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+        }
+        public async Task SaveChanges() {
             await _context.SaveChangesAsync();
         }
     }

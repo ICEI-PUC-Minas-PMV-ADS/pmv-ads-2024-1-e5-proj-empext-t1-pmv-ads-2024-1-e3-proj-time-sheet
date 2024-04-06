@@ -34,7 +34,7 @@ namespace TimeSheet.Controllers {
             var commandResult = await _commandHandler
                 .Handle<CreateUserCommand, CreateUserCommandResult>(command);
 
-            if (commandResult.Status is not CreateUserCommandResult.CommandResultStatus.UserCreated) {
+            if (commandResult.Status is not CommandResultStatus.UserCreated) {
                 return BadRequest(commandResult);
             }
 
