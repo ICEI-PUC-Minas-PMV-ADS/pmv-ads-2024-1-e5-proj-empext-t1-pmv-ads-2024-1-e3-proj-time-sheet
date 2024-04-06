@@ -35,4 +35,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore "codigo-fonte/time-sheet.sln"
     - name: Test
-      run: dotnet test --no-build --verbosity normal "codigo-fonte/time-sheet.sln"
+      run: dotnet test --verbosity normal "codigo-fonte/time-sheet.sln"
