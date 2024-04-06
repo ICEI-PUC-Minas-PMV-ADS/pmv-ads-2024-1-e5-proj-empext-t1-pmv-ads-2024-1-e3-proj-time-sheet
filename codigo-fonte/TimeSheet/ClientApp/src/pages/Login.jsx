@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Announcment } from "../components/Announcment";
 import { AdjustableModal } from "../components/AdjustableModal";
 import { Input } from "../components/Input";
@@ -9,6 +11,13 @@ import { Link } from "react-router-dom";
 import logoImg from "../assets/logo.svg";
 
 export function Login() {
+  const [cpf, setCpf] = useState()
+  const [password, setPassword] = useState()
+
+  function handleLogin() {
+    console.log(cpf, password)
+  }
+
   return (
     <div className="w-full h-screen justify-between flex flex-col md:flex-row md:justify-normal">
       <Announcment />
@@ -29,9 +38,19 @@ export function Login() {
               </p>
             </div>
 
-            <Input title="CPF" type="text" mask="999.999.999-99"/>
-            <Input title="Senha" type="password" />
-            <ErrorMenssage errorMenssage="CPF ou senha inválidos"/>
+            <Input 
+              title="CPF" type="text" 
+              mask="999.999.999-99"
+              value={cpf}
+              onChange={e => setCpf(e.target.value)}  
+            />
+            <Input 
+              title="Senha" 
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+            {/* <ErrorMenssage errorMenssage="CPF ou senha inválidos"/> */}
 
             <a href="#" className="text-base text-slate-600">
               Esqueceu a senha?
@@ -39,7 +58,7 @@ export function Login() {
             </a>
 
             <Link to="/">
-              <PrimaryButton title="Entrar" bgColor="primary-800" />
+              <PrimaryButton title="Entrar" bgColor="primary-800" onClick={handleLogin}/>
             </Link>
           </div>
         </AdjustableModal>

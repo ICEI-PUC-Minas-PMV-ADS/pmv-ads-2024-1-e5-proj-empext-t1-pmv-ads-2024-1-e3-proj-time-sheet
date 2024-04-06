@@ -5,12 +5,13 @@ import './custom.css';
 
 import { Login } from './pages/Login.jsx';
 import { ActiveUsers } from './pages/ActiveUsers.jsx'
-import { DeactivatedUsers } from './pages/DeactivatedUsers.jsx';
+import { DisabledUsers } from './pages/DisabledUsers.jsx';
+import { NewEmployee } from './pages/NewEmployee.jsx';
 
 import './styles/global.css'
 
 export default function App() {
     return (
-        <DeactivatedUsers />
+        <NewEmployee />
     );
 }

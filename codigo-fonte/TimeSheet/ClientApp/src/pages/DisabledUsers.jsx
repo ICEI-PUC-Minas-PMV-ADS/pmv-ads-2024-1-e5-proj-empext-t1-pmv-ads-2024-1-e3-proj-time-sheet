@@ -31,9 +31,9 @@ export function DisabledUsers() {
       <Employee name="Fabiana Santos" activated={false}/>
       <Employee name="Ana Maria" activated={false}/>
 
-      <div className="absolute bottom-0 w-full">
+      <Link to="/new-employee" className="absolute bottom-0 w-full">
         <EmployeeRegistrationButton />
-      </div>
+      </Link>
     </div>
   );
 }

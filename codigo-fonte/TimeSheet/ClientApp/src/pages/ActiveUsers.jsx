@@ -31,9 +31,9 @@ export function ActiveUsers() {
       <Employee name="Gustavo Oliveira" activated/>
       <Employee name="Thiago Martins" activated/>
 
-      <div className="absolute bottom-0 w-full">
+      <Link to="/new-employee" className="absolute bottom-0 w-full">
         <EmployeeRegistrationButton />
-      </div>
+      </Link>
     </div>
   );
 }
