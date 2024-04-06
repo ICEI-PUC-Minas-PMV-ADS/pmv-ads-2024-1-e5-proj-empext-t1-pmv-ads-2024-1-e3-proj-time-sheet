@@ -69,6 +69,16 @@ namespace TimeSheet.UnitTests {
                     Role  = UserRole.Employee,
                     Status = UserStatus.Inactive
                 },
+                new User() {
+                    Id = Guid.Parse("b6a5e04a-60cd-4a47-960c-1a189ecd221a"),
+                    Name = "Maria Julieta",
+                    CPF = "31207413020",
+                    TotalTime = 8,
+                    LunchTime = 1.0,
+                    Password = passwordService.EncryptPassword("Senha@123"),
+                    Role  = UserRole.Employee,
+                    Status = UserStatus.Active
+                },
             };
         }
     }

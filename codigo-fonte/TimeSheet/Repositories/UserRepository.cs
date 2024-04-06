@@ -42,6 +42,11 @@ namespace TimeSheet.Repositories {
 
             return user;
         }
+        public async Task DeleteUser(User user) {
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+        }
         public async Task SaveChanges() {
             await _context.SaveChangesAsync();
         }
