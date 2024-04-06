@@ -33,6 +33,7 @@ builder.Services.RegisterCommandHandler<DisableUserCommand, DisableUserCommandHa
 builder.Services.RegisterCommandHandler<AuthenticateCommand, AuthenticateCommandHandler, AuthenticateCommandResult>();
 builder.Services.RegisterCommandHandler<CreateUserCommand, CreateUserCommandHandler, CreateUserCommandResult>();
 builder.Services.RegisterCommandHandler<UpdateUserCommand, UpdateUserCommandHandler, UpdateUserCommandResult>();
+builder.Services.RegisterCommandHandler<ChangeUserPasswordCommand, ChangeUserPasswordCommandHandler, ChangeUserPasswordCommandResult>();
 builder.Services.RegisterQueryHandler<GetUsersQuery, GetUsersQueryHandler, GetUsersQueryResult>();
 
 builder.Services.AddAuthentication(opt => {
