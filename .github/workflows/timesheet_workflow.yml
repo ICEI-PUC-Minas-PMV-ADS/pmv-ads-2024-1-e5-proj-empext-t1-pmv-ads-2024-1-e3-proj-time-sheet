@@ -1,0 +1,38 @@
+# TimeSheet workflow
+# This workflow will build a .NET project
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore "codigo-fonte/time-sheet.sln"
+    - name: Build
+      run: dotnet build --no-restore "codigo-fonte/time-sheet.sln"
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore "codigo-fonte/time-sheet.sln"
+    - name: Test
+      run: dotnet test --verbosity normal "codigo-fonte/time-sheet.sln"
