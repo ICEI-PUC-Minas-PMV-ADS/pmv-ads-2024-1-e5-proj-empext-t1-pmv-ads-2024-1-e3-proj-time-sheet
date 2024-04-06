@@ -7,10 +7,11 @@ namespace TimeSheet.Commands {
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public CommandResultStatus Status { get; set; }
-        public enum CommandResultStatus {
-            UserCreated,
-            UserAlreadyExists,
-            Error
-        }
+    }
+    public enum CommandResultStatus {
+        UserCreated,
+        UserAlreadyExists,
+        InvalidUserData,
+        Error
     }
 }

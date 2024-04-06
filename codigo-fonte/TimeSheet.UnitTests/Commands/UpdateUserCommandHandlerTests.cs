@@ -54,7 +54,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_ValidUserData_ReturnsSuccess() {
+        public void Handle_ValidUserData_ReturnsSuccessWithUserUpdatedStatus() {
 
             var command = new UpdateUserCommand {
                 UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"),

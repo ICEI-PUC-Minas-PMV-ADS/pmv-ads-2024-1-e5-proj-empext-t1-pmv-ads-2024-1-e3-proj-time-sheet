@@ -36,7 +36,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_ValidData_ReturnsSuccess() {
+        public void Handle_ValidData_ReturnsSuccessWithPasswordChangedStatus() {
 
             var command = new ChangeUserPasswordCommand { CPF = "04037535033", Password = "Teste@345" };
             var commandResult = _handler.Handle(command).RunSync();

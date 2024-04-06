@@ -17,7 +17,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_UserThatNotExists_ShouldReturnsUserNotFoundStatus() {
+        public void Handle_UserThatNotExists_ReturnsFailureWithUserNotFoundStatus() {
 
             var command = new AuthenticateCommand { CPF = "08784013001", Password = "password" };
             var commandResult = _handler.Handle(command).RunSync();
@@ -28,7 +28,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_InvalidPassword_ShouldReturnsUserNotFoundStatus() {
+        public void Handle_InvalidPassword_ReturnsFailureWithUserNotFoundStatus() {
 
             var command = new AuthenticateCommand { CPF = "04037535033", Password = "password" };
             var commandResult = _handler.Handle(command).RunSync();
@@ -40,7 +40,7 @@ namespace TimeSheet.UnitTests.Commands {
 
 
         [TestMethod]
-        public void Handle_ValidUserData_ShouldReturnsUserAuthenticatedStatus() {
+        public void Handle_ValidUserData_ReturnsFailureWithUserAuthenticatedStatus() {
 
             var command = new AuthenticateCommand { CPF = "04037535033", Password = "Teste@123" };
             var commandResult = _handler.Handle(command).RunSync();

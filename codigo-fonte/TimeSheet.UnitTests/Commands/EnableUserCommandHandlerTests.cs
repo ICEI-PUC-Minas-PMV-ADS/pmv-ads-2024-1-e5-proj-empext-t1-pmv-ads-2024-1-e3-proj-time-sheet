@@ -15,7 +15,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_UserThatNotExists_ShouldReturnsUserNotFoundStatus() {
+        public void Handle_UserThatNotExists_ReturnsFailureWithUserNotFoundStatus() {
             
             var command = new EnableUserCommand { UserId = Guid.NewGuid() };
             var commandResult = _handler.Handle(command).RunSync();
@@ -25,7 +25,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_UserAlreadyEnabled_ShouldReturnsUserAlreadyEnabledStatus() {
+        public void Handle_UserAlreadyEnabled_ReturnsFailureWithUserAlreadyEnabledStatus() {
 
             var command = new EnableUserCommand { UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402") };
             var commandResult = _handler.Handle(command).RunSync();
@@ -35,7 +35,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_UserInactived_ShouldReturnsUserEnabledStatus() {
+        public void Handle_UserInactived_ReturnsSuccessWithUserEnabledStatus() {
 
             var command = new EnableUserCommand { UserId = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a") };
             var commandResult = _handler.Handle(command).RunSync();

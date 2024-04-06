@@ -17,7 +17,7 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
-        public void Handle_InvalidCommandData_ShouldReturnsErrorStatus() {
+        public void Handle_InvalidCommandData_ReturnsFailureWithInvalidUserDataStatus() {
 
             var command = new CreateUserCommand {
                 Name = "a",
@@ -31,11 +31,11 @@ namespace TimeSheet.UnitTests.Commands {
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
-            Assert.AreEqual(commandResult.Status, CreateUserCommandResult.CommandResultStatus.Error);
+            Assert.AreEqual(commandResult.Status, CommandResultStatus.InvalidUserData);
         }
 
         [TestMethod]
-        public void Handle_UserThatAlreadyExists_ShouldReturnsUserAlreadyExistsStatus() {
+        public void Handle_UserThatAlreadyExists_ReturnsFailureWithUserAlreadyExistsStatus() {
             var command = new CreateUserCommand {
                 Name = "Bruce Wayne",
                 CPF = "04037535033",
@@ -48,11 +48,11 @@ namespace TimeSheet.UnitTests.Commands {
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
-            Assert.AreEqual(commandResult.Status, CreateUserCommandResult.CommandResultStatus.UserAlreadyExists);
+            Assert.AreEqual(commandResult.Status, CommandResultStatus.UserAlreadyExists);
         }
 
         [TestMethod]
-        public void Handle_NewUser_ShouldReturnsUserCreatedStatus() {
+        public void Handle_NewUser_ReturnsSuccessWithUserCreatedStatus() {
             var command = new CreateUserCommand {
                 Name = "Raul Oliveira",
                 CPF = "36133786043",
@@ -65,7 +65,7 @@ namespace TimeSheet.UnitTests.Commands {
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
-            Assert.AreEqual(commandResult.Status, CreateUserCommandResult.CommandResultStatus.UserCreated);
+            Assert.AreEqual(commandResult.Status, CommandResultStatus.UserCreated);
         }
     }
 }

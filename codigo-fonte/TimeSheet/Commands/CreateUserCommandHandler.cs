@@ -30,7 +30,7 @@ namespace TimeSheet.Commands {
             if (buildUserResult.IsFailed) {
                 return new CreateUserCommandResult {
                     Message = buildUserResult.Errors.ToString(),
-                    Status = CreateUserCommandResult.CommandResultStatus.Error
+                    Status = CommandResultStatus.InvalidUserData
                 };
             }
 
@@ -40,7 +40,7 @@ namespace TimeSheet.Commands {
                 .FindUser(user.CPF) is not null) {
                 return new CreateUserCommandResult {
                     Message = "Usuário já existe.",
-                    Status = CreateUserCommandResult.CommandResultStatus.UserAlreadyExists
+                    Status = CommandResultStatus.UserAlreadyExists
                 };
             }
 
@@ -49,7 +49,7 @@ namespace TimeSheet.Commands {
             return new CreateUserCommandResult {
                 Id = user.Id,
                 Message = "Usuário criado com sucesso.",
-                Status = CreateUserCommandResult.CommandResultStatus.UserCreated
+                Status = CommandResultStatus.UserCreated
             };
         }
     }
