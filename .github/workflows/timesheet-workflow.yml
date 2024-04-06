@@ -20,9 +20,14 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
+    - name: Find solution file
+      run: |
+        cd $GITHUB_WORKSPACE
+        solution=$(find . -name "*.sln")
+        echo "Solução encontrada: $solution"
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore $solution
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore $solution
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal $solution
