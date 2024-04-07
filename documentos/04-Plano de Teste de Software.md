@@ -11,7 +11,7 @@
 | Caso de teste 002 | Administrador - Definir tempo de almoço |
 |------|----------------------------------------------------------------------|
 |Requisito Associado | RF-002	O admin deve conseguir definir o tempo de almoço do funcionário no sistema |
-| Passos | *abrir a plataforma -> logar -> cadastrar novo usuário -> incluir tempo de almoço * |
+| Passos | *abrir a plataforma -> logar -> cadastrar novo usuário -> incluir tempo de almoço* |
 | Critérios de êxito | O admin conseguir definir o tempo de almoço no sistema|
 
 | Caso de teste 003 | Administrador - Jornada de Trabalho  |
@@ -23,25 +23,25 @@
 | Caso de teste 004 | Administrador - Desabilitar funcionário |
 |------|----------------------------------------------------------------------|
 |Requisito Associado | RF-004	O admin deve conseguir desabilitar um funcionário no sistema |
-| Passos | *  abrir a plataforma -> logar -> identificar funcionário -> clicar no lápis -> simbolo de engrenagem ->desabilitar funcionário* |
+| Passos | *abrir a plataforma -> logar -> identificar funcionário -> clicar no lápis -> simbolo de engrenagem ->desabilitar funcionário* |
 | Critérios de êxito | O admin conseguir desabilitar um funcionário do sistem  |
 
 | Caso de teste 005 |Administrador - Listar Pontos |
 |------|----------------------------------------------------------------------|
 |Requisito Associado |RF-005	O admin deve conseguir listar todos os pontos dos funcionários  |
-| Passos | *abrir a plataforma -> logar -> clicar no nome do funcionário * |
+| Passos | *abrir a plataforma -> logar -> clicar no nome do funcionário* |
 | Critérios de êxito | O admin conseguir listar todos os pontos dos funcionários |
 
 | Caso de teste 006 | Administrador - Acrescentar/Remover pontos do funcionário  |
 |------|----------------------------------------------------------------------|
 |Requisito Associado |RF-006	O admin deve conseguir acrescentar ou remover pontos do funcionário  |
-| Passos | *abrir a plataforma -> logar -> clicar no nome do funcionário -> no lápis -> marcar ponto * |
+| Passos | *abrir a plataforma -> logar -> clicar no nome do funcionário -> no lápis -> marcar ponto* |
 | Critérios de êxito | O admin conseguir acrescentar ou remover pontos do funcinário |
 
 | Caso de teste 007 | Funcionário - login na plataforma  |
 |------|----------------------------------------------------------------------|
 |Requisito Associado | RF-007	O funcionário deve conseguir logar na plataforma  |
-| Passos | *abrir a plataforma -> informar cpf e senha corretos * |
+| Passos | *abrir a plataforma -> informar cpf e senha corretos* |
 | Critérios de êxito | O funcionário conseguir logar na plataforma |
 
 | Caso de teste 008 | Funcionário - Registrar Ponto - Inicio e Fim da Jornada  |
