@@ -18,6 +18,20 @@ namespace TimeSheet.Controllers {
         }
 
         [HttpGet]
+        public async Task<IActionResult> Index(Guid id) {
+
+            var query = new GetUserQuery { UserId = id };
+            var queryResult = await _queryHandler
+                .Handle<GetUserQuery, GetUserQueryResult>(query);
+
+            if (queryResult is null) {
+                return NotFound();
+            }
+
+            return Ok(queryResult);
+        }
+
+        [HttpGet]
         [Route("all")]
         public async Task<IActionResult> All() {
 
