@@ -35,7 +35,9 @@ builder.Services.RegisterCommandHandler<CreateUserCommand, CreateUserCommandHand
 builder.Services.RegisterCommandHandler<UpdateUserCommand, UpdateUserCommandHandler, UpdateUserCommandResult>();
 builder.Services.RegisterCommandHandler<ChangeUserPasswordCommand, ChangeUserPasswordCommandHandler, ChangeUserPasswordCommandResult>();
 builder.Services.RegisterCommandHandler<DeleteUserCommand, DeleteUserCommandHandler, DeleteUserCommandResult>();
+builder.Services.RegisterCommandHandler<VerifyTokenCommand, VerifyTokenCommandHandler, VerifyTokenCommandResult>();
 builder.Services.RegisterQueryHandler<GetUsersQuery, GetUsersQueryHandler, GetUsersQueryResult>();
+builder.Services.RegisterQueryHandler<GetUserQuery, GetUserQueryHandler, GetUserQueryResult>();
 
 builder.Services.AddAuthentication(opt => {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

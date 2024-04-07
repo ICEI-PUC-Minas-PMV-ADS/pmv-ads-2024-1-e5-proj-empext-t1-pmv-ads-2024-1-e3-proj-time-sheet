@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TimeSheet.Commands;
 using TimeSheet.Queries;
 
@@ -15,6 +16,33 @@ namespace TimeSheet.Controllers {
         public UserController(CommandHandler commandHandler, QueryHandler queryHandler) {
             _commandHandler = commandHandler;
             _queryHandler = queryHandler;
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("authenticated")]
+        public async Task<IActionResult> Authenticated() {
+
+            if(!User.Identity.IsAuthenticated) {
+                return Unauthorized();
+            }
+
+            var userId = User.Claims
+                .FirstOrDefault(c => c.Type == ClaimTypes.Sid);
+
+            if (userId is null) {
+                return NotFound();
+            }
+
+            var query = new GetUserQuery { UserId =  Guid.Parse(userId.Value)};
+            var queryResult = await _queryHandler
+                .Handle<GetUserQuery, GetUserQueryResult>(query);
+
+            if (queryResult is null) {
+                return NotFound();
+            }
+
+            return Ok(queryResult);
         }
 
         [HttpGet]
@@ -50,6 +78,21 @@ namespace TimeSheet.Controllers {
                 .Handle<AuthenticateCommand, AuthenticateCommandResult>(command);
 
             if (commandResult.Status is not AuthenticateCommandStatus.UserAuthenticated) {
+                return Unauthorized(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("verify")]
+        public async Task<IActionResult> VerifyToken([FromBody] VerifyTokenCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<VerifyTokenCommand, VerifyTokenCommandResult>(command);
+
+            if (commandResult.Status is not VerifyTokenCommandStatus.ValidToken) {
                 return Unauthorized(commandResult);
             }
 
