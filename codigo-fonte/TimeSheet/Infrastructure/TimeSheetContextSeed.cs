@@ -11,7 +11,7 @@ namespace TimeSheet.Infrastructure {
                           u.CPF == "00000000000")) {
 
                 context.Users.Add(new Models.User {
-                    Id = Guid.NewGuid(),
+                    Id = Guid.Parse("fd87aebe-6584-4163-8b2f-e6296d1a8e62"),
                     Name = "admin",
                     CPF = "00000000000",
                     TotalTime = 8,

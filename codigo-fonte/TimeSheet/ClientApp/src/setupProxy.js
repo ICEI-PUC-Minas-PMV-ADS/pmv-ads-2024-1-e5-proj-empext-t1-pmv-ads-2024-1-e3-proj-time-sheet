@@ -13,7 +13,9 @@ const context =  [
     "/user/enable",
     "/user/changepassword",
     "/user/update",
-    "/user/delete"
+    "/user/delete",
+    "/user/verify",
+    "/user/authenticated"
 ];
 
 module.exports = function(app) {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TimeSheet.Commands;
 using TimeSheet.Queries;
 
@@ -18,9 +19,22 @@ namespace TimeSheet.Controllers {
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(Guid id) {
+        [Authorize]
+        [Route("authenticated")]
+        public async Task<IActionResult> Authenticated() {
 
-            var query = new GetUserQuery { UserId = id };
+            if(!User.Identity.IsAuthenticated) {
+                return Unauthorized();
+            }
+
+            var userId = User.Claims
+                .FirstOrDefault(c => c.Type == ClaimTypes.Sid);
+
+            if (userId is null) {
+                return NotFound();
+            }
+
+            var query = new GetUserQuery { UserId =  Guid.Parse(userId.Value)};
             var queryResult = await _queryHandler
                 .Handle<GetUserQuery, GetUserQueryResult>(query);
 
