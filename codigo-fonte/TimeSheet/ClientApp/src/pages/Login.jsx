@@ -19,20 +19,21 @@ export function Login() {
   const navigate = useNavigate()
 
   const handleLogin = async () => {
-    console.log(cpf, password)
-    try {
-      const response = await authUsers(cpf, password)
-    
-      if(response.ok) {
-        console.log("Usuário autenticado com sucesso")
-        navigate("/home")
-      } else {
-        setError("CPF ou senha inválidos")
-      }
-    } catch (error) {
-      console.error("Erro ao autenticar usuário:", error);
-      setError("Erro ao autenticar usuário");
-    }
+    authUsers(cpf, password)
+          .then(result => {
+ 
+              var object = JSON.parse(result);
+ 
+              if (object.status === "UserAuthenticated") {
+                  console.log("Usuário autenticado");
+                  navigate("/home")
+              } else {
+                  setError("CPF ou senha inválidos");
+              }
+          })
+          .catch(err => {
+              console.error(err);
+          });
   }
 
   return (
