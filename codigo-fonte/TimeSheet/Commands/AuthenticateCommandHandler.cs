@@ -20,8 +20,12 @@ namespace TimeSheet.Commands {
 
         public async Task<AuthenticateCommandResult> Handle(AuthenticateCommand command) {
 
+            var cpf = command.CPF;
+
+            CPFValidations.Normalize(ref cpf);
+
             var user = await _repository
-                .FindUser(command.CPF);
+                .FindUser(cpf);
 
             if (user is null) {
                 return new AuthenticateCommandResult {

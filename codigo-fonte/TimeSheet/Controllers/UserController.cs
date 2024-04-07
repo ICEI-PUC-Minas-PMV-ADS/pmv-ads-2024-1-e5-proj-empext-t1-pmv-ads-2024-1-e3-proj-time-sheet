@@ -56,6 +56,21 @@ namespace TimeSheet.Controllers {
             return Ok(commandResult);
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("verify")]
+        public async Task<IActionResult> VerifyToken([FromBody] VerifyTokenCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<VerifyTokenCommand, VerifyTokenCommandResult>(command);
+
+            if (commandResult.Status is not VerifyTokenCommandStatus.ValidToken) {
+                return Unauthorized(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
         [HttpPut]
         [Route("disable")]
         public async Task<IActionResult> DisableUser([FromBody] DisableUserCommand command) {
