@@ -26,11 +26,6 @@ Um sistema de controle de jornadas simples, seguro, responsivo e elegante. A sol
 | [<img src="https://avatars.githubusercontent.com/u/80353812?v=4" width=115><br><sub>Will Sandra Silveira</sub>](https://github.com/silveirasandra) |
 | :---: |
 
-## Instruções de utilização
-
-- ✅ Como baixar
-- 📦 Como compilar
-- 🚀 Como executar 
 
 # Documentação
 
