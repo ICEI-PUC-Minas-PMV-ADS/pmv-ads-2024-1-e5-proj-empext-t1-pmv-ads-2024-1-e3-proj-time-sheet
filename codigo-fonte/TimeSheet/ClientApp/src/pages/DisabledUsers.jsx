@@ -10,7 +10,7 @@ export function DisabledUsers() {
       <Header />
 
       <nav className="w-full flex items-center gap-3 px-3 my-3">
-        <Link to="/" className="flex items-center gap-2 ">
+        <Link to="/home" className="flex items-center gap-2 ">
           <span class="material-symbols-outlined text-white">
             account_circle
           </span>
