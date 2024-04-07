@@ -6,16 +6,33 @@ import { Input } from "../components/Input";
 import { PrimaryButton } from "../components/PrimaryButton";
 import { ErrorMenssage } from "../components/ErrorMenssage";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { authUsers } from "../services/ApiService";
 
 import logoImg from "../assets/logo.svg";
 
 export function Login() {
   const [cpf, setCpf] = useState()
   const [password, setPassword] = useState()
+  const [error, setError] = useState()
+  const navigate = useNavigate()
 
-  function handleLogin() {
+  const handleLogin = async () => {
     console.log(cpf, password)
+    try {
+      const response = await authUsers(cpf, password)
+    
+      if(response.ok) {
+        console.log("Usuário autenticado com sucesso")
+        navigate("/home")
+      } else {
+        setError("CPF ou senha inválidos")
+      }
+    } catch (error) {
+      console.error("Erro ao autenticar usuário:", error);
+      setError("Erro ao autenticar usuário");
+    }
   }
 
   return (
@@ -50,16 +67,16 @@ export function Login() {
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
-            {/* <ErrorMenssage errorMenssage="CPF ou senha inválidos"/> */}
+            { error && <ErrorMenssage errorMenssage={error}/>}
 
             <a href="#" className="text-base text-slate-600">
               Esqueceu a senha?
               <span className="text-base text-primary-200"> Alterar</span>
             </a>
 
-            <Link to="/">
+            <div>
               <PrimaryButton title="Entrar" bgColor="primary-800" onClick={handleLogin}/>
-            </Link>
+            </div>
           </div>
         </AdjustableModal>
       </div>

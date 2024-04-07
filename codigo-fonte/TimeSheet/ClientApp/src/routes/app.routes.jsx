@@ -8,8 +8,8 @@ import { NewEmployee } from '../pages/NewEmployee'
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path='/' element={<ActiveUsers />} />
-      <Route path='/login' element={<Login />} />
+      <Route path='/' element={<Login />} />
+      <Route path='/home' element={<ActiveUsers />} />
       <Route path='/users-disabled' element={<DisabledUsers />} />
       <Route path='/new-employee' element={<NewEmployee />} />
     </Routes>
