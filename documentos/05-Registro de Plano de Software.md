@@ -41,8 +41,8 @@
 | Critérios de êxito |  O funcionário conseguir logar na plataforma |
 | Link da evidência em vídeo ou imagem |   
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/104041600/8b0d2fda-7a98-490c-bae8-5bb8ae0c0d11
 
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/4cc2bd27-3e3c-4783-a356-0bcf9c78e2bb
 
 | Testes | CT 008 - Funcionário - Registrar Ponto - Inicio e Fim da Jornada  |
 |------|-----------------------------------------|
