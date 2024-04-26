@@ -270,14 +270,19 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 </table>
 
 ## Diagrama de Casos de Uso
+
+O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos.
+
 ![Diagrama de caso de uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/0e3cbb3e-1a8f-48e9-bbee-1e363c46a771)
-
-
 
 ## Modelo ER (Projeto Conceitual)
 
-![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/65fbbde5-6136-4fea-b567-943dcbc2bb15)
+O modelo Entidade-Relacionamento (MER) é uma representação visual dos dados e relacionamentos das entidades do sistema. No MER, as entidades são representadas por retângulos, cada um com seu nome correspondente,
+e os relacionamentos são representados com losangos, com sua respectiva interação entre as entidades.
 
+A figura abaixo ilustra o modelo de Entidade-Relacionamento para o sistema proposto.
+
+![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/baaf9971-915e-4ab8-b228-8018f215ed8c)
 
 
 ## Projeto da Base de Dados
