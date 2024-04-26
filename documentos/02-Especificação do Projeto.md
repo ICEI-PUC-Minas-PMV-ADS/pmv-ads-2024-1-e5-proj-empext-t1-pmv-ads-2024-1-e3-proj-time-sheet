@@ -4,11 +4,11 @@ Este documento de Especificação do Projeto visa fornecer uma visão abrangente
 
 ## Arquitetura e Tecnologias
 
+O desenvolvimento de software moderno depende de uma variedade de tecnologias para criar produtos eficientes e inovadores. Nesta seção, destacamos algumas das principais tecnologias utilizadas no processo de desenvolvimento do sistema proposto.
 
-A arquitetura de um sistema PWA (Progressive Web App) é concebida para proporcionar uma experiência de usuário aprimorada, combinando a flexibilidade da web com a funcionalidade de aplicativos nativos. Esses aplicativos são construídos com base em uma arquitetura centrada na experiência do usuário, utilizando tecnologias web modernas e padrões progressivos. A estrutura de um PWA inclui um conjunto de tecnologias, como Service Workers, que permitem o funcionamento offline e melhoram o desempenho, e o manifest JSON, que possibilita a instalação do aplicativo no dispositivo do usuário.
-Abaixo está a arquitetura para o sistema proposto:
+A imagem abaixo representa a comunicação entre algumas das tecnologias utilizadas no desenvolvimento do sistema:
 
-![diagrama-arquitetura-time-sheet](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/7b7d0e37-2f17-44a4-a388-59eedeedc5ea)
+![Diagrama em branco (4)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/10b141ab-c810-434d-aada-0a5b63666602)
 
 Todas as tecnologias utilizadas estão listadas abaixo, separadas por tópicos e contém um breve resumo dos motivos de sua escolha.
 
