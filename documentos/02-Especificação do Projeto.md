@@ -127,41 +127,147 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| O admin deve conseguir cadastrar e excluir novos funcionários | ALTA | 
-|RF-002| O admin deve conseguir definir o tempo de almoço do funcionário no sistema | BAIXA |
-|RF-003| O admin deve conseguir definir o tempo de jornada de trabalhado do funcionário no sistema  | BAIXA |
-|RF-004| O admin deve conseguir desabilitar um funcionário no sistema  | MÉDIA |
-|RF-005| O admin deve conseguir listar todos os pontos dos funcionários  | ALTA |
-|RF-006| O admin deve conseguir acrescentar ou remover pontos do funcionário   | ALTA |
-|RF-007| O funcionário deve conseguir logar na plataforma  | ALTA |
-|RF-008| O funcionário deve conseguir registrar o ponto de início e final da jornada de trabalho  | ALTA |
-|RF-009| O funcionário deve conseguir registrar o ponto de saída e volta do almoço  | ALTA |
-|RF-010| O funcionário deve conseguir listar todos seus registros de pontos  | ALTA |
-|RF-011| o admin deve conseguir gerar relatórios com os registros de pontos  | MÉDIA |
+<table>
+ <tr>
+  <td width="100" align="center"><strong>ID</strong></td>
+  <td width="800" align="center"><strong>Descrição do Requisito</strong></td>
+  <td width="100" align="center"><strong>Prioridade</strong></td>
+ </tr>
+ <tr>
+  <td align="center">RF-001</td>
+  <td align="left">O funcionário deve conseguir logar no aplicativo</td>
+  <td align="center">ALTA</td>
+ </tr>
+  <tr>
+  <td align="center">RF-002</td>
+  <td align="left">O funcionário deve conseguir alterar sua senha de acesso</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-003</td>
+  <td align="left">O admin deve conseguir cadastrar novos funcionários</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-004</td>
+  <td align="left">O admin deve conseguir listas todos os funcionários</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-005</td>
+  <td align="left">O admin deve conseguir editar os dados de um funcionário</td>
+  <td align="center">MÉDIA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-006</td>
+  <td align="left">O admin deve conseguir habilitar e desabilitar um funcionário</td>
+  <td align="center">MÉDIA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-007</td>
+  <td align="left">O admin deve conseguir alterar a senha de um funcionário</td>
+  <td align="center">BAIXA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-008</td>
+  <td align="left">O admin deve conseguir excluir um funcionário</td>
+  <td align="center">BAIXA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-009</td>
+  <td align="left">O funcionário deve conseguir registrar o início e o final da sua jornada de trabalho</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-010</td>
+  <td align="left">O funcionário deve conseguir registrar a saída e o retorno do horário de almoço</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RF-011</td>
+  <td align="left">O funcionário deve conseguir listas todos os seus registros de pontos feitos na aplicação</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+ <td align="center">RF-012</td>
+  <td align="left">O admin deve conseguir listas todos os registros de pontos dos funcionários</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+ <td align="center">RF-012</td>
+  <td align="left">O admin deve coseguir gerar relatórios dos registros de pontos</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+ <td align="center">RF-013</td>
+  <td align="left">O admin deve conseguir acrescentar um registro de ponto ao funcionário</td>
+  <td align="center">MÉDIA</td>
+ </tr>
+</table>
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ter uma versão web | ALTA | 
-|RNF-002| O sistema deve ter uma versão mobile |  ALTA |
-|RNF-003| O sistema deve autenticar os usuários via token |  ALTA | 
-|RNF-004| O token de autenticação do usuário deve expirar em 12 horas | MÉDIA | 
-|RNF-005| O sistema deve processar requisições do usuário em no máximo 3s | MÉDIA |
-|RNF-006| O sistema deve estar disponível durante o período de 18 horas no mínimo | MÉDIA |
-|RNF-007| O sistema deve garantir a persistência dos dados durante um eventual desligamento dos servidores | ALTA |
+<table>
+ <tr>
+  <td width="100" align="center"><strong>ID</strong></td>
+  <td width="800" align="center"><strong>Descrição do Requisito</strong></td>
+  <td width="100" align="center"><strong>Prioridade</strong></td>
+ </tr>
+  <tr>
+ <td align="center">RNF-001</td>
+  <td align="left">O sistema deve rodar em dispositivos móveis</td>
+  <td align="center">ALTA</td>
+ </tr>
+  <tr>
+  <td align="center">RNF-002</td>
+  <td align="left">O sistema deve autenticar os usuários via token</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RNF-003</td>
+  <td align="left">O token de autenticação do usuário deve expirar em 12 horas</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RNF-004</td>
+  <td align="left">O sistema deve processar requisições do usuário em no máximo 3s</td>
+  <td align="center">MÉDIA</td>
+ </tr>
+ <tr>
+  <td align="center">RNF-005</td>
+  <td align="left">O sistema deve estar disponível durante o período de 18 horas no mínimo</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RNF-006</td>
+  <td align="left">O sistema deve garantir a persistência dos dados durante um eventual desligamento dos servidores</td>
+  <td align="center">ALTA</td>
+ </tr>
+ <tr>
+  <td align="center">RNF-007</td>
+  <td align="left">O sistema deve utilizar geolocalização para verificar se o usuário está no local</td>
+  <td align="center">ALTA</td>
+ </tr>
+</table>
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| O projeto precisa ser desenvolvida por integrantes do grupo apenas |
-|03| O projeto precisa rodar no ambiente local do cliente |
+<table>
+ <tr>
+  <td width="100" align="center"><strong>ID</strong></td>
+  <td width="900" align="center"><strong>Restrição</strong></td>
+ </tr>
+ <tr>
+  <td align="center">01</td>
+  <td align="left">O projeto deverá ser entregue até o final do semestre</td>
+ </tr>
+ <tr>
+  <td align="center">02</td>
+  <td align="left">O projeto precisa ser desenvolvida por integrantes do grupo apenas</td>
+ </tr>
+</table>
 
 ## Diagrama de Casos de Uso
 ![Diagrama de caso de uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/0e3cbb3e-1a8f-48e9-bbee-1e363c46a771)
