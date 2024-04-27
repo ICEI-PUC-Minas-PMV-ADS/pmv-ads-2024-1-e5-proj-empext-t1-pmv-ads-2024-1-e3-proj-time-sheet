@@ -11,6 +11,8 @@ namespace TimeSheet.Queries {
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public UserStatus Status { get; set; }
+        public double TotalTime { get; set; }
+        public double LunchTime { get; set; }
 
         public static GetUserQueryResult FromUser(User user) {
             return new GetUserQueryResult {
@@ -19,6 +21,8 @@ namespace TimeSheet.Queries {
                 CPF = user.CPF,
                 Role = user.Role,
                 Status = user.Status,
+                TotalTime = user.TotalTime,
+                LunchTime = user.LunchTime,
             };
         }
     }
