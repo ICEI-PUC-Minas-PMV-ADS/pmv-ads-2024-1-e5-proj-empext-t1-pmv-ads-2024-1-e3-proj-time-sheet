@@ -22,9 +22,9 @@ export default function Input({ value, label, placeholder, keyboardType, mask, s
         />) :
         (
           <View className="flex flex-row w-full border border-primary-600 rounded-lg pr-2 items-center">
-            <TextInput value={value} className="flex-1 border-none pl-1.5 mr-2 h-9" placeholder={placeholder} onChangeText={(text) => {setInputValue(text)}} secureTextEntry={!isVisible}/>
+            <TextInput value={value} className="flex-1 border-none pl-1.5 mr-2 h-9" placeholder={placeholder} onChangeText={(text) => { setInputValue(text) }} secureTextEntry={!isVisible} />
             <Pressable onPress={() => setIsVisible(!isVisible)}>
-              <Icon name={!isVisible ? "visibility" : "visibility-off"} size={24}/>
+              <Icon name={!isVisible ? "visibility" : "visibility-off"} size={24} />
             </Pressable>
           </View>
         )
