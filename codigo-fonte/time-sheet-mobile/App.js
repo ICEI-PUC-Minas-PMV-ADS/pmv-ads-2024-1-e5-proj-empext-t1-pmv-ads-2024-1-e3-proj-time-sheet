@@ -5,6 +5,12 @@ import AuthContext from "./src/contexts/AuthContext";
 import Routes from "./src/routes/app.routes";
 import LoadingPage from "./src/pages/LoadingPage";
 import * as AuthService from './src/services/AuthService';
+import { LogBox } from 'react-native';
+
+LogBox.ignoreLogs([
+  'Non-serializable values were found in the navigation state',
+  'Cannot update a component (`BottomTabNavigator`)'
+]);
 
 export default function App() {
   const [isSignedIn, setIsSignedIn] = React.useState(false);

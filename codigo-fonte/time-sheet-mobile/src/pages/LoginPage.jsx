@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image, TouchableOpacity, ActivityIndicator  } from "react-native";
+import { Text, View, Image, TouchableOpacity, ActivityIndicator } from "react-native";
 import AdjustableModal from "../components/AdjustableModal";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -30,6 +30,12 @@ export default function LoginPage({ navigation }) {
   }
 
   function handleLogin() {
+
+    if (!cpf || !password) {
+      setError("É necessário informar CPF e Senha.")
+      setErrorVisible(true);
+      return;
+    }
 
     setWaitingResponse(true);
 
@@ -71,8 +77,8 @@ export default function LoginPage({ navigation }) {
               <Text className="text-sm text-slate-600 mr-1">Esqueceu a senha?</Text>
               <Text className="text-sm text-primary-200">Alterar</Text>
             </TouchableOpacity>
-            <Button title={waitingResponse ? "" : "Entrar"} color="primary-600" onPress={handleLogin} icon={
-              <ActivityIndicator size={24} color="white" style={{display: waitingResponse? "flex" : "none"}}/> 
+            <Button title={waitingResponse ? "" : "Entrar"} color="primary-600" onPress={handleLogin} disabled={waitingResponse} icon={
+              <ActivityIndicator size={24} color="white" style={{ display: waitingResponse ? "flex" : "none" }} />
             } />
           </View>
         </AdjustableModal>
