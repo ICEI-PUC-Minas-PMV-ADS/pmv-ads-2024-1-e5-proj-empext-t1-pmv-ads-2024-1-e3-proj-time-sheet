@@ -311,4 +311,4 @@ CREATE TABLE "User" (
 O modelo completo pode ser encontrado em:
 - `pmv-ads-2024-1-e5-proj-time-sheet/codigo-fonte/time-sheet-db/time-sheet-database.sql`
 
-Ou acessando o Link: [time-sheet-database.sql](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/tree/main/codigo-fonte/time-sheet-db/time-sheet-database.sql)
+Ou acessando o Link: [time-sheet-database.sql](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/codigo-fonte/time-sheet-db/time-sheet-database.ql)
