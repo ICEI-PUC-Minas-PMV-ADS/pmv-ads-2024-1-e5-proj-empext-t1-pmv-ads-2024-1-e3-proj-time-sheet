@@ -289,7 +289,7 @@ A figura abaixo ilustra o modelo de Entidade-Relacionamento para o sistema propo
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
-O script de criação do banco foi gerador usando Esquema Relacional a partir da ferramenta [Lucidchart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier3_mixed_search_brand_exact_&km_CPC_CampaignId=1484560207&km_CPC_AdGroupID=60168114191&km_CPC_Keyword=lucidchart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=354596054350&km_CPC_TargetID=kwd-33511936169&km_CPC_Country=1001571&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gad_source=1&gclid=CjwKCAiA3JCvBhA8EiwA4kujZg8ql8O1ScU864fGcDUwnRCIuzQ3bFoTnHskVFn56BoEgcsFqenSqBoC-cwQAvD_BwE). Ele se destina ao banco de dados relacional `Postgres` e é gerado com a seguinte estrutura:
+O script de criação do banco foi gerador usando o modelo ER a partir da ferramenta [Lucidchart](https://www.lucidchart.com/pages/pt). Ele se destina ao banco de dados relacional `Postgres` e é gerado com a seguinte estrutura:
 
 
 ``` sql
@@ -309,6 +309,6 @@ CREATE TABLE "User" (
 ```
 
 O modelo completo pode ser encontrado em:
-- `pmv-ads-2024-1-e5-proj-time-sheet/time-sheat.sql/`
+- `pmv-ads-2024-1-e5-proj-time-sheet/codigo-fonte/time-sheet-db/time-sheet-database.sql`
 
-Ou acessando o Link: [time-sheet.sql](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/tree/main/time-sheat.sql)
+Ou acessando o Link: [time-sheet-database.sql](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/tree/main/codigo-fonte/time-sheet-db/time-sheet-database.sql)
