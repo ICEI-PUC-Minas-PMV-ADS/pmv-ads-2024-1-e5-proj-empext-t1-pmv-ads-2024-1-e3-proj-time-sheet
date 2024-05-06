@@ -116,7 +116,7 @@ Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um p
 ## Project Model Canvas
 
 
-![Project Model Canvas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/img/CanvasV1.JPG)
+![Project Model Canvas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/img/CanvasV2.jpg)
 
 ## Requisitos
 
