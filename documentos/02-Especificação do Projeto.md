@@ -8,7 +8,7 @@ O desenvolvimento de software moderno depende de uma variedade de tecnologias pa
 
 A imagem abaixo representa a comunicação entre algumas das tecnologias utilizadas no desenvolvimento do sistema:
 
-![Diagrama em branco (4)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/10b141ab-c810-434d-aada-0a5b63666602)
+![arquitetura-time-sheet](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/10b141ab-c810-434d-aada-0a5b63666602)
 
 Todas as tecnologias utilizadas estão listadas abaixo, separadas por tópicos e contém um breve resumo dos motivos de sua escolha.
 
@@ -122,7 +122,7 @@ Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um p
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito, como mostrado na figura a seguir:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/2bc28d31-2340-481c-9755-9da32fd11ec3)
+![Matriz de priorização](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/aa0a593a-f18b-4cd1-b2d7-ea4f9faaa4bd)
 
 
 ### Requisitos Funcionais
