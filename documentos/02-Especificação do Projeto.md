@@ -185,7 +185,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
  </tr>
  <tr>
   <td align="center">RF-011</td>
-  <td align="left">O funcionário deve conseguir listas todos os seus registros de pontos feitos na aplicação</td>
+  <td align="left">O funcionário deve conseguir listar todos os seus registros de pontos feitos na aplicação</td>
   <td align="center">ALTA</td>
  </tr>
  <tr>
@@ -194,12 +194,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   <td align="center">ALTA</td>
  </tr>
  <tr>
- <td align="center">RF-012</td>
+ <td align="center">RF-013</td>
   <td align="left">O admin deve coseguir gerar relatórios dos registros de pontos</td>
   <td align="center">ALTA</td>
  </tr>
  <tr>
- <td align="center">RF-013</td>
+ <td align="center">RF-014</td>
   <td align="left">O admin deve conseguir acrescentar um registro de ponto ao funcionário</td>
   <td align="center">MÉDIA</td>
  </tr>
