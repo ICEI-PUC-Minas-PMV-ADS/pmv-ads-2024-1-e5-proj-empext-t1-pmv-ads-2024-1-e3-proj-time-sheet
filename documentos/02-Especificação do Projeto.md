@@ -282,7 +282,7 @@ e os relacionamentos são representados com losangos, com sua respectiva intera�
 
 A figura abaixo ilustra o modelo de Entidade-Relacionamento para o sistema proposto.
 
-![Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/baaf9971-915e-4ab8-b228-8018f215ed8c)
+![TimeSheet - Modelo ER](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/f00f79fb-dd07-4aad-b1de-8bff57436b3d)
 
 
 ## Projeto da Base de Dados
@@ -293,32 +293,19 @@ O script de criação do banco foi gerador usando Esquema Relacional a partir da
 
 
 ``` sql
-CREATE TABLE admin (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR,
-  email VARCHAR,
-  senha VARCHAR
+...
+CREATE TABLE "User" (
+  "Id" uuid,
+  "Name" text,
+  "CPF" text,
+  "Password" text,
+  "Role" integer,
+  "Status" integer,
+  "TotalTime" double precision,
+  "LunchTime" double precision,
+  PRIMARY KEY ("Id")
 );
-
-CREATE TABLE funcionarios (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR,
-  cargo VARCHAR,
-  email VARCHAR,
-  senha VARCHAR,
-  tempo_almoco DOUBLE,
-  tempo_jornada DOUBLE
-);
-
-CREATE TABLE jornada_de_trabalho (
-  id SERIAL PRIMARY KEY,
-  id_funcionario INTEGER,
-  hora_de_inicio TIMESTAMP,
-  hora_de_termino TIMESTAMP,
-  saida_almoco TIMESTAMP,
-  volta_almoco TIMESTAMP,
-  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
-);
+...
 ```
 
 O modelo completo pode ser encontrado em:
