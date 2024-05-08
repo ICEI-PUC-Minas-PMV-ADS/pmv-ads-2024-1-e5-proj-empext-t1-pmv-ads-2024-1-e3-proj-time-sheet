@@ -27,7 +27,7 @@
 | Testes | CT 005 Administrador - Listar Pontos  |
 |------|-----------------------------------------|
 | Critérios de êxito | O admin conseguir listar todos os pontos dos funcionários |
-| Link da evidência em vídeo ou imagem |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/documentos/img/DesabilitaFunc.mp4|
+| Link da evidência em vídeo ou imagem |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/img/DesabilitaFunc.mp4|
 | Comentário| |
 
 | Testes | CT 006 -  Administrador - Acrescentar/Remover pontos do funcionário |
