@@ -27,7 +27,7 @@
 | Testes | CT 005 Administrador - Listar Pontos  |
 |------|-----------------------------------------|
 | Critérios de êxito | O admin conseguir listar todos os pontos dos funcionários |
-| Link da evidência em vídeo ou imagem |  *em desenvolvimento*|
+| Link da evidência em vídeo ou imagem |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/documentos/img/DesabilitaFunc.mp4|
 | Comentário| |
 
 | Testes | CT 006 -  Administrador - Acrescentar/Remover pontos do funcionário |
@@ -66,5 +66,11 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/asse
 | Testes | CT 011 - Administrador - Gerar relatório com os Pontos   |
 |------|-----------------------------------------|
 | Critérios de êxito |O admin deve conseguir gerar os relatórios com os registros de pontos |
+| Link da evidência em vídeo ou imagem | *em desenvolvimento* |
+| Comentário| |
+
+| Testes | CT 012 - Administrador - Editar Funcionário   |
+|------|-----------------------------------------|
+| Critérios de êxito |O admin deve conseguir editar os dados de um funcionário |
 | Link da evidência em vídeo ou imagem | *em desenvolvimento* |
 | Comentário| |
