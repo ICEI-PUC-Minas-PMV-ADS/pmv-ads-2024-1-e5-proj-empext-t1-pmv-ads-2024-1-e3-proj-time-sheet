@@ -68,3 +68,9 @@
 | Passos | *abrir site -> logar -> selecionar funcionário -> gerar relatório* |
 | Critérios de êxito | O admin deve conseguir gerar os relatórios com os registros de pontos|
 
+| Caso de teste 012 | Administrador - Editar funcionário  |
+|------|----------------------------------------------------------------------|
+|Requisito Associado | RF-005	O admin deve conseguir editar os dados de um funcionário  |
+| Passos | *abrir site -> logar -> selecionar funcionário -> Clicar em Editar |
+| Critérios de êxito | O admin deve conseguir Editar os dados do Funcionário|
+
