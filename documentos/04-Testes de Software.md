@@ -249,6 +249,42 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve mostrar apenas os funcionários desabilitados.</td>
   </tr>
 </table>
+
+
+--
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-008<br>Registrar Marcação de ponto "Horario de Almoço" (entrada e saída)</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação de entrada e saída do seu horario de almoço</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-010: O funcionário deve conseguir registrar a saída e o retorno do horário de almoço	</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário já cadastrado<br>
+      3. Após ter clicado em "Iniciar Jornada de Trabalho, clicar em "Iniciar horário de almoço".<br>
+      4. Para finalizar, clicar em "Finalizar hórario de almoço".
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "566.765.836-40"<br>
+      - <strong>Nova senha:</strong> "909090Lo"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve registrar o inicio e fim do horário de almoço</td>
+  </tr>
+</table>
  
 # Evidências de Testes de Software
 
