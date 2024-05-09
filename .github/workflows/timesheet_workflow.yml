@@ -22,7 +22,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore "codigo-fonte/time-sheet-api/time-sheet.sln"
     - name: Build
-      run: dotnet build --no-restore "codigo-fonte/time-sheet/time-sheet.sln"
+      run: dotnet build --no-restore "codigo-fonte/time-sheet-api/time-sheet.sln"
   test:
     runs-on: ubuntu-latest
 
@@ -33,6 +33,6 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore "codigo-fonte/time-sheet/time-sheet.sln"
+      run: dotnet restore "codigo-fonte/time-sheet-api/time-sheet.sln"
     - name: Test
-      run: dotnet test --verbosity normal "codigo-fonte/time-sheet/time-sheet.sln"
+      run: dotnet test --verbosity normal "codigo-fonte/time-sheet-api/time-sheet.sln"
