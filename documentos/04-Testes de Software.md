@@ -207,7 +207,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Dados de teste</strong></td>
     <td>
       - <strong>CPF:</strong> "00000000000"<br>
-      - <strong>Nova senha:</strong> "Admin@123"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
@@ -242,7 +242,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Dados de teste</strong></td>
     <td>
       - <strong>CPF:</strong> "00000000000"<br>
-      - <strong>Nova senha:</strong> "Admin@123"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
@@ -250,8 +250,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-
---
+<br>
 
 <table>
   <tr>
@@ -278,11 +277,55 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Dados de teste</strong></td>
     <td>
       - <strong>CPF:</strong> "566.765.836-40"<br>
-      - <strong>Nova senha:</strong> "909090Lo"<br>
+      - <strong>Senha:</strong> "909090Lo"<br>
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
     <td>O sistema deve registrar o inicio e fim do horário de almoço</td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-009<br>Cadastrar novo funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-003: O admin deve conseguir cadastrar novos funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão "+".<br>
+      4. Inserir o nome válido. <br>
+      5. Inserir o CPF válido.<br>
+      6. Inserir a senha válida. <br>
+      7. Inserir a jornada de trabalho válida. <br>
+      8. Inserir o tempo de almoço válido. <br>
+      9. Clicar em cadastrar funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>CPF:</strong> "435.566.600-08"<br>
+      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Jornada de trabalho:</strong> "8:00"<br>
+      - <strong>Tempo de almoço:</strong> "1:30"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
   </tr>
 </table>
  
