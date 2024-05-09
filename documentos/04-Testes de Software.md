@@ -254,7 +254,45 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-008<br>Registrar Marcação de ponto "Horario de Almoço" (entrada e saída)</th>
+    <th colspan="2" width="1000">CT-008<br> Registrar Início e Fim de Jornada</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação do horário de início e fim da sua jornada de trabalho</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-009: O funcionário deve conseguir registrar o início e o final da sua jornada de trabalho</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário já cadastrado<br>
+      3. Iniciar a jornada clicando no botão "Iniciar Jornada de Trabalho".<br>
+      5. Marcar o horário de almoço clicando em "Iniciar horário de almoço" e após "Finalizar horário de almoço". <br>
+      4. Finalizar a jornada clicando em "Finalizar Jornada de Trabalho".
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "059.333.006-40"<br>
+      - <strong>Senha:</strong> "Teste123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve registrar o inicio e fim da jornada de trabalho</td>
+  </tr>
+</table>
+
+
+<br>
+
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-009<br>Registrar Marcação de ponto "Horario de Almoço" (entrada e saída)</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
