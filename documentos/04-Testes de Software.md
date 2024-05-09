@@ -327,7 +327,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-009<br>Cadastrar novo funcionário</th>
+    <th colspan="2" width="1000">CT-010<br>Cadastrar novo funcionário</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
