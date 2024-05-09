@@ -26,7 +26,7 @@
 | Passos | *abrir a plataforma -> logar -> identificar funcionário -> clicar no lápis -> simbolo de engrenagem ->desabilitar funcionário* |
 | Critérios de êxito | O admin conseguir desabilitar um funcionário do sistem  |
 
-| Caso de teste 005 |Administrador - Listar Pontos |
+| Caso de teste 005 | Administrador - Listar Pontos |
 |------|----------------------------------------------------------------------|
 |Requisito Associado |RF-005	O admin deve conseguir listar todos os pontos dos funcionários  |
 | Passos | *abrir a plataforma -> logar -> clicar no nome do funcionário* |
@@ -47,8 +47,8 @@
 | Caso de teste 008 | Funcionário - Registrar Ponto - Inicio e Fim da Jornada  |
 |------|----------------------------------------------------------------------|
 |Requisito Associado |RF-008	O funcionário deve conseguir registrar o ponto de início e final da jornada de trabalho  |
-| Passos | *abrir a plataforma -> informar cpf e senha -> registrar ponto* |
-| Critérios de êxito | O funcionário conseguir registrar o ponto de início e final da jornada de trabalho|
+| Passos | *abrir a plataforma -> logar -> registrar o ponto* |
+| Critérios de êxito | O funcionário deve conseguir registrar o ponto de início e final da jornada de trabalho|
 
 | Caso de teste 009 | Funcionário - Ponto de almoço  |
 |------|----------------------------------------------------------------------|
