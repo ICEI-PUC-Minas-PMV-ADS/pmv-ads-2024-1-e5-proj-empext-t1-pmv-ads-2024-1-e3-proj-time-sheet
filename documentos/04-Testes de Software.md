@@ -401,6 +401,77 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+
+ <table>
+  <tr>
+    <th colspan="2" width="1000">CT-012<br>Administrador não terá informações dos meses sem marcações</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se os meses sem marcações não geram relatórios.</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-005 O admin deve receber informação que não é registro de ponto naquele determinado mês</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "Folha de Ponto" na barra de navegação.<br>
+      3. Marcar o mês desejado.<br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00000000000"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema informar "nenhum registro encontrado para a data selecionada".</td>
+  </tr>
+</table>
+
+
+ <table>
+  <tr>
+    <th colspan="2" width="1000">CT-013<br>O funcionário conseguir listar todos os seus pontos </th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o funcionario consegue listar todos os seus registros de pontos</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-010 O funcionário deve conseguir listar todos seus registros de pontos</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Inserir o CPF válido.<br>
+      3. Inserir a senha válida.<br>
+      4. Clicar no botão "Entrar".<br>
+      5. Ir em Folha de Ponto.<br>
+      6. Selecionar o mês correto.<br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "566.765.836-40"<br>
+      - <strong>Senha:</strong> "909090Lo"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O funcionario deve conseguir listar todos os seus registros de pontos.</td>
+  </tr>
+</table>
+
+
 # Evidências de Testes de Software
 
 Abaixo estão as evidências dos testes propostos no Plano de Testes, os registros foram retirados da aplicação em funcionamento nos dispositivos dos desenvolvedores do projeto.
