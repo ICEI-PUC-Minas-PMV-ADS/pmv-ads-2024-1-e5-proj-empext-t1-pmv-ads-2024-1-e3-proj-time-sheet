@@ -180,6 +180,75 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve informar ao usuário que o CPF não está cadastrado.</td>
   </tr>
 </table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-006<br>Listar funcionários habilitados</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o sistema lista corretamente apenas os funcionários habilitados na aba de "usuários ativos".</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-004: O admin deve conseguir listas todos os funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00000000000"<br>
+      - <strong>Nova senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve mostrar apemas os funcionários habilitados.</td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-007<br>Listar funcionários desabilitados</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o sistema lista corretamente apenas os funcionários desabilitados na aba de "usuários inativos".</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-004: O admin deve conseguir listas todos os funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      4. Clicar em "Usuários inativos".
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00000000000"<br>
+      - <strong>Nova senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve mostrar apenas os funcionários desabilitados.</td>
+  </tr>
+</table>
  
 # Evidências de Testes de Software
 
