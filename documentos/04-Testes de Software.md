@@ -366,7 +366,41 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
   </tr>
 </table>
- 
+
+ <table>
+  <tr>
+    <th colspan="2" width="1000">CT-011<br>Administrador conseguir listar pontos dos funcionários</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue listar os pontos dos funcionários.</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-005 O admin deve conseguir listar todos os pontos dos funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "Folha de Ponto" na barra de navegação.<br>
+      3. Marcar o mês desejado.<br>
+      4. Selecionar o Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00000000000"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve listar os pontos do funcionário no mês.</td>
+  </tr>
+</table>
+
 # Evidências de Testes de Software
 
 Abaixo estão as evidências dos testes propostos no Plano de Testes, os registros foram retirados da aplicação em funcionamento nos dispositivos dos desenvolvedores do projeto.
