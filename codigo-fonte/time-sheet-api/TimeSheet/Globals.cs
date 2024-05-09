@@ -1,0 +1,11 @@
+﻿global using TimeSheet.Common;
+global using TimeSheet.Common.CQRS;
+global using TimeSheet.Common.Converters;
+global using TimeSheet.Configuration;
+global using TimeSheet.Models;
+global using TimeSheet.Services;
+global using TimeSheet.Infrastructure;
+global using TimeSheet.Repositories;
+global using TimeSheet.Builders;
+global using TimeSheet.Commands;
+global using TimeSheet.Queries;

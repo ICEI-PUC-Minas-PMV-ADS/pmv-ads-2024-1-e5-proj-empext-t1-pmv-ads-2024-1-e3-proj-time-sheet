@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/_expo/static/js/web/AppEntry-fd8b6e018e241d7bfedf41b6527d1287.js",
+    "favicon.ico": "/favicon.ico",
+    "index.html": "/index.html",
+    "favicon-32.png": "/favicon-32.png",
+    "favicon-16.png": "/favicon-16.png",
+    "manifest.json": "/manifest.json",
+    "serve.json": "/serve.json"
+  },
+  "entrypoints": [
+    "/_expo/static/js/web/AppEntry-fd8b6e018e241d7bfedf41b6527d1287.js"
+  ]
+}
