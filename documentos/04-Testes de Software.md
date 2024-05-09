@@ -600,3 +600,89 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
 </table>
 
+
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-011<br>Administrador conseguir listar pontos dos funcionários</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve listar os pontos do funcionário no mês.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável</strong></td>
+    <td width="430">Juliana Madureira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema lista os pontos do funcionário no mês corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td width="170">Adcionar evidencia</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-012<br>Administrador não terá informações dos meses sem marcações</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema informar "nenhum registro encontrado para a data selecionada".</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável</strong></td>
+    <td width="430">Juliana Madureira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema emite a mensagem de ausencia de marcações corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td width="170">Adcionar evidencia</td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-013<br>O funcionário conseguir listar todos os seus pontos</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O funcionario deve conseguir listar todos os seus registros de pontos.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável</strong></td>
+    <td width="430">Juliana Madureira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O funcionário consegue emitir corretamente seus registro de ponto.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td width="170">Adcionar evidencia</td>
+  </tr>
+</table>
