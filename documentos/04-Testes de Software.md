@@ -104,6 +104,82 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve informar ao usuário que ele está impedido de entrar no aplicativo.</td>
   </tr>
 </table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-004<br>Alterar a senha de acesso passando dados válidos</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se um usuário consegue alterar sua senha de acesso.</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-002: O funcionário deve conseguir alterar sua senha de acesso</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Clicar no link "Esqueceu a senha? Alterar".<br>
+      2. Inserir o CPF válido.<br>
+      3. Inserir a nova senha.<br>
+      4. Inserir a senha novamente.<br>
+      4. Clicar no botão "Alterar senha".
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "50160209064"<br>
+      - <strong>Nova senha:</strong> "Senha@123"<br>
+      - <strong>Confirmar senha:</strong> "Senha@123"
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve informar ao usuário que a senha foi alterada com sucesso.</td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-005<br>Alterar a senha de acesso passando um CPF não cadastrado</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o sistema informa ao usuário que o CPF não está cadastrado.</td>
+  </tr>
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-002: O funcionário deve conseguir alterar sua senha de acesso</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Clicar no link "Esqueceu a senha? Alterar".<br>
+      2. Inserir o CPF não cadastrado.<br>
+      3. Inserir a nova senha.<br>
+      4. Inserir a senha novamente.<br>
+      4. Clicar no botão "Alterar senha".
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "47542542010"<br>
+      - <strong>Nova senha:</strong> "Senha@123"<br>
+      - <strong>Confirmar senha:</strong> "Senha@123"
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve informar ao usuário que o CPF não está cadastrado.</td>
+  </tr>
+</table>
  
 # Evidências de Testes de Software
 
