@@ -600,6 +600,39 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
 </table>
 
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-008<br>Registrar Início e Fim da Jornada</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve informar ao usuário que o horário de início e fim da jornada foram registrados com sucesso.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável</strong></td>
+    <td width="430">Rayane Santos</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está registrando o horário de início e fim de jornada corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/b0298811-cc05-4861-b2d7-2cbcb305532e"/></td>
+  </tr>
+</table>
+
+<br>
+
+
 
 
 <table>
