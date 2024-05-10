@@ -334,6 +334,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
   </tr>
   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Bruno Selas</td>
+  </tr>
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-003: O admin deve conseguir cadastrar novos funcionários</td>
   </tr>
