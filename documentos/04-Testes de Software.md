@@ -11,6 +11,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>Este caso de teste verifica se um usuário pode fazer login com sucesso utilizando credenciais válidas.</td>
   </tr>
   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
+  </tr>
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-001: O funcionário deve conseguir logar no aplicativo</td>
   </tr>
@@ -44,6 +48,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   <tr>
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se um usuário é impedido de fazer login utilizando credenciais inválidas.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
   </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -81,6 +89,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>Este caso de teste verifica se um usuário desabilitado é impedido de fazer login.</td>
   </tr>
   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
+  </tr>
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-001: O funcionário deve conseguir logar no aplicativo</td>
   </tr>
@@ -114,6 +126,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   <tr>
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se um usuário consegue alterar sua senha de acesso.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
   </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -154,6 +170,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>Este caso de teste verifica se o sistema informa ao usuário que o CPF não está cadastrado.</td>
   </tr>
   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
+  </tr>
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-002: O funcionário deve conseguir alterar sua senha de acesso</td>
   </tr>
@@ -192,6 +212,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>Este caso de teste verifica se o sistema lista corretamente apenas os funcionários habilitados na aba de "usuários ativos".</td>
   </tr>
   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
+  </tr>
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-004: O admin deve conseguir listas todos os funcionários</td>
   </tr>
@@ -224,6 +248,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   <tr>
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se o sistema lista corretamente apenas os funcionários desabilitados na aba de "usuários inativos".</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
   </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -259,6 +287,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   <tr>
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação do horário de início e fim da sua jornada de trabalho</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
   </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -297,6 +329,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   <tr>
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação de entrada e saída do seu horario de almoço</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
   </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -379,6 +415,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se o administrador consegue listar os pontos dos funcionários.</td>
   </tr>
+   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
+  </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-005 O admin deve conseguir listar todos os pontos dos funcionários</td>
@@ -414,6 +454,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se os meses sem marcações não geram relatórios.</td>
   </tr>
+   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
+  </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-005 O admin deve receber informação que não é registro de ponto naquele determinado mês</td>
@@ -447,6 +491,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   <tr>
     <td width="150"><strong>Descrição</strong></td>
     <td>Este caso de teste verifica se o funcionario consegue listar todos os seus registros de pontos</td>
+  </tr>
+   <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">...</td>
   </tr>
   <tr>
     <td><strong>Requisitos associados</strong></td>
