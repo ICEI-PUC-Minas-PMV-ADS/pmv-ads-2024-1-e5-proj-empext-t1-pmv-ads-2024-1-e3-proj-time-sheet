@@ -14,6 +14,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+ <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-001: O funcionário deve conseguir logar no aplicativo</td>
@@ -54,6 +58,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="430">...</td>
   </tr>
   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-001: O funcionário deve conseguir logar no aplicativo</td>
   </tr>
@@ -93,6 +101,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="430">...</td>
   </tr>
   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-001: O funcionário deve conseguir logar no aplicativo</td>
   </tr>
@@ -131,6 +143,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-002: O funcionário deve conseguir alterar sua senha de acesso</td>
@@ -174,6 +190,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="430">...</td>
   </tr>
   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-002: O funcionário deve conseguir alterar sua senha de acesso</td>
   </tr>
@@ -216,6 +236,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="430">...</td>
   </tr>
   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-004: O admin deve conseguir listas todos os funcionários</td>
   </tr>
@@ -253,6 +277,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-004: O admin deve conseguir listas todos os funcionários</td>
@@ -292,6 +320,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-009: O funcionário deve conseguir registrar o início e o final da sua jornada de trabalho</td>
@@ -335,6 +367,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td width="430">...</td>
   </tr>
   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-010: O funcionário deve conseguir registrar a saída e o retorno do horário de almoço	</td>
   </tr>
@@ -373,6 +409,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">Bruno Selas</td>
   </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-003: O admin deve conseguir cadastrar novos funcionários</td>
@@ -419,6 +459,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-005 O admin deve conseguir listar todos os pontos dos funcionários</td>
@@ -458,6 +502,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-005 O admin deve receber informação que não é registro de ponto naquele determinado mês</td>
@@ -496,6 +544,10 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td><strong>Responsável pela funcionalidade</strong></td>
     <td width="430">...</td>
   </tr>
+   <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
     <td>RF-010 O funcionário deve conseguir listar todos seus registros de pontos</td>
@@ -520,6 +572,156 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <tr>
     <td><strong>Critérios de êxito</strong></td>
     <td>O funcionario deve conseguir listar todos os seus registros de pontos.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-014<br>Cadastrar novo funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Bruno Selas</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Teste de Erro</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-003: O admin deve conseguir cadastrar novos funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão "+".<br>
+      4. Inserir o nome válido. <br>
+      5. Inserir o CPF válido.<br>
+      6. Inserir a senha válida. <br>
+      7. Inserir a jornada de trabalho válida. <br>
+      8. Inserir o tempo de almoço válido. <br>
+      9. Clicar em cadastrar funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>CPF:</strong> "435.566.600-08"<br>
+      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Jornada de trabalho:</strong> "8:00"<br>
+      - <strong>Tempo de almoço:</strong> "1:30"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-015<br>Cadastrar novo funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Bruno Selas</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-003: O admin deve conseguir cadastrar novos funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão "+".<br>
+      4. Inserir o nome válido. <br>
+      5. Inserir o CPF válido.<br>
+      6. Inserir a senha válida. <br>
+      7. Inserir a jornada de trabalho válida. <br>
+      8. Inserir o tempo de almoço válido. <br>
+      9. Clicar em cadastrar funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>CPF:</strong> "435.566.600-08"<br>
+      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Jornada de trabalho:</strong> "8:00"<br>
+      - <strong>Tempo de almoço:</strong> "1:30"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-016<br>Cadastrar novo funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Bruno Selas</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-003: O admin deve conseguir cadastrar novos funcionários</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão "+".<br>
+      4. Inserir o nome válido. <br>
+      5. Inserir o CPF válido.<br>
+      6. Inserir a senha válida. <br>
+      7. Inserir a jornada de trabalho válida. <br>
+      8. Inserir o tempo de almoço válido. <br>
+      9. Clicar em cadastrar funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>CPF:</strong> "435.566.600-08"<br>
+      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Jornada de trabalho:</strong> "8:00"<br>
+      - <strong>Tempo de almoço:</strong> "1:30"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
   </tr>
 </table>
 
