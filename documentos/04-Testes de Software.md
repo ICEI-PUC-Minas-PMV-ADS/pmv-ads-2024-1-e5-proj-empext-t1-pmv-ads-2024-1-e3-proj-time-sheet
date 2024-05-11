@@ -577,11 +577,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-014<br>Cadastrar novo funcionário</th>
+    <th colspan="2" width="1000">CT-014<br>Cadastrar dois perfis com um mesmo CPF</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
+    <td>Este caso de teste tem como objetivo verifica se o administrador consegue cadastrar dois funcionários com um mesmo número de CPF
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
@@ -603,7 +603,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
       3. Clicar em "funcionários" na barra de navegação.<br>
       3. Clicar no botão "+".<br>
       4. Inserir o nome válido. <br>
-      5. Inserir o CPF válido.<br>
+      5. Inserir um CPF já cadastrado em outro perfil de funcionario .<br>
       6. Inserir a senha válida. <br>
       7. Inserir a jornada de trabalho válida. <br>
       8. Inserir o tempo de almoço válido. <br>
@@ -613,25 +613,25 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <tr>
     <td><strong>Dados de teste</strong></td>
     <td>
-      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>Nome:</strong> "Dick Grayson"<br>
       - <strong>CPF:</strong> "435.566.600-08"<br>
-      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Senha:</strong> "Robin123"<br>
       - <strong>Jornada de trabalho:</strong> "8:00"<br>
       - <strong>Tempo de almoço:</strong> "1:30"<br>
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
-    <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+    <td>O sistema não deve cadastrar o funcionário e precisa retornar uma mensagem de erro ao usuário.</td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-015<br>Cadastrar novo funcionário</th>
+    <th colspan="2" width="1000">CT-015<br>Validação de campos. </th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verifica se o administrador consegue cadastrar um novo funcionário passando dados válidos.</td>
+    <td>Este caso de teste verifica se o administrador consegue preencher os campos de cadastro com dados inválidos nos mesmos.</td>
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
@@ -639,7 +639,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Teste de Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -652,26 +652,21 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
       2. Fazer login com um usuário administrador.<br>
       3. Clicar em "funcionários" na barra de navegação.<br>
       3. Clicar no botão "+".<br>
-      4. Inserir o nome válido. <br>
-      5. Inserir o CPF válido.<br>
-      6. Inserir a senha válida. <br>
-      7. Inserir a jornada de trabalho válida. <br>
-      8. Inserir o tempo de almoço válido. <br>
-      9. Clicar em cadastrar funcionário. <br>
+      4. preencher os campos de cadastro com dados inválidos. <br>
       </td>
   </tr>
     <tr>
     <td><strong>Dados de teste</strong></td>
     <td>
-      - <strong>Nome:</strong> "Bruce Wayne"<br>
-      - <strong>CPF:</strong> "435.566.600-08"<br>
-      - <strong>Senha:</strong> "Batman123"<br>
-      - <strong>Jornada de trabalho:</strong> "8:00"<br>
-      - <strong>Tempo de almoço:</strong> "1:30"<br>
+      - <strong>Nome:</strong> "1234"<br>
+      - <strong>CPF:</strong> "000-00"<br>
+      - <strong>Senha:</strong> " "<br>
+      - <strong>Jornada de trabalho:</strong> "1:30"<br>
+      - <strong>Tempo de almoço:</strong> "8:00"<br>
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
-    <td>O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+    <td>O sistema deve impedir o cadastro do usuario e retornas as mensagens de erro correta de validação dos campos.</td>
   </tr>
 </table>
 
