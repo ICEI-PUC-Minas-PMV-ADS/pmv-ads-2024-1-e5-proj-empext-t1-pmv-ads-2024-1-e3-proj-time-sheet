@@ -441,7 +441,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-012<br>Registrar Marcação o fim da "Horario de Almoço"</th>
+    <th colspan="2" width="1000">CT-012<br>Registrar o fim do Horário do Almoço</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -938,15 +938,15 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-008<br>Registrar Início e Fim da Jornada</th>
+    <th colspan="6" width="1000">CT-008<br>Registrar Início da Jornada</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
-    <td colspan="5">O sistema deve informar ao usuário que o horário de início e fim da jornada foram registrados com sucesso.</td>
+    <td colspan="5">O sistema deve informar ao usuário que o horário de início da jornada foram registrados com sucesso.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
-    <td width="430">Rayane Santos</td>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Juliana </td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
@@ -954,7 +954,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O sistema está registrando o horário de início e fim de jornada corretamente.</td>
+    <td colspan="5">O sistema está registrando o horário de início da jornada corretamente.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
@@ -966,9 +966,97 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 
 <br>
 
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-009<br>Registrar o Fim da Jornada</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve informar ao usuário que o horário de fim da jornada foram registrados com sucesso.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Juliana</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está registrando o horário de fim de jornada corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/b0298811-cc05-4861-b2d7-2cbcb305532e"/></td>
+  </tr>
+</table>
 
+<br>
 
+<br>
 
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-011<br>Registrar Marcação da Entrada no Horário de Almoço</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve informar ao usuário que o horário de inicio do almoço foi registrado com sucesso.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Rayane</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está registrando o início do horário de almoço corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+   
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-012<br>Registrar Marcação do fim do "Horário de Almoço"</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve informar ao usuário que o horário do fim do almoço foi registrado com sucesso.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Rayane</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está registrando o fim do horário de almoço corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+   
+  </tr>
+</table>
+
+<br>
 <table>
   <tr>
     <th colspan="6" width="1000">CT-011<br>Administrador conseguir listar pontos dos funcionários</th>
@@ -978,8 +1066,8 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve listar os pontos do funcionário no mês.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
-    <td width="430">Juliana Madureira</td>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Walber</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
@@ -1006,8 +1094,8 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema informar "nenhum registro encontrado para a data selecionada".</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
-    <td width="430">Juliana Madureira</td>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Walber</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
@@ -1035,8 +1123,8 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O funcionario deve conseguir listar todos os seus registros de pontos.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
-    <td width="430">Juliana Madureira</td>
+    <td><strong>Responsável pelo Teste </strong></td>
+    <td width="430">Walber</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
