@@ -310,23 +310,23 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-008<br> Registrar Início e Fim de Jornada</th>
+    <th colspan="2" width="1000">CT-008<br> Registrar Início de Jornada</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação do horário de início e fim da sua jornada de trabalho</td>
+    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação do horário de início sua jornada de trabalho</td>
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Walber</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
-    <td>RF-009: O funcionário deve conseguir registrar o início e o final da sua jornada de trabalho</td>
+    <td>RF-009: O funcionário deve conseguir registrar o início da sua jornada de trabalho</td>
   </tr>
   <tr>
     <td><strong>Passos</strong></td>
@@ -334,8 +334,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
       1. Abrir o aplicativo.<br>
       2. Fazer login com um usuário já cadastrado<br>
       3. Iniciar a jornada clicando no botão "Iniciar Jornada de Trabalho".<br>
-      5. Marcar o horário de almoço clicando em "Iniciar horário de almoço" e após "Finalizar horário de almoço". <br>
-      4. Finalizar a jornada clicando em "Finalizar Jornada de Trabalho".
+      5. Marcar o horário de jornada clicando em "Iniciar Jornada de Trabalho" e após "Finalizar Jornada de Trabalho". <br>
       </td>
   </tr>
     <tr>
@@ -346,33 +345,119 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
-    <td>O sistema deve registrar o inicio e fim da jornada de trabalho</td>
+    <td>O sistema deve registrar o inicio jornada de trabalho</td>
   </tr>
 </table>
 
 
 <br>
 
-
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-009<br>Registrar Marcação de ponto "Horario de Almoço" (entrada e saída)</th>
+    <th colspan="2" width="1000">CT-009<br> Registrar Fim de Jornada</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação de entrada e saída do seu horario de almoço</td>
+    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação do horário de fim da sua jornada de trabalho</td>
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Walber</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
-    <td>RF-010: O funcionário deve conseguir registrar a saída e o retorno do horário de almoço	</td>
+    <td>RF-009: O funcionário deve conseguir registrar o final da sua jornada de trabalho</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário já cadastrado<br>
+      3. Iniciar a jornada clicando no botão "Finalizar Jornada de Trabalho".<br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "059.333.006-40"<br>
+      - <strong>Senha:</strong> "Teste123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve registrar e fim da jornada de trabalho</td>
+  </tr>
+</table>
+
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-011<br>Registrar Marcação da Entrada no Horario de Almoço</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação de entrada do seu horario de almoço</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Rayane</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Sucesso</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-010: O funcionário deve conseguir registrar o inicio do seu horário de almoço	</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário já cadastrado<br>
+      3. Após ter clicado em "Iniciar Jornada de Trabalho, clicar em "Iniciar horário de almoço".<br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "566.765.836-40"<br>
+      - <strong>Senha:</strong> "909090Lo"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve registrar o inicio do horário de almoço</td>
+  </tr>
+</table>
+
+<br>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-012<br>Registrar Marcação o fim da "Horario de Almoço"</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o usuário consegue registrar corretamente a marcação fim do seu horario de almoço</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Rayane</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Sucesso</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-010: O funcionário deve conseguir o fim do horário de almoço	</td>
   </tr>
   <tr>
     <td><strong>Passos</strong></td>
@@ -391,7 +476,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
     <tr>
     <td><strong>Critérios de êxito</strong></td>
-    <td>O sistema deve registrar o inicio e fim do horário de almoço</td>
+    <td>O sistema deve registrar o fim do horário de almoço</td>
   </tr>
 </table>
 
@@ -399,7 +484,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-010<br>Cadastrar novo funcionário</th>
+    <th colspan="2" width="1000">CT-013<br>Cadastrar novo funcionário</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -492,7 +577,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
  <table>
   <tr>
-    <th colspan="2" width="1000">CT-012<br>Administrador não terá informações dos meses sem marcações</th>
+    <th colspan="2" width="1000">CT-014<br>Administrador não terá informações dos meses sem marcações</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -534,7 +619,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
  <table>
   <tr>
-    <th colspan="2" width="1000">CT-013<br>O funcionário conseguir listar todos os seus pontos </th>
+    <th colspan="2" width="1000">CT-015<br>O funcionário conseguir listar todos os seus pontos </th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -577,7 +662,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-014<br>Cadastrar dois perfis com um mesmo CPF</th>
+    <th colspan="2" width="1000">CT-016<br>Cadastrar dois perfis com um mesmo CPF</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
