@@ -397,7 +397,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-010<br>Registrar Marcação da Entrada no Horario de Almoço</th>
+    <th colspan="2" width="1000">CT-010<br>Registrar Marcação da Inicio do "Horário de Almoço"</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -441,7 +441,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-011<br>Registrar o fim do Horário do Almoço</th>
+    <th colspan="2" width="1000">CT-011<br>Registrar Marcação da Fim do "Horário de Almoço"</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -755,6 +755,48 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-018<br> Não permitir que o funcionário registre a saída no dia posterior ao do início da jornada</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o usuário consegue registrar a saída no dia seguinte o início da jornada. </td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Walber</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Erro</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-009: O funcionário deve conseguir o fim do horário de almoço	</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário já cadastrado<br>
+      3. Após ter clicado em "Iniciar Jornada de Trabalho, clicar em "Iniciar horário de almoço".<br>
+      4. Para finalizar, clicar em "Finalizar hórario de almoço".<br>
+      5. No dia seguinte clicar em "Fim da Jornada de trabalho". <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "566.765.836-40"<br>
+      - <strong>Senha:</strong> "909090Lo"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema não deve permitir o registro de ponto em dia diferente do início da jornada.</td>
+  </tr>
+</table>
+
 
 # Evidências de Testes de Software
 
@@ -950,7 +992,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-011<br>Registrar Marcação da Entrada no Horário de Almoço</th>
+    <th colspan="6" width="1000">CT-010<br>Registrar Marcação da Inicio do "Horário de Almoço"</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -980,7 +1022,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-012<br>Registrar Marcação do fim do "Horário de Almoço"</th>
+    <th colspan="6" width="1000">CT-011<br>Registrar Marcação da Fim do "Horário de Almoço"</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -1009,7 +1051,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 <br>
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-011<br>Administrador conseguir listar pontos dos funcionários</th>
+    <th colspan="6" width="1000">CT-013<br>Administrador conseguir listar pontos dos funcionários</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -1037,7 +1079,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-012<br>Administrador não terá informações dos meses sem marcações</th>
+    <th colspan="6" width="1000">CT-014<br>Administrador não terá informações dos meses sem marcações</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -1066,7 +1108,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-013<br>O funcionário conseguir listar todos os seus pontos</th>
+    <th colspan="6" width="1000">CT-015<br>O funcionário conseguir listar todos os seus pontos</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -1090,4 +1132,31 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   <tr>
     <td width="170">Adcionar evidencia</td>
   </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-018<br>Não permitir que o funcionário registre a saída no dia posterior ao do início da jornada</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O funcionario não conseguir registrar a saída no dia posterior ao do início da jornada.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste </strong></td>
+    <td width="430">Rayane</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">09/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O funcionário não deve conseguir registrar o ponto no dia posterior ao seu início.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td width="170">Adcionar evidencia</td>
 </table>
