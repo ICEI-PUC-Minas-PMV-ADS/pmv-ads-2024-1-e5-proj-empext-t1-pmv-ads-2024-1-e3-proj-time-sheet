@@ -397,7 +397,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-011<br>Registrar Marcação da Entrada no Horario de Almoço</th>
+    <th colspan="2" width="1000">CT-010<br>Registrar Marcação da Entrada no Horario de Almoço</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -441,7 +441,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-012<br>Registrar o fim do Horário do Almoço</th>
+    <th colspan="2" width="1000">CT-011<br>Registrar o fim do Horário do Almoço</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -484,7 +484,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-013<br>Cadastrar novo funcionário</th>
+    <th colspan="2" width="1000">CT-012<br>Cadastrar novo funcionário</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -534,7 +534,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
  <table>
   <tr>
-    <th colspan="2" width="1000">CT-011<br>Administrador conseguir listar pontos dos funcionários</th>
+    <th colspan="2" width="1000">CT-013<br>Administrador conseguir listar pontos dos funcionários</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -550,7 +550,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
-    <td>RF-005 O admin deve conseguir listar todos os pontos dos funcionários</td>
+    <td>RF-0012 O admin deve conseguir listar todos os pontos dos funcionários</td>
   </tr>
   <tr>
     <td><strong>Passos</strong></td>
@@ -593,7 +593,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
-    <td>RF-005 O admin deve receber informação que não é registro de ponto naquele determinado mês</td>
+    <td>RF-012 O admin deve receber informação que não é registro de ponto naquele determinado mês</td>
   </tr>
   <tr>
     <td><strong>Passos</strong></td>
@@ -635,7 +635,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
-    <td>RF-010 O funcionário deve conseguir listar todos seus registros de pontos</td>
+    <td>RF-011 O funcionário deve conseguir listar todos seus registros de pontos</td>
   </tr>
   <tr>
     <td><strong>Passos</strong></td>
@@ -712,7 +712,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-015<br>Validação de campos. </th>
+    <th colspan="2" width="1000">CT-017<br>Validação de campos. </th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -757,7 +757,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
 
 <table>
   <tr>
-    <th colspan="2" width="1000">CT-016<br>Cadastrar novo funcionário</th>
+    <th colspan="2" width="1000">CT-018<br>Cadastrar novo funcionário</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
@@ -946,7 +946,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">Juliana </td>
+    <td width="430">Rayane </td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
@@ -976,7 +976,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">Juliana</td>
+    <td width="430">Rayane</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
@@ -1008,7 +1008,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">Rayane</td>
+    <td width="430">Juliana</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
@@ -1038,7 +1038,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">Rayane</td>
+    <td width="430">Juliana</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
