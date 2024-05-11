@@ -1536,9 +1536,12 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/cbec9a65-316d-4c82-be6a-ec23e2a54c12"/></td>
   </tr>
 </table>
+
+
+
 
 <table>
   <tr>
