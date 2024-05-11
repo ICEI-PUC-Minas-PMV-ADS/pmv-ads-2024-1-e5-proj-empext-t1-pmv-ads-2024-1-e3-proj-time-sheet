@@ -1014,7 +1014,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-      <td width="170">Adcionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/104041600/e6390774-34f4-47fb-8e8a-45c85615b143"/></td>
   </tr>
 </table>
 
@@ -1045,7 +1045,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/104041600/43148eea-602a-4b4f-9972-1b6f4d52c453"/></td>
   </tr>
 </table>
 
