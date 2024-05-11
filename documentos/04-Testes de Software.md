@@ -2,6 +2,10 @@
 
 Este documento tem como objetivo apresentar uma estratégia detalhada para a realização de testes que assegurem não apenas a funcionalidade, mas também a confiabilidade, desempenho e usabilidade do software desenvolvido.
 
+### Tipo de Teste
+- **Sucesso**: Tem o objetivo de verificar se as funcionalidades funcionam corretamente.
+- **Erro**: Tem o objetivo de verificar se o sistema trata erros de maneira correta.
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-001<br>Login com credenciais válidas</th>
@@ -12,11 +16,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
  <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -43,7 +47,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -55,11 +59,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -86,7 +90,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -98,11 +102,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -129,7 +133,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -141,11 +145,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -175,7 +179,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -187,11 +191,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -221,7 +225,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -233,11 +237,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Error</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -263,7 +267,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -275,11 +279,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -306,7 +310,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -349,8 +353,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-
-<br>
+<br/>
 
 <table>
   <tr>
@@ -392,8 +395,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-
-<br>
+<br/>
 
 <table>
   <tr>
@@ -435,9 +437,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
-
-<br>
+<br/>
 
 <table>
   <tr>
@@ -480,7 +480,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -496,7 +496,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -532,6 +532,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
  <table>
   <tr>
     <th colspan="2" width="1000">CT-013<br>Administrador conseguir listar pontos dos funcionários</th>
@@ -542,11 +544,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
    <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Juliana</td>
   </tr>
    <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -574,6 +576,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
 
  <table>
   <tr>
@@ -585,11 +588,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
    <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Juliana</td>
   </tr>
    <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -616,6 +619,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
 
  <table>
   <tr>
@@ -627,11 +631,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
    <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Juliana</td>
   </tr>
    <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -660,6 +664,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-016<br>Cadastrar dois perfis com um mesmo CPF</th>
@@ -674,7 +680,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">Teste de Erro</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -710,6 +716,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-017<br>Validação de campos. </th>
@@ -724,7 +732,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">Teste de Erro</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -754,6 +762,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve impedir o cadastro do usuario e retornas as mensagens de erro correta de validação dos campos.</td>
   </tr>
 </table>
+
+<br/>
 
 <table>
   <tr>
@@ -796,7 +806,9 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema não deve permitir o registro de ponto em dia diferente do início da jornada.</td>
   </tr>
 </table>
+
 <br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-019<br>Editar funcionário</th>
@@ -811,7 +823,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -843,7 +855,9 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve alterar o dado do funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
   </tr>
 </table>
+
 <br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-020<br>Validação de campos ao Editar. </th>
@@ -858,7 +872,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">Teste de Erro</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -895,13 +909,15 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-021<br>Desabilitar funcionário</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verificar se o administrador consegue Habilitar um funcionário já cadstrado.</td>
+    <td>Este caso de teste verificar se o administrador consegue desabilitar um funcionário já cadstrado.</td>
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
@@ -909,7 +925,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -938,6 +954,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-022<br>Habilitar funcionário</th>
@@ -952,7 +970,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -979,7 +997,143 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
 
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-023<br>Desabilitar o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o administrador é impedido de desabilitar a si mesmo.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei Marques</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Falha</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-006: O admin deve conseguir habilitar e desabilitar um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do usuário atual.<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em desabilitar Funcionário. <br>
+      6. Clicar novamente em desabilitar Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "50160209064"<br>
+      - <strong>Senha:</strong> "Teste@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve mostrar uma mensagem impedindo o usuário de desabilitar a si mesmo.</td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-024<br>Excluir um funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o administrador consegue excluir um funcionário do sistema.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Raul Oliveira</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Sucesso</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-008: O admin deve conseguir excluir um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome de um usuário.<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em excluir Funcionário. <br>
+      6. Clicar novamente em excluir Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00000000000"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve excluir o funcionário do sistema e mostrar uma mensagem de sucesso para o usuário.</td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-025<br>Excluir o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o sistema impede o administrador de excluir a si mesmo do sistema.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Raul Oliveira</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Falha</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-008: O admin deve conseguir excluir um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do usuário atual.<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em excluir Funcionário. <br>
+      6. Clicar novamente em excluir Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "50160209064"<br>
+      - <strong>Senha:</strong> "Teste@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+</table>
 
 # Evidências de Testes de Software
 
