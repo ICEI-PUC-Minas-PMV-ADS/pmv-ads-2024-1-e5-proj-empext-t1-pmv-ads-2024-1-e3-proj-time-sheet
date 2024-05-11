@@ -1154,7 +1154,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve redirecionar o usuário para a página inicial do aplicativo após o login bem-sucedido.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1184,7 +1184,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve informar ao usuário que os dados de login estão inválidos.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1214,7 +1214,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve informar ao usuário que ele está impedido de entrar no aplicativo.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1244,7 +1244,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve informar ao usuário que a senha foi alterada com sucesso.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1260,6 +1260,96 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
     <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/145afbcb-931d-4693-9e87-f9445efaceff"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-005<br>Alterar a senha de acesso passando um CPF não cadastrado</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve informar ao usuário que o CPF não está cadastrado.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-006<br>Listar funcionários habilitados</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar apemas os funcionários habilitados.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-007<br>Listar funcionários desabilitados</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar apenas os funcionários desabilitados.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
   </tr>
 </table>
 
@@ -1391,6 +1481,37 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 </table>
 
 <br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-012<br>Cadastrar novo funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
 <table>
   <tr>
     <th colspan="6" width="1000">CT-013<br>Administrador conseguir listar pontos dos funcionários</th>
@@ -1476,6 +1597,68 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
 </table>
 
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-016<br>Cadastrar dois perfis com um mesmo CPF</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema não deve cadastrar o funcionário e precisa retornar uma mensagem de erro ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-017<br>Validação de campos</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve impedir o cadastro do usuario e retornas as mensagens de erro correta de validação dos campos.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
 <table>
   <tr>
     <th colspan="6" width="1000">CT-018<br>Não permitir que o funcionário registre a saída no dia posterior ao do início da jornada</th>
@@ -1501,4 +1684,214 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
     <td width="170">Adcionar evidencia</td>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-019<br>Editar funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve alterar o dado do funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-020<br>Validação de campos ao Editar</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve impedir o cadastro do usuario e retornar mensagens de erro correta de validação dos campos.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-021<br>Desabilitar funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve desabilitar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-022<br>Habilitar funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve Habilitar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-023<br>Desabilitar o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem impedindo o usuário de desabilitar a si mesmo.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-024<br>Excluir um funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve excluir o funcionário do sistema e mostrar uma mensagem de sucesso para o usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-025<br>Excluir o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">~~</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">🔜</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">xx/xx/xx</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">~~</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
 </table>
