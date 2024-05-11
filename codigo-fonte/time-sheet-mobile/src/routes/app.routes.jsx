@@ -1,12 +1,9 @@
 import React from "react";
-import { Alert, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import * as UserService from "../services/UserService";
-import Header from "../components/Header";
 import AuthContext from "../contexts/AuthContext";
 import WorkJourneyPage from "../pages/WorkJourneyPage";
 import TimeSheetPage from "../pages/TimeSheetPage";
@@ -39,7 +36,10 @@ export default function Routes() {
 
 function UnauthenticatedRoutes() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator
+      initialRouteName="Login"
+      screenOptions={{ headerShown: false }}
+    >
       <Stack.Screen name="Login" component={LoginPage} />
       <Stack.Screen name="ChangePassword" component={ChangePasswordPage} />
     </Stack.Navigator>
@@ -74,7 +74,6 @@ function EmployeeRoutes() {
 }
 
 function AdministratorRoutes() {
-
   const [users, setUsers] = React.useState(null);
 
   function updateUsers() {
@@ -86,7 +85,7 @@ function AdministratorRoutes() {
   }
 
   function getUserName(userId) {
-    const user = users.find(u => u.id === userId);
+    const user = users.find((u) => u.id === userId);
 
     return user?.name;
   }
@@ -113,7 +112,11 @@ function AdministratorRoutes() {
           options={{
             tabBarLabel: "Funcionários",
             tabBarIcon: ({ color, size }) => (
-              <Icon name="card-account-details-outline" size={36} color={color} />
+              <Icon
+                name="card-account-details-outline"
+                size={36}
+                color={color}
+              />
             ),
           }}
         />

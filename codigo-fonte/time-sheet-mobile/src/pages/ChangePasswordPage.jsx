@@ -8,6 +8,7 @@ import CustomModal from "../components/CustomModal";
 import { useInput } from "../hooks/useInput";
 import { cpfValidations, passwordValidations } from "../common/validations";
 import * as AuthService from "../services/AuthService";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const logo = require("../../assets/logo.png");
 
@@ -15,6 +16,8 @@ export default function ChangePasswordPage({ navigation }) {
   const [modalContent, setModalContent] = React.useState(null);
   const [modalVisible, setModalVisible] = React.useState(false);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
+
+  const insets = useSafeAreaInsets();
 
   const cpfInput = useInput();
   cpfInput.setValidation(
@@ -99,7 +102,12 @@ export default function ChangePasswordPage({ navigation }) {
     <View className="flex-1 justify-start items-center bg-primary-600">
       <CustomModal visible={modalVisible}>{modalContent}</CustomModal>
 
-      <View className="flex w-full justify-center items-center bg-primary-800 pt-8 pb-3">
+      <View
+        className="flex w-full justify-center items-center bg-primary-800 pb-3"
+        style={{
+          paddingTop: insets.top + 12,
+        }}
+      >
         <Text className="text-white text-base">
           Gestão de tempo de uma maneira simples
         </Text>

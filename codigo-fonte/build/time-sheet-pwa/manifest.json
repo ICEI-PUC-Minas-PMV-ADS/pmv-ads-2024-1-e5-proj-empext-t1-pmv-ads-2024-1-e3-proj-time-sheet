@@ -1,9 +1,9 @@
 {
   "background_color": "#1E3F42",
   "display": "standalone",
-  "lang": "en",
-  "name": "time-sheet-mobile",
-  "short_name": "time-sheet-mobile",
+  "lang": "pt-br",
+  "name": "TimeSheet",
+  "short_name": "TimeSheet",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait"
 }

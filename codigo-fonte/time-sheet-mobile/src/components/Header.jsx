@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Pressable } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import AuthContext from "../contexts/AuthContext";
 
@@ -7,6 +8,7 @@ import * as AuthService from "../services/AuthService";
 
 export default function Header({ navigation }) {
   const { userData, validateUser } = React.useContext(AuthContext);
+  const insets = useSafeAreaInsets();
 
   function handleLogout() {
     AuthService.logout().then((response) => {
@@ -15,7 +17,12 @@ export default function Header({ navigation }) {
   }
 
   return (
-    <View className="flex flex-row items-center w-full bg-primary-800 pt-10 px-3 pb-3">
+    <View
+      className="flex flex-row items-center w-full bg-primary-800 pt-10 px-3 pb-3"
+      style={{
+        paddingTop: insets.top + 6,
+      }}
+    >
       <View className="bg-primary-400 p-1 rounded-full">
         <Icon name="account-outline" color="white" size={36} />
       </View>

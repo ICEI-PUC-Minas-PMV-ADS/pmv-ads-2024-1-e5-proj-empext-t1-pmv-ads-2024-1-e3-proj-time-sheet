@@ -12,6 +12,7 @@ import Button from "../components/Button";
 import ErrorMessage from "../components/ErrorMessage";
 import * as AuthService from "../services/AuthService";
 import AuthContext from "../contexts/AuthContext";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const logo = require("../../assets/logo.png");
 
@@ -21,6 +22,7 @@ export default function LoginPage({ navigation }) {
   const [error, setError] = React.useState();
   const [errorVisible, setErrorVisible] = React.useState(false);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
+  const insets = useSafeAreaInsets();
 
   const { validateUser } = React.useContext(AuthContext);
 
@@ -57,7 +59,12 @@ export default function LoginPage({ navigation }) {
 
   return (
     <View className="flex-1 justify-start items-center bg-primary-600">
-      <View className="flex w-full justify-center items-center bg-primary-800 pt-8 pb-3">
+      <View
+        className="flex w-full justify-center items-center bg-primary-800 pb-3"
+        style={{
+          paddingTop: insets.top + 12,
+        }}
+      >
         <Text className="text-white text-base">
           Gestão de tempo de uma maneira simples
         </Text>

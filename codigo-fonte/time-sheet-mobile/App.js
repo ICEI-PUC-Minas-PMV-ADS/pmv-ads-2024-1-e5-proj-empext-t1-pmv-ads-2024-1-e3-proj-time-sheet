@@ -1,11 +1,11 @@
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { LogBox } from "react-native";
 import { delay } from "./src/common/utils";
-import AuthContext from "./src/contexts/AuthContext";
 import Routes from "./src/routes/app.routes";
+import AuthContext from "./src/contexts/AuthContext";
 import LoadingPage from "./src/pages/LoadingPage";
 import * as AuthService from "./src/services/AuthService";
-import { LogBox } from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 
 NativeWindStyleSheet.setOutput({
