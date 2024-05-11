@@ -1014,7 +1014,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-   
+      <td width="170">Adcionar evidencia</td>
   </tr>
 </table>
 
@@ -1044,6 +1044,11 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
+  <tr>
+    <td width="170">Adcionar evidencia</td>
+  </tr>
+</table>
+
    
   </tr>
 </table>
