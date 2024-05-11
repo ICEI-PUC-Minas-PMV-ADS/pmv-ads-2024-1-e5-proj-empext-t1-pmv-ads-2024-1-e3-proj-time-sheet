@@ -796,6 +796,189 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema não deve permitir o registro de ponto em dia diferente do início da jornada.</td>
   </tr>
 </table>
+<br/>
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-019<br>Editar funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue Edita dados de um funcionário já cadstrado passando dados válidos.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei Marques</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-005: O admin deve conseguir editar dados de um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do funcionário<br>
+      4. Alterar valor de um campo válido com dados válido. <br>
+      5. Clicar em Salvar. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>CPF:</strong> "435.566.600-08"<br>
+      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Jornada de trabalho:</strong> "8:00"<br>
+      - <strong>Tempo de almoço:</strong> "1:30"<br>
+      <strong> Alterar tempo Tempo de almoço para:</strong> "02:00"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve alterar o dado do funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+</table>
+<br/>
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-020<br>Validação de campos ao Editar. </th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue preencher os campos de cadastro com dados inválidos ao Editar Funcionário.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei Marques</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Teste de Erro</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-005: O admin deve conseguir editar os dados de um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do funcionário<br>
+      4. Alterar valor de um campo válido com dados inválidos. <br>
+      5. Clicar em Salvar. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome:</strong> "Bruce Wayne"<br>
+      - <strong>Nome:</strong> "Alterar nome para Br"<br>
+      - <strong>CPF:</strong> "435.566.600-08"<br>
+      - <strong>CPF:</strong> "Alterar cpf para 111.111.111-11"<br>
+      - <strong>Senha:</strong> "Batman123"<br>
+      - <strong>Senha:</strong> "Alter senha para batman"<br>
+      - <strong>Jornada de trabalho:</strong> "8:00"<br>
+      - <strong>Jornada de trabalho:</strong> "Alterar hora para 38:00"<br>
+      - <strong>Tempo de almoço:</strong> "1:30"<br>
+      - <strong>Tempo de almoço:</strong> "Alterar campo para 41:30"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve impedir o cadastro do usuario e retornar mensagens de erro correta de validação dos campos.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-021<br>Desabilitar funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o administrador consegue Habilitar um funcionário já cadstrado.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei Marques</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-006: O admin deve conseguir habilitar e desabilitar um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do funcionário<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em desabilitar Funcionário. <br>
+      6. Clicar novamente em desabilitar Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome do Funcionário:</strong> "Rose"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve desabilitar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-022<br>Habilitar funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verifica se o administrador consegue Habilitar um funcionário já cadstrado.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei Marques</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">...</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-006: O admin deve conseguir habilitar e desabilitar um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no menu superior em "Usuários Inativos"<br>
+      4. Clicar em Habilitar ao lado do nome do funcionário <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>Nome do Funcionário:</strong> "Rose"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve Habilitar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+</table>
+
 
 
 # Evidências de Testes de Software
