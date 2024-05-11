@@ -72,5 +72,5 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/asse
 | Testes | CT 012 - Administrador - Editar Funcionário   |
 |------|-----------------------------------------|
 | Critérios de êxito |O admin deve conseguir editar os dados de um funcionário |
-| Link da evidência em vídeo ou imagem | *em desenvolvimento* |
+| Link da evidência em vídeo ou imagem | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/documentos/img/TesteEditar.mp4 |
 | Comentário| |
