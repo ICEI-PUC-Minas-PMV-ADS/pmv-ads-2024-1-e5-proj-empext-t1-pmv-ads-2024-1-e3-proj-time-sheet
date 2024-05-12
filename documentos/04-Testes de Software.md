@@ -1303,6 +1303,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td width="170"><strong>Critérios de êxito</strong></td>
     <td colspan="5">O sistema deve mostrar apemas os funcionários habilitados.</td>
   </tr>
+  <tr>
      <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Bruno Selas</td>
     <td width="100"><strong>Status</strong></td>
@@ -1332,23 +1333,23 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td width="170"><strong>Critérios de êxito</strong></td>
     <td colspan="5">O sistema deve mostrar apenas os funcionários desabilitados.</td>
   </tr>
-    <tr>
-    <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+   <tr>
+     <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">O teste foi realizado na plaaforma IOS e o sistema apresentou o comportamento esperado.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/c19ec867-425b-41cf-b1f6-a53b419bc0bb"/></td>
   </tr>
 </table>
 
