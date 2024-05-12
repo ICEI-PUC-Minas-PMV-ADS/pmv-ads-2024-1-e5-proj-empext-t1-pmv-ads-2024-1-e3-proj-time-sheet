@@ -1681,13 +1681,14 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O funcionário não deve conseguir registrar o ponto no dia posterior ao seu início.</td>
+    <td colspan="5">O sistema não está impedindo o funcionário de fechar as horas um dia depois.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adicionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/32c2041d-b8bc-436c-9dbd-2838fec913f5"/></td>
+  </tr>
 </table>
 
 <br>
