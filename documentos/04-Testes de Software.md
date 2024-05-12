@@ -1702,21 +1702,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">O sistema está alterando as informações na edição corretamente.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/b33b18f7-9ca0-4f85-8ff8-9db0b76e741d"/></td>
   </tr>
 </table>
 
@@ -1732,21 +1732,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">O sistema está validando corretamente os campos na página de edição.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/cf6f9fac-ec56-4182-a4b2-6dd46617a6e2"/></td>
   </tr>
 </table>
 
@@ -1762,21 +1762,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">O sistema está desabilitando corretamente o funcionário.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/8f7d516b-c308-428f-84b4-3d3cab87d6a9"/></td>
   </tr>
 </table>
 
@@ -1792,21 +1792,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">O sistema está habilitando corretamente um usuário desabilitado.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/95344961-cd3f-45ba-b422-b5158d08ec11"/></td>
   </tr>
 </table>
 
@@ -1822,21 +1822,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">❌</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">O sistema não está impedindo um usuário de se auto-desabilitar.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/c25e82c8-6f3a-4419-9c91-3d526c6a7479"/></td>
   </tr>
 </table>
 
