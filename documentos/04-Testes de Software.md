@@ -1675,7 +1675,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td><strong>Responsável pelo Teste </strong></td>
     <td width="430">Rayane</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">✅</td>
+    <td width="50" align="center">❌</td>
     <td width="100"><strong>Data</strong></td>
     <td width="150">09/05/2024</td>
   </tr>
@@ -1687,7 +1687,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+    <td width="170">Adicionar evidencia</td>
 </table>
 
 <br>
