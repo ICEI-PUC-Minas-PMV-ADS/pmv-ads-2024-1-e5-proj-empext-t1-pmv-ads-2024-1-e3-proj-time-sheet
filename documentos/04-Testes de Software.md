@@ -1853,21 +1853,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Bruno Selas</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo obtém como resultado o comportamento esperado.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/25f35a06-cffd-4308-810c-e9e7a4108a8b"/></td>
   </tr>
 </table>
 
