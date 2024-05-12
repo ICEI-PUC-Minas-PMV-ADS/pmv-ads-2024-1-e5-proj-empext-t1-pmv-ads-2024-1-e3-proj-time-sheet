@@ -1836,7 +1836,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/c25e82c8-6f3a-4419-9c91-3d526c6a7479"/></td>
+    <td colspan="6" align="center"><video preload="none" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/c25e82c8-6f3a-4419-9c91-3d526c6a7479"/></td>
   </tr>
 </table>
 
