@@ -13,28 +13,28 @@ Durante toda a fase de planejamento e implementação da solução, serão gerad
 
 ## Ata de reunião - Etapa 01
 
-**Data**: `20 de Fevereiro de 2024`
+**Data**: `02 de Março de 2024`
 
 ### Objetivo
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+O objetivo dessa ata foi documentar formalmente o encontro do aluno Bruno Selas com o cliente para apresentação dos avanços do projeto na Etapa 1.
 
-> Acesse a ata completa aqui: [link]()
+> Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Ata%20de%20reuni%C3%A3o%20-%20Etapa%201.jpg)
 
 ## Ata de reunião - Etapa 02
 
-**Data**: `20 de Fevereiro de 2024`
+**Data**: `05 de Abril de 2024`
 
 ### Objetivo
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+O objetivo dessa ata foi documentar formalmente o encontro do aluno Bruno Selas com o cliente para apresentação dos avanços do projeto na Etapa 2.
 
-> Acesse a ata completa aqui: [link]()
+> Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Ata%20de%20reuni%C3%A3o%20-%20Etapa%202.pdf)
 
 ## Ata de reunião - Etapa 03
 
-**Data**: `20 de Fevereiro de 2024`
+**Data**: `23 de Abril de 2024`
 
 ### Objetivo
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+O objetivo dessa ata foi documentar formalmente o encontro do aluno Bruno Selas com o cliente para apresentação dos avanços do projeto na Etapa 3 e mostrar a primeira versão funcional da aplicação para o cliente testar.
 
-> Acesse a ata completa aqui: [link]()
-> Acesse o feedback do cliente aqui: [link]()
+> Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Ata%20de%20reuni%C3%A3o%20-%20Etapa%203.pdf)  
+> Acesse o feedback do cliente aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Feedback%20do%20cliente%20-%20Apresenta%C3%A7%C3%A3o%20do%20produto%20-%20Etapa%203.mp4)
