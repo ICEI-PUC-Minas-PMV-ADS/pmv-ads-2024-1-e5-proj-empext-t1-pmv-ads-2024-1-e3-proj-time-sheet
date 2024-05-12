@@ -1492,15 +1492,15 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Edglei</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">Funcionário cadastrado com sucesso</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
@@ -1613,21 +1613,21 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Edglei</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">Sistema não permite cadastro com mesmo CPF</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/97347735/1ac11ed9-93dd-4b13-92a7-5d1f90a1358f"/></td>
   </tr>
 </table>
 
@@ -1641,23 +1641,23 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td width="170"><strong>Critérios de êxito</strong></td>
     <td colspan="5">O sistema deve impedir o cadastro do usuario e retornas as mensagens de erro correta de validação dos campos.</td>
   </tr>
-    <tr>
+   <tr>
     <td><strong>Responsável pelo Teste</strong></td>
-    <td width="430">~~</td>
+    <td width="430">Edglei</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">🔜</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">xx/xx/xx</td>
+    <td width="150">12/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">~~</td>
+    <td colspan="5">Aplicativo valida os campos, antes de salvar com sucesso</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src=""/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/97347735/d037ec1e-54ef-4c6b-8031-0015e0928b88"/></td>
   </tr>
 </table>
 
