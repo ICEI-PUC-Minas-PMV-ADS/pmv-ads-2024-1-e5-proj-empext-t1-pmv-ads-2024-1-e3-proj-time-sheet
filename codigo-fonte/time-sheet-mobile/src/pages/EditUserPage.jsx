@@ -18,12 +18,13 @@ import {
 } from "../common/validations";
 import { useInput } from "../hooks/useInput";
 import * as UserService from "../services/UserService";
+import AuthContext from "../contexts/AuthContext";
 
 const logo = require("../../assets/logo.png");
 
 export default function EditUserPage({ navigation }) {
   const route = useRoute();
-  const { item, updateUsers } = route.params;
+  const { item, updateUsers} = route.params;
   const [modalVisible, setModalVisible] = React.useState(false);
   const [modalContent, setModalContent] = React.useState(null);
   const [role, setRole] = React.useState(item.role === "Administrator");
@@ -31,6 +32,9 @@ export default function EditUserPage({ navigation }) {
 
   var lunchTime = parseToTimeValue(item.lunchTime);
   var totalTime = parseToTimeValue(item.totalTime);
+
+  const { userData} = React.useContext(AuthContext);
+  const [myId, setMyId] = React.useState(userData.id)
 
   /* Name Input */
 
@@ -137,13 +141,18 @@ export default function EditUserPage({ navigation }) {
 
   function disableUser() {
     setWaitingResponse(true);
+    if(item.id != myId){
+      UserService.disableUser(item.id).then((result) => {
+        if (result.status === "Success") {
+          updateModalContent("confirm-user-disabled");
+        }
+        setWaitingResponse(false);
+      });
 
-    UserService.disableUser(item.id).then((result) => {
-      if (result.status === "Success") {
-        updateModalContent("confirm-user-disabled");
-      }
-      setWaitingResponse(false);
-    });
+    }else{
+      updateModalContent("user-not-disabled");
+    }
+    
   }
 
   function deleteUser() {
