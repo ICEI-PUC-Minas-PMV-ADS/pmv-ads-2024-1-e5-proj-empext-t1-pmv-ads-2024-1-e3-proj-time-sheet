@@ -201,6 +201,12 @@ export default function EditUserPage({ navigation }) {
       case "confirm-user-updated":
         setModalContent(<ConfirmUserUpdatedModalContent backAction={goBack} />);
         break;
+      case "user-not-disabled":
+        setModalContent(<ConfirmUserUpdatedModalContent backAction={() => setModalVisible(false)} />);
+        break;
+        case "user-not-delete":
+          setModalContent(<UserNotUpdatedModalContent backAction={() => setModalVisible(false)} />);
+          break;
       default:
         setModalContent(
           <OptionsModalContent
@@ -537,3 +543,23 @@ function ConfirmUserUpdatedModalContent({ backAction }) {
     </View>
   );
 }
+function UserNotUpdatedModalContent({ backAction }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-3xl font-bold text-primary-800 mb-1">
+        Funcionário não desabilitado
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Faça login com outro usuário para desabilitar este!
+      </Text>
+      <Button
+        className="mt-5"
+        title="Ok"
+        color="primary-600"
+        type="outline"
+        onPress={backAction}
+      />
+    </View>
+  );
+}
+
