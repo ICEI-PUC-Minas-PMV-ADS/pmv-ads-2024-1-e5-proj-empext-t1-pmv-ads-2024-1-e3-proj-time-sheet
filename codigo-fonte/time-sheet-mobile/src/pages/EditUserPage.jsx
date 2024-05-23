@@ -555,7 +555,7 @@ function UserNotUpdatedModalContent({ backAction }) {
         Funcionário não desabilitado
       </Text>
       <Text className="text-sm font-semibold mb-5">
-        Faça login com outro usuário para desabilitar este!
+        Faça login com outro usuário para desabilitar este funcionário!
       </Text>
       <Button
         className="mt-5"
@@ -575,7 +575,7 @@ function UserNotDeleteModalContent({ backAction }) {
         Funcionário não Excluido
       </Text>
       <Text className="text-sm font-semibold mb-5">
-        Faça login com outro usuário para excluir este!
+        Faça login com outro usuário para excluir este funcionário!
       </Text>
       <Button
         className="mt-5"
