@@ -59,6 +59,16 @@ builder.Services.AddAuthentication(opt => {
     };
 });
 
+#if DEBUG
+
+builder.Services.AddDbContext<TimeSheetContext>(options => {
+    options
+        .UseInMemoryDatabase("time-sheet-database")
+        .UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
+});
+
+#else
+
 string envHost = Environment.GetEnvironmentVariable("DB_HOST") ?? "";
 string envDatabase = Environment.GetEnvironmentVariable("DB_DATABASE") ?? "";
 string envPassword = Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "";
@@ -70,6 +80,8 @@ builder.Services.AddDbContext<TimeSheetContext>(options => {
         .UseNpgsql($"Host={envHost};Port={envPort};Database={envDatabase};Username={envUsername};Password={envPassword};")
         .UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
 });
+
+#endif
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -84,6 +96,8 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwaggerUI();
 }
 
+#if RELEASE
+
 using (var scope = app.Services.CreateScope()) {
 
     var provider = scope.ServiceProvider;
@@ -97,6 +111,8 @@ using (var scope = app.Services.CreateScope()) {
 
     scope.Dispose();
 }
+
+#endif
 
 app.UseCors(x => x
     .AllowAnyOrigin()

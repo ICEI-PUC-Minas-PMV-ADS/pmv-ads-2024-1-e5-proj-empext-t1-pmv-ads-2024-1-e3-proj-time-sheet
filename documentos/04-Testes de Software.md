@@ -2,6 +2,10 @@
 
 Este documento tem como objetivo apresentar uma estratégia detalhada para a realização de testes que assegurem não apenas a funcionalidade, mas também a confiabilidade, desempenho e usabilidade do software desenvolvido.
 
+### Tipo de Teste
+- **Sucesso**: Tem o objetivo de verificar se as funcionalidades funcionam corretamente.
+- **Erro**: Tem o objetivo de verificar se o sistema trata erros de maneira correta.
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-001<br>Login com credenciais válidas</th>
@@ -12,11 +16,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
  <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -43,7 +47,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -55,11 +59,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -86,7 +90,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -98,11 +102,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -129,7 +133,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -141,11 +145,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -175,7 +179,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -187,11 +191,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -221,7 +225,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -233,11 +237,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Error</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -263,7 +267,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -275,11 +279,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Raul Oliveira</td>
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -306,7 +310,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -349,8 +353,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-
-<br>
+<br/>
 
 <table>
   <tr>
@@ -392,8 +395,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-
-<br>
+<br/>
 
 <table>
   <tr>
@@ -435,9 +437,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
-
-<br>
+<br/>
 
 <table>
   <tr>
@@ -480,7 +480,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
-<br>
+<br/>
 
 <table>
   <tr>
@@ -496,7 +496,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -532,6 +532,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
  <table>
   <tr>
     <th colspan="2" width="1000">CT-013<br>Administrador conseguir listar pontos dos funcionários</th>
@@ -542,11 +544,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
    <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Juliana</td>
   </tr>
    <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -574,6 +576,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
 
  <table>
   <tr>
@@ -585,11 +588,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
    <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Juliana</td>
   </tr>
    <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -616,6 +619,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
 
  <table>
   <tr>
@@ -627,11 +631,11 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
    <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">...</td>
+    <td width="430">Juliana</td>
   </tr>
    <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -660,6 +664,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-016<br>Cadastrar dois perfis com um mesmo CPF</th>
@@ -674,7 +680,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">Teste de Erro</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -710,6 +716,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-017<br>Validação de campos. </th>
@@ -724,7 +732,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">Teste de Erro</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -754,6 +762,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve impedir o cadastro do usuario e retornas as mensagens de erro correta de validação dos campos.</td>
   </tr>
 </table>
+
+<br/>
 
 <table>
   <tr>
@@ -796,7 +806,9 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema não deve permitir o registro de ponto em dia diferente do início da jornada.</td>
   </tr>
 </table>
+
 <br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-019<br>Editar funcionário</th>
@@ -811,7 +823,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -843,7 +855,9 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
     <td>O sistema deve alterar o dado do funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
   </tr>
 </table>
+
 <br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-020<br>Validação de campos ao Editar. </th>
@@ -858,7 +872,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">Teste de Erro</td>
+    <td width="430">Erro</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -895,13 +909,15 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-021<br>Desabilitar funcionário</th>
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verificar se o administrador consegue Habilitar um funcionário já cadstrado.</td>
+    <td>Este caso de teste verificar se o administrador consegue desabilitar um funcionário já cadstrado.</td>
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
@@ -909,7 +925,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -938,6 +954,8 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
 <table>
   <tr>
     <th colspan="2" width="1000">CT-022<br>Habilitar funcionário</th>
@@ -952,7 +970,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td><strong>Tipo do Teste</strong></td>
-    <td width="430">...</td>
+    <td width="430">Sucesso</td>
   </tr> 
   <tr>
     <td><strong>Requisitos associados</strong></td>
@@ -979,7 +997,143 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
 
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-023<br>Desabilitar o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o administrador é impedido de desabilitar a si mesmo.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei Marques</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Falha</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-006: O admin deve conseguir habilitar e desabilitar um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do usuário atual.<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em desabilitar Funcionário. <br>
+      6. Clicar novamente em desabilitar Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "50160209064"<br>
+      - <strong>Senha:</strong> "Teste@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve mostrar uma mensagem impedindo o usuário de desabilitar a si mesmo.</td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-024<br>Excluir um funcionário</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o administrador consegue excluir um funcionário do sistema.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Raul Oliveira</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Sucesso</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-008: O admin deve conseguir excluir um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome de um usuário.<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em excluir Funcionário. <br>
+      6. Clicar novamente em excluir Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00000000000"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve excluir o funcionário do sistema e mostrar uma mensagem de sucesso para o usuário.</td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-025<br>Excluir o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o sistema impede o administrador de excluir a si mesmo do sistema.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Raul Oliveira</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Falha</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-008: O admin deve conseguir excluir um funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "funcionários" na barra de navegação.<br>
+      3. Clicar no botão em Editar no lado direito ao nome do usuário atual.<br>
+      4. Clicar na engrenagem no canto superior direito. <br>
+      5. Clicar em excluir Funcionário. <br>
+      6. Clicar novamente em excluir Funcionário. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "50160209064"<br>
+      - <strong>Senha:</strong> "Teste@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+</table>
 
 # Evidências de Testes de Software
 
@@ -1000,7 +1154,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve redirecionar o usuário para a página inicial do aplicativo após o login bem-sucedido.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1030,7 +1184,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve informar ao usuário que os dados de login estão inválidos.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1060,7 +1214,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve informar ao usuário que ele está impedido de entrar no aplicativo.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1090,7 +1244,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="5">O sistema deve informar ao usuário que a senha foi alterada com sucesso.</td>
   </tr>
     <tr>
-    <td><strong>Responsável</strong></td>
+    <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Raul Oliveira</td>
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
@@ -1106,6 +1260,96 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
     <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/145afbcb-931d-4693-9e87-f9445efaceff"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-005<br>Alterar a senha de acesso passando um CPF não cadastrado</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve informar ao usuário que o CPF não está cadastrado.</td>
+  </tr>
+   <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O teste foi realizado na plaaforma IOS e o sistema apresentou o comportamento esperado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/9b322cd2-6112-470e-bf64-ba291f830652"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-006<br>Listar funcionários habilitados</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar apemas os funcionários habilitados.</td>
+  </tr>
+  <tr>
+     <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O teste foi realizado na plaaforma IOS e o sistema apresentou o comportamento esperado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/86a2db51-cc4e-4363-a275-a75210dee844"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-007<br>Listar funcionários desabilitados</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar apenas os funcionários desabilitados.</td>
+  </tr>
+   <tr>
+     <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O teste foi realizado na plaaforma IOS e o sistema apresentou o comportamento esperado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/c19ec867-425b-41cf-b1f6-a53b419bc0bb"/></td>
   </tr>
 </table>
 
@@ -1135,7 +1379,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/b0298811-cc05-4861-b2d7-2cbcb305532e"/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/a2e57d57-8a2f-4153-932c-122dec1d1018"/></td>
   </tr>
 </table>
 
@@ -1165,7 +1409,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/b0298811-cc05-4861-b2d7-2cbcb305532e"/></td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/100081087/b0b2fcb7-00c4-4bf4-87e9-9c4bb94ea488"/></td>
   </tr>
 </table>
 
@@ -1237,6 +1481,37 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
 </table>
 
 <br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-012<br>Cadastrar novo funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve cadastrar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Edglei</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Funcionário cadastrado com sucesso</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/97347735/a1c81425-5bdc-43c3-851e-6349c8704b5b"/></td>
+  </tr>
+</table>
+
+<br>
+
 <table>
   <tr>
     <th colspan="6" width="1000">CT-013<br>Administrador conseguir listar pontos dos funcionários</th>
@@ -1251,7 +1526,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">09/05/2024</td>
+    <td width="150">11/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
@@ -1261,9 +1536,12 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/cbec9a65-316d-4c82-be6a-ec23e2a54c12"/></td>
   </tr>
 </table>
+
+
+
 
 <table>
   <tr>
@@ -1279,7 +1557,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">09/05/2024</td>
+    <td width="150">11/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
@@ -1289,7 +1567,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+     <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/62027ac6-b7f8-4fca-9c46-665b9be06e62"/></td>
   </tr>
 </table>
 
@@ -1308,7 +1586,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td width="100"><strong>Status</strong></td>
     <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
-    <td width="150">09/05/2024</td>
+    <td width="150">11/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
@@ -1318,9 +1596,72 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/103972585/8a439534-bef0-4a9d-bde5-c041af8c1cdb"/></td>
   </tr>
 </table>
+
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-016<br>Cadastrar dois perfis com um mesmo CPF</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema não deve cadastrar o funcionário e precisa retornar uma mensagem de erro ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Edglei</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Sistema não permite cadastro com mesmo CPF</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/97347735/1ac11ed9-93dd-4b13-92a7-5d1f90a1358f"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-017<br>Validação de campos</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve impedir o cadastro do usuario e retornas as mensagens de erro correta de validação dos campos.</td>
+  </tr>
+   <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Edglei</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Aplicativo valida os campos, antes de salvar com sucesso</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/97347735/d037ec1e-54ef-4c6b-8031-0015e0928b88"/></td>
+  </tr>
+</table>
+
+<br>
 
 <table>
   <tr>
@@ -1334,17 +1675,227 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td><strong>Responsável pelo Teste </strong></td>
     <td width="430">Rayane</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">✅</td>
+    <td width="50" align="center">❌</td>
     <td width="100"><strong>Data</strong></td>
     <td width="150">09/05/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O funcionário não deve conseguir registrar o ponto no dia posterior ao seu início.</td>
+    <td colspan="5">O sistema não está impedindo o funcionário de fechar as horas um dia depois.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td width="170">Adcionar evidencia</td>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/32c2041d-b8bc-436c-9dbd-2838fec913f5"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-019<br>Editar funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve alterar o dado do funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Raul Oliveira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está alterando as informações na edição corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/b33b18f7-9ca0-4f85-8ff8-9db0b76e741d"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-020<br>Validação de campos ao Editar</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve impedir o cadastro do usuario e retornar mensagens de erro correta de validação dos campos.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Raul Oliveira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está validando corretamente os campos na página de edição.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/cf6f9fac-ec56-4182-a4b2-6dd46617a6e2"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-021<br>Desabilitar funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve desabilitar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Raul Oliveira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está desabilitando corretamente o funcionário.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/8f7d516b-c308-428f-84b4-3d3cab87d6a9"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-022<br>Habilitar funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve Habilitar o funcionário e mostrar uma mensagem de sucesso ao usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Raul Oliveira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está habilitando corretamente um usuário desabilitado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/95344961-cd3f-45ba-b422-b5158d08ec11"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-023<br>Desabilitar o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem impedindo o usuário de desabilitar a si mesmo.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Raul Oliveira</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">❌</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema não está impedindo um usuário de se auto-desabilitar.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video preload="none" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/c25e82c8-6f3a-4419-9c91-3d526c6a7479"/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-024<br>Excluir um funcionário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve excluir o funcionário do sistema e mostrar uma mensagem de sucesso para o usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">✅</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo obtém como resultado o comportamento esperado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/54289b1e-e9b6-491c-b21e-42244986c763"/></td>
+  </tr>
+</table>
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-025<br>Excluir o usuário atual</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+     <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">❌</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">12/05/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/0220e88c-c988-49d9-b352-0f7d5790c773"/></td>
+  </tr>
 </table>

@@ -1,8 +1,10 @@
-const apiUrl = "https://time-sheet-api.onrender.com";
+import { API_URL } from '@env';
 
 export async function sendRequest(url, method, body, token) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 20000);
+
+  console.log("API " + API_URL);
 
   var headers = new Headers();
   var requestOptions = {};
@@ -31,7 +33,7 @@ export async function sendRequest(url, method, body, token) {
       throw Error(`Invalid request method: ${method}.`);
   }
 
-  url = apiUrl.concat(url);
+  url = API_URL.concat(url);
 
   return await fetch(url, requestOptions);
 }
