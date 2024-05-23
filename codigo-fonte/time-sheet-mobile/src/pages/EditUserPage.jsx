@@ -157,13 +157,16 @@ export default function EditUserPage({ navigation }) {
 
   function deleteUser() {
     setWaitingResponse(true);
-
-    UserService.deleteUser(item.id).then((result) => {
-      if (result.status === "Success") {
-        updateModalContent("confirm-user-deleted");
-      }
-      setWaitingResponse(false);
-    });
+    if (item.id != myId){
+      UserService.deleteUser(item.id).then((result) => {
+        if (result.status === "Success") {
+          updateModalContent("confirm-user-deleted");
+        }
+        setWaitingResponse(false);
+      });
+    }else{
+      updateModalContent("user-not-delete");
+    }
   }
 
   function changeUserPassword() {
@@ -202,10 +205,10 @@ export default function EditUserPage({ navigation }) {
         setModalContent(<ConfirmUserUpdatedModalContent backAction={goBack} />);
         break;
       case "user-not-disabled":
-        setModalContent(<ConfirmUserUpdatedModalContent backAction={() => setModalVisible(false)} />);
+        setModalContent(<UserNotUpdatedModalContent backAction={() => setModalVisible(false)} />);
         break;
         case "user-not-delete":
-          setModalContent(<UserNotUpdatedModalContent backAction={() => setModalVisible(false)} />);
+          setModalContent(<UserNotDeleteModalContent backAction={() => setModalVisible(false)} />);
           break;
       default:
         setModalContent(
@@ -563,3 +566,22 @@ function UserNotUpdatedModalContent({ backAction }) {
   );
 }
 
+function UserNotDeleteModalContent({ backAction }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-3xl font-bold text-primary-800 mb-1">
+        Funcionário não Excluido
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Faça login com outro usuário para excluir este!
+      </Text>
+      <Button
+        className="mt-5"
+        title="Ok"
+        color="primary-600"
+        type="outline"
+        onPress={backAction}
+      />
+    </View>
+  );
+}
