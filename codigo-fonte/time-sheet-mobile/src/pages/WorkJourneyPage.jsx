@@ -10,6 +10,7 @@ import { calcularTempoDecorrido, parseToDate } from "../common/utils";
 import * as WorkJourneyService from "../services/WorkJourneyService";
 import AuthContext from "../contexts/AuthContext";
 import react from "react";
+import RefreshContext from "../contexts/RefreshContext";
 
 const status = {
   notInitialized: 0,
@@ -60,6 +61,7 @@ export default function WorkJourneyPage() {
   const [serverTime, setServerTime] = React.useState();
   const { visible, showNotification } = useNotification(5);
   const [messageModalData, setMessageModalData] = React.useState(null);
+  const {updateRefresh} = React.useContext(RefreshContext);
 
   function updateElapsedTime(WorkJourneyInProgress, currentStatus) {
     var totalHours = 0;
@@ -218,6 +220,7 @@ export default function WorkJourneyPage() {
         setMessageModalData(workJourneyFinishedModalData);
         showNotification();
         updateWorkJourneyInProgress();
+        updateRefresh();
       }
     });
   }
