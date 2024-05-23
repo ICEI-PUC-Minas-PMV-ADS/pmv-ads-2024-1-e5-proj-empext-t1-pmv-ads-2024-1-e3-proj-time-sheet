@@ -146,12 +146,13 @@ export default function EditUserPage({ navigation }) {
         if (result.status === "Success") {
           updateModalContent("confirm-user-disabled");
         }
-        setWaitingResponse(false);
+        
       });
 
     }else{
       updateModalContent("user-not-disabled");
     }
+    setWaitingResponse(false);
     
   }
 
@@ -162,11 +163,12 @@ export default function EditUserPage({ navigation }) {
         if (result.status === "Success") {
           updateModalContent("confirm-user-deleted");
         }
-        setWaitingResponse(false);
+        
       });
     }else{
       updateModalContent("user-not-delete");
     }
+    setWaitingResponse(false);
   }
 
   function changeUserPassword() {
