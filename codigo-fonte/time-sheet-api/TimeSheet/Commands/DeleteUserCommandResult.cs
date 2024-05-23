@@ -11,6 +11,7 @@ namespace TimeSheet.Commands {
     public enum DeleteUserCommandResultStatus {
         UserNotFound,
         UserDeleted,
+        UserNotDeleted,
         Error
     }
 }
