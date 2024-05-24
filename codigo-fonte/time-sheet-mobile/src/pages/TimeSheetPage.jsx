@@ -163,7 +163,7 @@ export default function TimeSheetPage() {
             </View>
           ) : isAdministrator ? (
             <FlatList
-              className="w-full"
+              className="w-full pb-20"
               data={workJourneys}
               renderItem={({ item }) => (
                 <ExpandableUserJourneyView
