@@ -11,6 +11,7 @@ import * as WorkJourneyService from "../services/WorkJourneyService";
 import AuthContext from "../contexts/AuthContext";
 import react from "react";
 import RefreshContext from "../contexts/RefreshContext";
+import Location from "../services/Location";
 
 const status = {
   notInitialized: 0,
@@ -358,7 +359,7 @@ export default function WorkJourneyPage() {
             </View>
           )}
       </ScrollView>
-
+  
       {currentStatus === status.notInitialized && (
         <Fab position={{ right: 20, bottom: 20 }} onPress={startWorkJourney}>
           <View className="flex flex-row justify-center items-center">

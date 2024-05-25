@@ -13,6 +13,7 @@ import ErrorMessage from "../components/ErrorMessage";
 import * as AuthService from "../services/AuthService";
 import AuthContext from "../contexts/AuthContext";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import Local from "expo-location";
 
 const logo = require("../../assets/logo.png");
 
@@ -23,13 +24,22 @@ export default function LoginPage({ navigation }) {
   const [errorVisible, setErrorVisible] = React.useState(false);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
   const insets = useSafeAreaInsets();
-
+  
   const { validateUser } = React.useContext(AuthContext);
 
   function handleCpfInput(input) {
     setErrorVisible(false);
     setCpf(input);
   }
+
+  (async () => {
+      
+    let { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      console.log('Permission to access location was denied');
+      return;
+    }
+  });
 
   function handlePasswordInput(input) {
     setErrorVisible(false);
