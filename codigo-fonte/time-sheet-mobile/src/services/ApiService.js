@@ -34,6 +34,6 @@ export async function sendRequest(url, method, body, token) {
   }
 
   url = API_URL.concat(url);
-
+  console.log(url)
   return await fetch(url, requestOptions);
 }
