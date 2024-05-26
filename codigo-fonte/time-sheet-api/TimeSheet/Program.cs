@@ -96,23 +96,24 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwaggerUI();
 }
 
-#if RELEASE
 
 using (var scope = app.Services.CreateScope()) {
 
     var provider = scope.ServiceProvider;
     var appContext = provider.GetRequiredService<TimeSheetContext>();
 
+#if RELEASE
+
     if (appContext.Database.GetPendingMigrations().Any()) {
         appContext.Database.Migrate();
     }
+#endif
 
     TimeSheetContextSeed.SeedContext(appContext);
 
     scope.Dispose();
 }
 
-#endif
 
 app.UseCors(x => x
     .AllowAnyOrigin()
