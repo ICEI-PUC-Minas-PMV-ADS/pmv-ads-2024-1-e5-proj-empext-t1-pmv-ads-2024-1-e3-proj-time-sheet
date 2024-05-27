@@ -370,7 +370,7 @@ export default function WorkJourneyPage() {
 
         {currentStatus === status.workJourneyFinished &&
           WorkJourneyInProgress && (
-            <View className="flex flex-row">
+            <View className="flex flex-row mb-14">
               <View className="flex flex-col mr-3 w-full">
                 <Text className="text-stone-200 mb-1">
                   Final da jornada de trabalho
