@@ -8,6 +8,7 @@ namespace TimeSheet.Infrastructure {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<WorkJourney> WorkJourneys { get; set; } = null!;
         public DbSet<WorkJourneyInProgress> WorkJourneyInProgresses { get; set; } = null!;
+        public DbSet<PendingJourneyEntry> PendingJourneyEntries { get; set; } = null!; 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder) {
 
             configurationBuilder

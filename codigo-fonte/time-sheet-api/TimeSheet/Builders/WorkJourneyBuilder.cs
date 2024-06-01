@@ -9,6 +9,17 @@ namespace TimeSheet.Builders {
             _result = new Result<WorkJourney>();
             _workJourney = new WorkJourney();
             _workJourney.Id = Guid.NewGuid();
+            _workJourney.JourneyType = WorkJourneyType.Normal;
+
+            return this;
+        }
+        public WorkJourneyBuilder WithMedicalCertificateType() {
+
+            if (_result is null || _workJourney is null) {
+                throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
+            }
+
+            _workJourney.JourneyType = WorkJourneyType.MedicalCertificate;
 
             return this;
         }

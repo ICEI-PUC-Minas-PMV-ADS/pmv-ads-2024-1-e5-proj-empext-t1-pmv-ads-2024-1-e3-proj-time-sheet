@@ -165,6 +165,36 @@ namespace TimeSheet.Controllers {
             return Ok(commandResult);
         }
 
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        [Route("addjourney")]
+        public async Task<IActionResult> AddNewJourney([FromBody] AddWorkJourneyCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<AddWorkJourneyCommand, AddWorkJourneyCommandResult>(command);
+
+            if (commandResult.Status is not AddWorkJourneyCommandResultStatus.WorkJourneyAdded) {
+                return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        [Route("updatejourney")]
+        public async Task<IActionResult> UpdateJourney([FromBody] UpdateWorkJourneyCommand command) {
+
+            var commandResult = await _commandHandler
+                .Handle<UpdateWorkJourneyCommand, UpdateWorkJourneyCommandResult>(command);
+
+            if (commandResult.Status is not UpdateWorkJourneyCommandResultStatus.WorkJourneyUpdated) {
+                return BadRequest(commandResult);
+            }
+
+            return Ok(commandResult);
+        }
+
         [HttpGet]
         [AllowAnonymous]
         [Route("servertime")]

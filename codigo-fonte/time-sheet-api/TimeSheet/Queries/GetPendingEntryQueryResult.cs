@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
 namespace TimeSheet.Queries {
-    public class GetWorkJourneyResult : IQueryResult {
+    public class GetPendingEntryQueryResult : IQuery {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
 
@@ -19,19 +19,5 @@ namespace TimeSheet.Queries {
 
         [JsonConverter(typeof(TimeOnlyJsonConverter))]
         public TimeOnly EndLunchTime { get; set; }
-        public WorkJourneyType JourneyType { get; set; }
-
-        public static GetWorkJourneyResult FromWorkJourney(WorkJourney workJourney) {
-            return new GetWorkJourneyResult {
-                Id = workJourney.Id,
-                UserId = workJourney.UserId,
-                Date = workJourney.Date,
-                StartTime = workJourney.StartTime,
-                EndTime = workJourney.EndTime,
-                StartLunchTime = workJourney.StartLunchTime,
-                EndLunchTime = workJourney.EndLunchTime,
-                JourneyType = workJourney.JourneyType
-            };
-        }
     }
 }
