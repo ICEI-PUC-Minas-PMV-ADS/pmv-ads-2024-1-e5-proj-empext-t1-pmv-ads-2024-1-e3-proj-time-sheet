@@ -7,6 +7,10 @@ namespace TimeSheet.Repositories {
         public WorkJourneyRepository(TimeSheetContext context) {
             _context = context;
         }
+        public async Task<WorkJourney?> GetWorkJourney(Guid id) {
+            return await _context.WorkJourneys
+                .FirstOrDefaultAsync(x => x.Id == id);
+        }
         public async Task<IEnumerable<WorkJourney>> GetWorkJourneys(Guid UserId, int year, int month)
         {
            return await _context.WorkJourneys
@@ -19,6 +23,9 @@ namespace TimeSheet.Repositories {
             await _context.SaveChangesAsync();
 
             return true;
+        }
+        public async Task SaveChanges() {
+            await _context.SaveChangesAsync();
         }
     }
 }

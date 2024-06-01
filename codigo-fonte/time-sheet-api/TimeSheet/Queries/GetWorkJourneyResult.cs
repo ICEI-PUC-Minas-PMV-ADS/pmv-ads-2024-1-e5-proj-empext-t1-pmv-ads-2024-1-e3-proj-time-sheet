@@ -19,6 +19,7 @@ namespace TimeSheet.Queries {
 
         [JsonConverter(typeof(TimeOnlyJsonConverter))]
         public TimeOnly EndLunchTime { get; set; }
+        public WorkJourneyType JourneyType { get; set; }
 
         public static GetWorkJourneyResult FromWorkJourney(WorkJourney workJourney) {
             return new GetWorkJourneyResult {
@@ -28,7 +29,8 @@ namespace TimeSheet.Queries {
                 StartTime = workJourney.StartTime,
                 EndTime = workJourney.EndTime,
                 StartLunchTime = workJourney.StartLunchTime,
-                EndLunchTime = workJourney.EndLunchTime
+                EndLunchTime = workJourney.EndLunchTime,
+                JourneyType = workJourney.JourneyType
             };
         }
     }

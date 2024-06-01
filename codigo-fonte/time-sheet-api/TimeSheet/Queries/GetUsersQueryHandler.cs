@@ -8,7 +8,7 @@
         }
         public async Task<GetUsersQueryResult> Handle(GetUsersQuery query) {
 
-            var users = (await _repository.GetAll()).ToList();           
+            var users = (await _repository.GetAll()).OrderBy(user => user.Name).ToList();           
             var usersResult = new List<GetUserQueryResult>();
 
             users.ForEach(user => {

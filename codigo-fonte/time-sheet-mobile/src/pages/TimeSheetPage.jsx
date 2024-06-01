@@ -15,6 +15,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import moment from "moment-timezone";
 import { Checkbox } from "react-native-paper";
 import * as WorkJourneyService from "../services/WorkJourneyService";
+import RefreshContext from "../contexts/RefreshContext";
 
 const months = [
   "Janeiro",
@@ -48,6 +49,7 @@ export default function TimeSheetPage() {
     userData.role === "Administrator"
   );
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
+  const {refresh,updateRefresh}= React.useContext(RefreshContext);
 
   function updateDate(date) {
     setDate(date);
@@ -94,6 +96,13 @@ export default function TimeSheetPage() {
   React.useEffect(() => {
     forceUpdate();
   }, [users]);
+
+  React.useEffect(()=>{
+   if(refresh){
+    updateJourneys();
+    updateRefresh();
+   }
+  }, [refresh])
 
   return (
     <View className="flex-1 bg-primary-600">
@@ -154,7 +163,7 @@ export default function TimeSheetPage() {
             </View>
           ) : isAdministrator ? (
             <FlatList
-              className="w-full"
+              className="w-full pb-20"
               data={workJourneys}
               renderItem={({ item }) => (
                 <ExpandableUserJourneyView

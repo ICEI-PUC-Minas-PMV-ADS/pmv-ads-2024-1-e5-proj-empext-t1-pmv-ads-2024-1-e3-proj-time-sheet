@@ -7,6 +7,7 @@ import AuthContext from "./src/contexts/AuthContext";
 import LoadingPage from "./src/pages/LoadingPage";
 import * as AuthService from "./src/services/AuthService";
 import { NativeWindStyleSheet } from "nativewind";
+import RefreshContext from "./src/contexts/RefreshContext";
 
 NativeWindStyleSheet.setOutput({
   default: "native",
@@ -23,6 +24,8 @@ export default function App() {
   const [isAdministrator, setIsAdministrator] = React.useState(false);
   const [userData, setUserData] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [refresh, setRefresh] = React.useState(false);
+
 
   function validateUser() {
     setIsLoading(true);
@@ -53,7 +56,9 @@ export default function App() {
   }
 
   React.useEffect(() => validateUser(), []);
-
+  function updateRefresh(){
+    setRefresh(!refresh);
+  }
   if (isLoading) return <LoadingPage />;
 
   return (
@@ -61,7 +66,9 @@ export default function App() {
       <AuthContext.Provider
         value={{ isSignedIn, isAdministrator, validateUser, userData }}
       >
-        <Routes />
+        <RefreshContext.Provider value={{refresh, updateRefresh}}>
+        <Routes />       
+        </RefreshContext.Provider>
       </AuthContext.Provider>
     </SafeAreaProvider>
   );

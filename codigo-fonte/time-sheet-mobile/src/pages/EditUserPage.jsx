@@ -18,12 +18,13 @@ import {
 } from "../common/validations";
 import { useInput } from "../hooks/useInput";
 import * as UserService from "../services/UserService";
+import AuthContext from "../contexts/AuthContext";
 
 const logo = require("../../assets/logo.png");
 
 export default function EditUserPage({ navigation }) {
   const route = useRoute();
-  const { item, updateUsers } = route.params;
+  const { item, updateUsers} = route.params;
   const [modalVisible, setModalVisible] = React.useState(false);
   const [modalContent, setModalContent] = React.useState(null);
   const [role, setRole] = React.useState(item.role === "Administrator");
@@ -31,6 +32,9 @@ export default function EditUserPage({ navigation }) {
 
   var lunchTime = parseToTimeValue(item.lunchTime);
   var totalTime = parseToTimeValue(item.totalTime);
+
+  const { userData} = React.useContext(AuthContext);
+  const [myId, setMyId] = React.useState(userData.id)
 
   /* Name Input */
 
@@ -137,24 +141,34 @@ export default function EditUserPage({ navigation }) {
 
   function disableUser() {
     setWaitingResponse(true);
+    if(item.id != myId){
+      UserService.disableUser(item.id).then((result) => {
+        if (result.status === "Success") {
+          updateModalContent("confirm-user-disabled");
+        }
+        
+      });
 
-    UserService.disableUser(item.id).then((result) => {
-      if (result.status === "Success") {
-        updateModalContent("confirm-user-disabled");
-      }
-      setWaitingResponse(false);
-    });
+    }else{
+      updateModalContent("user-not-disabled");
+    }
+    setWaitingResponse(false);
+    
   }
 
   function deleteUser() {
     setWaitingResponse(true);
-
-    UserService.deleteUser(item.id).then((result) => {
-      if (result.status === "Success") {
-        updateModalContent("confirm-user-deleted");
-      }
-      setWaitingResponse(false);
-    });
+    if (item.id != myId){
+      UserService.deleteUser(item.id).then((result) => {
+        if (result.status === "Success") {
+          updateModalContent("confirm-user-deleted");
+        }
+        
+      });
+    }else{
+      updateModalContent("user-not-delete");
+    }
+    setWaitingResponse(false);
   }
 
   function changeUserPassword() {
@@ -192,6 +206,12 @@ export default function EditUserPage({ navigation }) {
       case "confirm-user-updated":
         setModalContent(<ConfirmUserUpdatedModalContent backAction={goBack} />);
         break;
+      case "user-not-disabled":
+        setModalContent(<UserNotUpdatedModalContent backAction={() => setModalVisible(false)} />);
+        break;
+        case "user-not-delete":
+          setModalContent(<UserNotDeleteModalContent backAction={() => setModalVisible(false)} />);
+          break;
       default:
         setModalContent(
           <OptionsModalContent
@@ -517,6 +537,45 @@ function ConfirmUserUpdatedModalContent({ backAction }) {
       </Text>
       <Text className="text-sm font-semibold mb-5">
         O funcionário atualizado com sucesso
+      </Text>
+      <Button
+        className="mt-5"
+        title="Ok"
+        color="primary-600"
+        type="outline"
+        onPress={backAction}
+      />
+    </View>
+  );
+}
+function UserNotUpdatedModalContent({ backAction }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-3xl font-bold text-primary-800 mb-1">
+        Funcionário não desabilitado
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Faça login com outro usuário para desabilitar este funcionário!
+      </Text>
+      <Button
+        className="mt-5"
+        title="Ok"
+        color="primary-600"
+        type="outline"
+        onPress={backAction}
+      />
+    </View>
+  );
+}
+
+function UserNotDeleteModalContent({ backAction }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-3xl font-bold text-primary-800 mb-1">
+        Funcionário não Excluido
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Faça login com outro usuário para excluir este funcionário!
       </Text>
       <Button
         className="mt-5"

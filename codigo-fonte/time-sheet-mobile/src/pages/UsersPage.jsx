@@ -11,6 +11,8 @@ import UserContext from "../contexts/UserContext";
 
 import * as UserService from "../services/UserService";
 import { FlatList } from "react-native";
+import AuthContext from "../contexts/AuthContext";
+
 
 export default function UsersPage({ navigation }) {
   const [currentPage, setCurrentPage] = React.useState("user-active");
@@ -20,6 +22,8 @@ export default function UsersPage({ navigation }) {
   const [activeUsers, setActiveUsers] = React.useState(null);
   const [inactiveUsers, setInactiveUsers] = React.useState(null);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
+
+  
 
   const route = useRoute();
   const { users, updateUsers } = React.useContext(UserContext);

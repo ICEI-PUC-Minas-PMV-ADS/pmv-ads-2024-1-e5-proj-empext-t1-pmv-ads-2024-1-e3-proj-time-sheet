@@ -21,6 +21,7 @@ builder.Services.AddScoped<WorkJourneyInProgressRepository>();
 builder.Services.AddScoped<WorkJourneyInProgressBuilder>();
 builder.Services.AddScoped<WorkJourneyRepository>();
 builder.Services.AddScoped<WorkJourneyBuilder>();
+builder.Services.AddScoped<PendingJourneyEntryRepository>();
 
 builder.Services.UseQueries();
 builder.Services.UseCommands();
@@ -37,11 +38,16 @@ builder.Services.RegisterCommandHandler<StartWorkJourneyCommand, StartWorkJourne
 builder.Services.RegisterCommandHandler<FinishWorkJourneyCommand, FinishWorkJourneyCommandHandler, FinishWorkJourneyCommandResult>();
 builder.Services.RegisterCommandHandler<StartLunchTimeCommand, StartLunchTimeCommandHandler, StartLunchTimeCommandResult>();
 builder.Services.RegisterCommandHandler<FinishLunchTimeCommand, FinishLunchTimeCommandHandler, FinishLunchTimeCommandResult>();
+builder.Services.RegisterCommandHandler<AddWorkJourneyCommand, AddWorkJourneyCommandHandler, AddWorkJourneyCommandResult>();
+builder.Services.RegisterCommandHandler<UpdateWorkJourneyCommand, UpdateWorkJourneyCommandHandler, UpdateWorkJourneyCommandResult>();
+builder.Services.RegisterCommandHandler<RegisterPendingJourneyEntryCommand, RegisterPendingJourneyEntryCommandHandler, RegisterPendingJourneyEntryCommandResult>();
+builder.Services.RegisterCommandHandler<RemovePendingJourneyEntryCommand, RemovePendingJourneyEntryCommandHandler, RemovePendingJourneyEntryCommandResult>();
 builder.Services.RegisterQueryHandler<GetUsersQuery, GetUsersQueryHandler, GetUsersQueryResult>();
 builder.Services.RegisterQueryHandler<GetUserQuery, GetUserQueryHandler, GetUserQueryResult>();
 builder.Services.RegisterQueryHandler<GetWorkJourneyInProgressQuery, GetWorkJourneyInProgressQueryHandler, GetWorkJourneyInProgressQueryResult>();
 builder.Services.RegisterQueryHandler<GetWorkJourneysQuery, GetWorkJourneysQueryHandler, GetWorkJourneysQueryResult>();
 builder.Services.RegisterQueryHandler<GetAllWorkJourneysQuery, GetAllWorkJourneysQueryHandler, GetAllWorkJourneysQueryResult>();
+builder.Services.RegisterQueryHandler<GetPendingEntriesQuery, GetPendingEntriesQueryHandler, GetPendingEntriesQueryResult>();
 
 builder.Services.AddAuthentication(opt => {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -59,6 +65,16 @@ builder.Services.AddAuthentication(opt => {
     };
 });
 
+#if DEBUG
+
+builder.Services.AddDbContext<TimeSheetContext>(options => {
+    options
+        .UseInMemoryDatabase("time-sheet-database")
+        .UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
+});
+
+#else
+
 string envHost = Environment.GetEnvironmentVariable("DB_HOST") ?? "";
 string envDatabase = Environment.GetEnvironmentVariable("DB_DATABASE") ?? "";
 string envPassword = Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "";
@@ -70,6 +86,8 @@ builder.Services.AddDbContext<TimeSheetContext>(options => {
         .UseNpgsql($"Host={envHost};Port={envPort};Database={envDatabase};Username={envUsername};Password={envPassword};")
         .UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll);
 });
+
+#endif
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -84,19 +102,24 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwaggerUI();
 }
 
+
 using (var scope = app.Services.CreateScope()) {
 
     var provider = scope.ServiceProvider;
     var appContext = provider.GetRequiredService<TimeSheetContext>();
 
+#if RELEASE
+
     if (appContext.Database.GetPendingMigrations().Any()) {
         appContext.Database.Migrate();
     }
+#endif
 
     TimeSheetContextSeed.SeedContext(appContext);
 
     scope.Dispose();
 }
+
 
 app.UseCors(x => x
     .AllowAnyOrigin()

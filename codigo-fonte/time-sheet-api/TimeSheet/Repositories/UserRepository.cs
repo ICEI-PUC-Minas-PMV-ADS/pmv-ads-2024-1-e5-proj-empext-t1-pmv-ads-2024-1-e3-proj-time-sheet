@@ -10,6 +10,10 @@ namespace TimeSheet.Repositories {
         public async Task<IEnumerable<User>> GetAll() {
             return await _context.Users.ToListAsync();
         }
+        public async Task<bool> UserExists(Guid id) {
+            return await _context.Users
+                .AnyAsync(x => x.Id == id);
+        }
         public async Task<User?> FindUser(string cpf) {
 
             CPFValidations.Normalize(ref cpf);

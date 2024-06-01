@@ -7,5 +7,11 @@
         public TimeOnly EndTime { get; set; }
         public TimeOnly StartLunchTime { get; set; }
         public TimeOnly EndLunchTime { get; set; }
+        public WorkJourneyType JourneyType { get; set; }
+    }
+
+    public enum WorkJourneyType {
+        Normal,
+        MedicalCertificate
     }
 }
