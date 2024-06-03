@@ -16,6 +16,7 @@ import moment from "moment-timezone";
 import { Checkbox } from "react-native-paper";
 import * as WorkJourneyService from "../services/WorkJourneyService";
 import RefreshContext from "../contexts/RefreshContext";
+import { calculateJourneyStats } from "../services/JourneyService";
 
 const months = [
   "Janeiro",
@@ -49,7 +50,7 @@ export default function TimeSheetPage() {
     userData.role === "Administrator"
   );
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
-  const {refresh,updateRefresh}= React.useContext(RefreshContext);
+  const { refresh, updateRefresh } = React.useContext(RefreshContext);
 
   function updateDate(date) {
     setDate(date);
@@ -97,26 +98,26 @@ export default function TimeSheetPage() {
     forceUpdate();
   }, [users]);
 
-  React.useEffect(()=>{
-   if(refresh){
-    updateJourneys();
-    updateRefresh();
-   }
+  React.useEffect(() => {
+    if (refresh) {
+      updateJourneys();
+      updateRefresh();
+    }
   }, [refresh])
 
   return (
     <View className="flex-1 bg-primary-600">
       <Header />
-      <View className="flex bg-white justify-center items-center p-5 mt-5">
+      <View className="flex bg-white justify-center items-center p-3">
         <Pressable onPress={() => setMothPickerVisible(true)}>
-          <Text className="text-2xl text-primary-800 font-bold">
+          <Text className="text-xl text-primary-800 font-bold">
             {dateFormatted}
           </Text>
         </Pressable>
       </View>
-      <View className="flex-1 flex-column relative mt-5">
+      <View className="flex-1 flex-column relative">
         {monthPickerVisible && (
-          <View className="flex w-full absolute" style={{ zIndex: 100 }}>
+          <View className="flex w-full absolute mt-5" style={{ zIndex: 100 }}>
             <View className="flex mx-5">
               <MonthSelectorCalendar
                 selectedDate={date}
@@ -130,25 +131,50 @@ export default function TimeSheetPage() {
         )}
 
         <View className="flex-1 w-full items-center">
-          <View className="flex w-full flex-row items-center border border-primary-600 py-2 pl-4">
-            <View className="flex justify-center items-center w-10 h-10 bg-primary-400 rounded">
-              <Text className="text-xl font-bold text-white">Dia</Text>
+
+          {isAdministrator ? (
+            <View className="flex w-full flex-row items-center bg-primary-800 border  border-b-white p-2">
+              <View className="flex justify-center items-center w-8 h-8 bg-primary-400 rounded">
+                <Text className="text-sm font-bold text-white">Dias</Text>
+              </View>
+              <View className="flex-1 flex-row justify-around pr-4">
+                <Text className="text-base text-primary-100">h. trab</Text>
+                <Text className="text-base text-primary-100">h. extras</Text>
+                <Text className="text-base text-primary-100">h. total</Text>
+                <Text className="text-base text-primary-100">atest.</Text>
+              </View>
+              <View>
+                <Checkbox
+                  color="white"
+                  status={expanded ? "checked" : "unchecked"}
+                  uncheckedColor="white"
+                  onPress={() => setExpanded(!expanded)}
+                />
+              </View>
             </View>
-            <View className="flex-1 flex-row justify-around pr-4">
-              <Text className="text-base text-primary-100">início</Text>
-              <Text className="text-base text-primary-100">saída</Text>
-              <Text className="text-base text-primary-100">retorno</Text>
-              <Text className="text-base text-primary-100">final</Text>
+
+          ) : (
+            <View className="flex w-full flex-row items-center bg-primary-800 border  border-b-white p-2">
+              <View className="flex justify-center items-center w-8 h-8 bg-primary-400 rounded">
+                <Text className="text-base font-bold text-white">Dia</Text>
+              </View>
+              <View className="flex-1 flex-row justify-around pr-4">
+                <Text className="text-base text-primary-100">início</Text>
+                <Text className="text-base text-primary-100">saída</Text>
+                <Text className="text-base text-primary-100">retorno</Text>
+                <Text className="text-base text-primary-100">final</Text>
+              </View>
+              <View>
+                <Checkbox
+                  color="white"
+                  status={expanded ? "checked" : "unchecked"}
+                  uncheckedColor="white"
+                  onPress={() => setExpanded(!expanded)}
+                />
+              </View>
             </View>
-            <View>
-              <Checkbox
-                color="white"
-                status={expanded ? "checked" : "unchecked"}
-                uncheckedColor="white"
-                onPress={() => setExpanded(!expanded)}
-              />
-            </View>
-          </View>
+
+          )}
 
           {waitingResponse ? (
             <View className="flex-1 justify-center items-center">
@@ -212,7 +238,12 @@ export default function TimeSheetPage() {
         </View>
       </View>
       <Fab>
-        <Icon size={36} name="calendar-export" color="#59A093" />
+        <View className="flex flex-row justify-center items-center">
+          <Icon name="calendar-export" size={24} color="#59A093" />
+          <Text className="text-white pl-2">
+            Gerar relatório de horas
+          </Text>
+        </View>
       </Fab>
     </View>
   );
@@ -225,61 +256,41 @@ function ExpandableUserJourneyView({ userName, workJourneys, expanded }) {
     setIsExpanded(expanded);
   }, [expanded]);
 
+  const stats = calculateJourneyStats(8, workJourneys);
+
   return (
     <View className="w-full">
-      <View className="flex flex-row justify-between items-center bg-slate-200 w-full py-2 border border-primary-600">
-        <View className="flex-1 flex-column justify-start pl-2">
-          <Text className="text-xl text-primary-600 font-semibold">
+      <View className="flex flex-row justify-between items-center bg-primary-200 w-full px-2 py-1">
+        <View className="flex-1 flex-column justify-start">
+          <Text className="text-base text-white font-semibold">
             {userName}
-          </Text>
-          <Text className="text-base text-slate-400 font-semibold">
-            Funcionário
           </Text>
         </View>
         <Checkbox
-          color="#1E3F42"
+          color="white"
+          uncheckedColor="white"
           status={isExpanded ? "checked" : "unchecked"}
           onPress={() => {
             setIsExpanded(!isExpanded);
           }}
         />
       </View>
-      {isExpanded && (
-        <FlatList
-          className="w-full"
-          data={workJourneys}
-          renderItem={({ item }) => (
-            <View className="flex flex-row items-center bg-primary-400 border border-primary-600 py-2 pl-4">
-              <View className="flex justify-center items-center w-10 h-10 bg-primary-600 rounded">
-                <Text className="text-xl font-bold text-white">
-                  {item.date.split("-")[2]}
-                </Text>
-              </View>
-              <View className="flex-1 flex-row justify-around w-80 pr-4">
-                <Text className="text-base text-white font-semibold">
-                  {item.startTime}
-                </Text>
-                <Text className="text-base text-white font-semibold">
-                  {item.startLunchTime}
-                </Text>
-                <Text className="text-base text-white font-semibold">
-                  {item.endLunchTime}
-                </Text>
-                <Text className="text-base text-white font-semibold">
-                  {item.endTime}
-                </Text>
-              </View>
-              <View>
-                <Checkbox
-                  color="white"
-                  status={isExpanded ? "checked" : "unchecked"}
-                  uncheckedColor="white"
-                />
-              </View>
-            </View>
-          )}
-        />
-      )}
+      <View className="flex w-full flex-row items-center bg-primary-400 p-2">
+        <View className="flex justify-center items-center w-8 h-8 bg-primary-600 rounded">
+          <Text className="text-base font-bold text-white">{stats.days}</Text>
+        </View>
+        <View className="flex-1 flex-row justify-around pr-4">
+          <Text className="text-base text-white">{stats.workTime}</Text>
+          <Text className="text-base text-white">{stats.extraTime}</Text>
+          <Text className="text-base text-white">{stats.totalTime}</Text>
+          <Text className="text-base text-white">{stats.certificates}</Text>
+        </View>
+        <View>
+          <Pressable className="flex justify-center items-center bg-primary-200 rounded" style={{ height: 24, width: 24 }}>
+            <Icon name="pencil" size={20} color="white" />
+          </Pressable>
+        </View>
+      </View>
     </View>
   );
 }

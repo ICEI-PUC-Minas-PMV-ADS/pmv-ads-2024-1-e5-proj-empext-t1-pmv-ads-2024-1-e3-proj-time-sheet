@@ -11,12 +11,13 @@ export default function Input({
   mask = null,
   setInputValue,
   secure,
+  disabled = false,
   ...rest
 }) {
   const [isVisible, setIsVisible] = React.useState(false);
 
   return (
-    <View {...rest} className="flex w-full">
+    <View {...rest} className="flex-1">
       <Text className="text-sm text-primary-600">{label}</Text>
       {mask ? (
         <MaskedTextInput
@@ -53,6 +54,8 @@ export default function Input({
           className="w-full border border-primary-600 rounded-lg pl-1.5 h-9"
           placeholder={placeholder}
           keyboardType={keyboardType}
+          editable={!disabled}
+          disabled={disabled}
           onChangeText={(text) => {
             setInputValue(text);
           }}

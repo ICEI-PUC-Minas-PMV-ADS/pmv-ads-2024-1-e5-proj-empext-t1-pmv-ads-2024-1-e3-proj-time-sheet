@@ -299,3 +299,42 @@ export async function serverTime() {
     return result;
   }
 }
+
+export async function addJourney(userId, date, startTime, endTime, startLunchTime, endLunchTime, journeyType) {
+  var result = {};
+  const token = await AsyncStorage.getItem("@TimeSheet:userToken");
+
+  try {
+    var response = await ApiService.sendRequest(
+      "/workjourney/addjourney",
+      "GET",
+      {
+        userId: userId,
+        date: date,
+        startTime: startTime,
+        endTime: endTime,
+        startLunchTime: startLunchTime,
+        endLunchTime: endLunchTime,
+        journeyType: journeyType
+      },
+      token
+    );
+
+    if (!response.ok) {
+
+      result.message = "Error ao se comunicar com o servidor.";
+      result.status = "Error";
+
+      return result;
+    }
+
+    result.message = "Registro adicionado";
+    result.status = "WorkJourneyAdded";
+
+    return result;
+  } catch (err) {
+    result.message = "Error ao se comunicar com o servidor.";
+    result.status = "Error";
+    return result;
+  }
+}

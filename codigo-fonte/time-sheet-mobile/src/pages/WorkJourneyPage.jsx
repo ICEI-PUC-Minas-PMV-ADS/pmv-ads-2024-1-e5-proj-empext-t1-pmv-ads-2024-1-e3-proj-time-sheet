@@ -288,15 +288,15 @@ export default function WorkJourneyPage() {
         className="flex flex-col bg-primary-400 pt-3 shadow drop-shadow-xl border-b-2 border-primary-600"
         style={{ zIndex: 100 }}
       >
-        <View className="bg-white inline p-2 pr-10 rounded-r-full self-start">
+        <View className="bg-white inline p-1 pr-10 rounded-r-full self-start">
           <Text className="text-lg font-semibold w-min text-primary-600 inline">
             {userData.name}
           </Text>
         </View>
-        <Text className="text-stone-200 text-4xl font-bold w-full text-center">
+        <Text className="text-stone-200 text-3xl font-bold w-full text-center">
           {time}
         </Text>
-        <Text className="text-stone-200 text-lg font-bold text-right  mr-3 mb-1">
+        <Text className="text-stone-200 text-base font-bold text-right  mr-3 mb-1">
           {date}
         </Text>
       </View>

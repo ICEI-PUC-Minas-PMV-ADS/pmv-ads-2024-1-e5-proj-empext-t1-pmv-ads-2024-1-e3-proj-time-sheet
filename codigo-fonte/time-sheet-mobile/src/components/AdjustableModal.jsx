@@ -51,7 +51,7 @@ export default function AdjustableModal({
       className="flex flex-col justify-end h-screen w-full"
     >
       <Animated.View
-        className="flex flex-col w-full bg-surface-600 rounded-t-3xl p-10 absolute"
+        className="flex flex-col w-full bg-surface-600 rounded-t-3xl p-7 absolute"
         style={{
           transform: [
             {

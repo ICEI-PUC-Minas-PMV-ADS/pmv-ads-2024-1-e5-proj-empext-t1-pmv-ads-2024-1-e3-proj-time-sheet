@@ -13,6 +13,7 @@ import UsersPage from "../pages/UsersPage";
 import CadastreUserPage from "../pages/CadastreUserPage";
 import EditUserPage from "../pages/EditUserPage";
 import EditUserPasswordPage from "../pages/EditUserPasswordPage";
+import AddWorkJourneyPage from "../pages/AddWorkJourneyPage";
 import UserContext from "../contexts/UserContext";
 
 const Stack = createNativeStackNavigator();
@@ -132,7 +133,7 @@ function AdministratorRoutes() {
         />
         <Tab.Screen
           name="TimeSheet"
-          component={TimeSheetPage}
+          component={TimeSheetStack}
           options={{
             tabBarLabel: "Folha de pontos",
             tabBarIcon: ({ color, size }) => (
@@ -169,6 +170,25 @@ function UsersStack({ navigation }) {
         name="EditUserPasswordPage"
         component={EditUserPasswordPage}
       />
+    </Stack.Navigator>
+  );
+}
+
+function TimeSheetStack({ navigation }) {
+  return (
+    <Stack.Navigator
+      screenOptions={({ route }) => {
+        if (route.name === "AddWorkJourneyPage") {
+          navigation.setOptions(screenOptionsHideTab);
+          return screenOptionsHideTab;
+        } else {
+          navigation.setOptions(screenOptions);
+          return screenOptions;
+        }
+      }}
+    >
+      <Stack.Screen name="TimeSheetPage" component={TimeSheetPage}/>
+      <Stack.Screen name="AddWorkJourneyPage" component={AddWorkJourneyPage} />
     </Stack.Navigator>
   );
 }
