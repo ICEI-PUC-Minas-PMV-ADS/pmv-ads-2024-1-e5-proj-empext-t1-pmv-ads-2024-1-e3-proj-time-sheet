@@ -14,7 +14,7 @@ export function useLocation(){
       setLat(pos.coords.latitude)
       setLong(pos.coords.longitude)
   
-  if((lat <= latLoja + 0.001 && lat >= latLoja - 0.001 ) && (long <= longLoja +0.001 && lat >= latLoja - 0.001)){
+  if((lat <= latLoja + 0.0045 && lat >= latLoja - 0.0045 ) && (long <= longLoja +0.0045 && lat >= latLoja - 0.0045)){
 
       setLocationValid(true)
       return(true)
