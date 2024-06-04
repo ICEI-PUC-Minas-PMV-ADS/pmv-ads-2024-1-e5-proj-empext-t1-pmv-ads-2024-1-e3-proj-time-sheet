@@ -4,8 +4,8 @@ import * as local  from "expo-location"
 export function useLocation(){
     const[lat, setLat] =React.useState(0);
     const[long, setLong] = React.useState(0);
-    const[latLoja, setLatLoja] = React.useState(-20.297);
-    const[longLoja, setLongLoja] = React.useState(-40.297);
+    const[latLoja, setLatLoja] = React.useState(-3.803148);
+    const[longLoja, setLongLoja] = React.useState(-38.550105);
     const [locationValid, setLocationValid] = React.useState(true);
 
 
