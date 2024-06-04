@@ -1,5 +1,5 @@
 import React from "react";
-import local from "expo-location"
+import * as local from "expo-location"
 
 export default function Location(){
     const[lat, setLat] =React.useState(0);
