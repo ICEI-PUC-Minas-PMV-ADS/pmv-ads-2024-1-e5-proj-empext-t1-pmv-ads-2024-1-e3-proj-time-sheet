@@ -6,7 +6,7 @@
         public GetUserQueryHandler(UserRepository repository) {
             _repository = repository;
         }
-        public async Task<GetUserQueryResult> Handle(GetUserQuery query) {
+        public async Task<GetUserQueryResult?> Handle(GetUserQuery query) {
 
             var user = await _repository.
                 FindUser(query.UserId);

@@ -11,7 +11,7 @@ namespace TimeSheet.Commands {
         WorkJourneyNotStarted,
         UserNotFound,
         LunchTimeAlreadyStarted,
-        Erro,
+        Error,
         LunchTimeStarted
     }
 }

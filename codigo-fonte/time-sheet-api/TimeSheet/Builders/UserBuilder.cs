@@ -13,11 +13,12 @@ namespace TimeSheet.Builders {
             _result = new Result<User>();
             _user = new User();
             _user.Id = Guid.NewGuid();
+            _user.Role = UserRole.Employee;
             _user.Status = UserStatus.Active;
 
             return this;
         }
-        public UserBuilder WithName(string name) {
+        public UserBuilder WithName(string? name) {
 
             if (_result is null || _user is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
@@ -49,7 +50,7 @@ namespace TimeSheet.Builders {
 
             return this;
         }
-        public UserBuilder WithCPF(string cpf) {
+        public UserBuilder WithCPF(string? cpf) {
 
             if (_result is null || _user is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
@@ -84,7 +85,7 @@ namespace TimeSheet.Builders {
 
             return this;
         }
-        public UserBuilder WithPassword(string password) {
+        public UserBuilder WithPassword(string? password) {
 
             if (_result is null || _user is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
@@ -136,13 +137,13 @@ namespace TimeSheet.Builders {
 
             return this;
         }
-        public UserBuilder WithWorkJourney(double totalTime, double lunchTime) {
+        public UserBuilder WithWorkJourney(double workTime, double lunchTime) {
 
             if (_result is null || _user is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
             }
 
-            if (!WorkJourneyValidations.CheckTimeBounds(totalTime)) {
+            if (!WorkJourneyValidations.CheckTimeBounds(workTime)) {
                 _result.WithError<ValueOutsideTimeBoundsError>();
             }
 
@@ -150,11 +151,11 @@ namespace TimeSheet.Builders {
                 _result.WithError<ValueOutsideTimeBoundsError>();
             }
 
-            if (!WorkJourneyValidations.CheckLunchTimeConsistency(totalTime, lunchTime)) {
+            if (!WorkJourneyValidations.CheckLunchTimeConsistency(workTime, lunchTime)) {
                 _result.WithError<InconsistentLunchTimeError>();
             }
 
-            _user.TotalTime = totalTime;
+            _user.WorkTime = workTime;
             _user.LunchTime = lunchTime;
 
             return this;

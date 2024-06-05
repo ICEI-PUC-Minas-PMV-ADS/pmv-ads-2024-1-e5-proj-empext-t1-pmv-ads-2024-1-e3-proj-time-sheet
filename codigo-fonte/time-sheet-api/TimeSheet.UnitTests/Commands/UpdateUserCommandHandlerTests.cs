@@ -16,7 +16,6 @@ namespace TimeSheet.UnitTests.Commands {
             _handler = new UpdateUserCommandHandler(repository, builder);
         }
 
-
         [TestMethod]
         public void Handle_UserThatNotExists_ReturnsFailureWithUserNotFoundStatus() {
 
@@ -24,12 +23,12 @@ namespace TimeSheet.UnitTests.Commands {
                 UserId = Guid.NewGuid(),
                 CPF = "61154646092",
                 Name = "Bruce Wayne",
-                TotalTime = 8,
+                WorkTime = 8,
                 LunchTime = 2,
                 Role = Models.UserRole.Administrator
             };
-            var commandResult = _handler.Handle(command).RunSync();
 
+            var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
             Assert.AreEqual(commandResult.Status, UpdateUserCommandResultStatus.UserNotFound);
@@ -42,12 +41,12 @@ namespace TimeSheet.UnitTests.Commands {
                 UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"),
                 CPF = "11111111111",
                 Name = "B",
-                TotalTime = 25,
+                WorkTime = 25,
                 LunchTime = 27,
                 Role = Models.UserRole.Administrator
             };
-            var commandResult = _handler.Handle(command).RunSync();
 
+            var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
             Assert.AreEqual(commandResult.Status, UpdateUserCommandResultStatus.InvalidUserData);
@@ -60,12 +59,12 @@ namespace TimeSheet.UnitTests.Commands {
                 UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"),
                 CPF = "44309223060",
                 Name = "Bruce Wayne",
-                TotalTime = 10,
+                WorkTime = 10,
                 LunchTime = 3,
                 Role = Models.UserRole.Employee
             };
-            var commandResult = _handler.Handle(command).RunSync();
 
+            var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
             Assert.AreEqual(commandResult.Status, UpdateUserCommandResultStatus.UserUpdated);

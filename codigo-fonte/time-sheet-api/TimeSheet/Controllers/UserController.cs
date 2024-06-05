@@ -21,9 +21,10 @@ namespace TimeSheet.Controllers {
         [Route("authenticated")]
         public async Task<IActionResult> Authenticated() {
 
-            if(!User.Identity.IsAuthenticated) {
+            if (User.Identity is null ||
+                User.Identity.IsAuthenticated is false) {
                 return Unauthorized();
-            }
+            } 
 
             var userId = User.Claims
                 .FirstOrDefault(c => c.Type == ClaimTypes.Sid);
@@ -82,24 +83,14 @@ namespace TimeSheet.Controllers {
             return Ok(commandResult);
         }
 
-        [HttpPost]
-        [AllowAnonymous]
-        [Route("verify")]
-        public async Task<IActionResult> VerifyToken([FromBody] VerifyTokenCommand command) {
-
-            var commandResult = await _commandHandler
-                .Handle<VerifyTokenCommand, VerifyTokenCommandResult>(command);
-
-            if (commandResult.Status is not VerifyTokenCommandStatus.ValidToken) {
-                return Unauthorized(commandResult);
-            }
-
-            return Ok(commandResult);
-        }
-
         [HttpPut]
         [Route("disable")]
         public async Task<IActionResult> DisableUser([FromBody] DisableUserCommand command) {
+
+            var claimSid = ClaimsPrincipal.Current?.Claims.First(c => c.Type == ClaimTypes.Sid).Value;
+            var currenteid = claimSid is null ? Guid.Empty : Guid.Parse(claimSid);
+
+            command.CurrentId = currenteid;
 
             var commandResult = await _commandHandler
                 .Handle<DisableUserCommand, DisableUserCommandResult>(command);
@@ -173,6 +164,11 @@ namespace TimeSheet.Controllers {
         [HttpDelete]
         [Route("delete")]
         public async Task<IActionResult> DeleteUser([FromBody] DeleteUserCommand command) {
+
+            var claimSid = ClaimsPrincipal.Current?.Claims.First(c => c.Type == ClaimTypes.Sid).Value;
+            var currenteid = claimSid is null ? Guid.Empty : Guid.Parse(claimSid);
+
+            command.CurrentId = currenteid;
 
             var commandResult = await _commandHandler
                 .Handle<DeleteUserCommand, DeleteUserCommandResult>(command);

@@ -6,7 +6,7 @@
         public GetUsersQueryHandler(UserRepository repository) {
             _repository = repository;
         }
-        public async Task<GetUsersQueryResult> Handle(GetUsersQuery query) {
+        public async Task<GetUsersQueryResult?> Handle(GetUsersQuery query) {
 
             var users = (await _repository.GetAll()).OrderBy(user => user.Name).ToList();           
             var usersResult = new List<GetUserQueryResult>();

@@ -13,41 +13,49 @@
 
         public async Task<ChangeUserPasswordCommandResult> Handle(ChangeUserPasswordCommand command) {
 
-            var cpf = command.CPF;
+            try {
 
-            CPFValidations.Normalize(ref cpf);
+                var cpf = command.CPF;
 
-            var user = await _repository
-                .FindUser(cpf);
+                CPFValidations.Normalize(ref cpf);
 
-            if (user is null) {
+                var user = await _repository.FindUser(cpf);
+
+                if (user is null) {
+                    return new ChangeUserPasswordCommandResult {
+                        Message = "Usuário não encontrado.",
+                        Status = ChangeUserPasswordCommandResultStatus.UserNotFound
+                    };
+                }
+
+                var result = _builder
+                    .CreateNew()
+                    .WithPassword(command.Password)
+                    .EncryptPassword()
+                    .Build();
+
+                if (result.IsFailed) {
+                    return new ChangeUserPasswordCommandResult {
+                        Message = result.Errors[0].Message,
+                        Status = ChangeUserPasswordCommandResultStatus.InvalidPassword
+                    };
+                }
+
+                user.Password = result.Value.Password;
+
+                await _repository.SaveChanges();
+
                 return new ChangeUserPasswordCommandResult {
-                    Message = "Usuário não encontrado.",
-                    Status = ChangeUserPasswordCommandResultStatus.UserNotFound
+                    Message = "Senha alterada com sucesso.",
+                    Status = ChangeUserPasswordCommandResultStatus.PasswordChanged
+                };
+
+            } catch(Exception exc) {
+                return new ChangeUserPasswordCommandResult {
+                    Message = $"{exc.Message} | {exc.GetType()}",
+                    Status = ChangeUserPasswordCommandResultStatus.Error
                 };
             }
-
-            var result = _builder
-                .CreateNew()
-                .WithPassword(command.Password)
-                .EncryptPassword()
-                .Build();
-
-            if (result.IsFailed) {
-                return new ChangeUserPasswordCommandResult {
-                    Message = result.Errors[0].Message,
-                    Status = ChangeUserPasswordCommandResultStatus.InvalidPassword
-                };
-            }
-
-            user.Password = result.Value.Password;
-
-            await _repository.SaveChanges();
-
-            return new ChangeUserPasswordCommandResult {
-                Message = "Senha alterada com sucesso.",
-                Status = ChangeUserPasswordCommandResultStatus.PasswordChanged
-            };
         }
     }
 }

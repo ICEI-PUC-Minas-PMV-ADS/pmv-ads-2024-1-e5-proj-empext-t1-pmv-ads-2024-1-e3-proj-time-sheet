@@ -10,7 +10,7 @@ namespace TimeSheet.Commands {
     public enum DisableUserCommandResultStatus {
         UserAlreadyDisabled,
         UserNotFound,
-        UserWithSameId,
+        CurrentUser,
         UserDisabled,
         Error
     }

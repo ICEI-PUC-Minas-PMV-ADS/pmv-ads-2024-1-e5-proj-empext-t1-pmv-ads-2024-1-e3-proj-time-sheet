@@ -1,10 +1,8 @@
+import { API_URL } from "@env";
+
 export async function sendRequest(url, method, body, token) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 20000);
-
-  const API_URL = "https://localhost:7278";
-
-  console.log("API " + API_URL);
 
   var headers = new Headers();
   var requestOptions = {};
@@ -34,6 +32,6 @@ export async function sendRequest(url, method, body, token) {
   }
 
   url = API_URL.concat(url);
-  console.log(url)
+
   return await fetch(url, requestOptions);
 }

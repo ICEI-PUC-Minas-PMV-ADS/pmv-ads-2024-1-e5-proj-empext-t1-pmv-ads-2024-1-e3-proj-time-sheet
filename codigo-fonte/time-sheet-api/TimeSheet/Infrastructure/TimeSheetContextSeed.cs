@@ -12,7 +12,7 @@
                     Id = Guid.Parse("fd87aebe-6584-4163-8b2f-e6296d1a8e62"),
                     Name = "admin",
                     CPF = "00000000000",
-                    TotalTime = 8,
+                    WorkTime = 8,
                     LunchTime = 2,
                     Password = passwordServices.EncryptPassword("admin@123"),
                     Role = Models.UserRole.Administrator,

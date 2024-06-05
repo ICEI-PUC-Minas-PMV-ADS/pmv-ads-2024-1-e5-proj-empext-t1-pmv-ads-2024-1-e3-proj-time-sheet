@@ -6,7 +6,7 @@
         public GetWorkJourneyInProgressQueryHandler(WorkJourneyInProgressRepository repository) {
             _repository = repository;
         }
-        public async Task<GetWorkJourneyInProgressQueryResult> Handle(GetWorkJourneyInProgressQuery query) {
+        public async Task<GetWorkJourneyInProgressQueryResult?> Handle(GetWorkJourneyInProgressQuery query) {
 
             var workJourneyInProgress = await _repository
                 .GetWorkJourneyInProgress(query.UserId);

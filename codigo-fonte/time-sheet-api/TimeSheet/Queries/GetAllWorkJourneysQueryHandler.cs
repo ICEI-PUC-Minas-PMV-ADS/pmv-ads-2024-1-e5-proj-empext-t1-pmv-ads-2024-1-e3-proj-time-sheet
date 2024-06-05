@@ -7,7 +7,7 @@
             _repository = repository;
             _userRepository = userRepository;
         }
-        public async Task<GetAllWorkJourneysQueryResult> Handle(GetAllWorkJourneysQuery query) {
+        public async Task<GetAllWorkJourneysQueryResult?> Handle(GetAllWorkJourneysQuery query) {
 
             var workJourneys = new List<GetWorkJourneysQueryResult>();
 

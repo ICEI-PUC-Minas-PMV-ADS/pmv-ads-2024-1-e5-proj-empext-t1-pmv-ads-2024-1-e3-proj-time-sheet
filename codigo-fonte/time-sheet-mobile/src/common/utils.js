@@ -93,3 +93,27 @@ export function parseToDate(time = null, date = null) {
     0
   );
 }
+
+export function calculateTimeDiference(date1, date2) {
+
+  const hours1 = date1.getHours();
+  const minutes1 = date1.getMinutes();
+  const hours2 = date2.getHours();
+  const minutes2 = date2.getMinutes();
+
+  // Converte as horas e minutos para minutos totais desde o início do dia
+  const totalMinutes1 = hours1 * 60 + minutes1;
+  const totalMinutes2 = hours2 * 60 + minutes2;
+
+  // Calcula a diferença em minutos
+  const differenceInMinutes = Math.abs(totalMinutes2 - totalMinutes1);
+
+  // Converte a diferença de volta para horas e minutos
+  const diffHours = Math.floor(differenceInMinutes / 60);
+  const diffMinutes = differenceInMinutes % 60;
+
+  return {
+    hours: diffHours,
+    minutes: diffMinutes
+  };
+}

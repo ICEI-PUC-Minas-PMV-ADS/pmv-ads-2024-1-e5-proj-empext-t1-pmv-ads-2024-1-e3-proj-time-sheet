@@ -23,7 +23,7 @@ export default function UsersPage({ navigation }) {
   const [inactiveUsers, setInactiveUsers] = React.useState(null);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
 
-  
+
 
   const route = useRoute();
   const { users, updateUsers } = React.useContext(UserContext);
@@ -109,7 +109,7 @@ export default function UsersPage({ navigation }) {
             <FlatList
               data={inactiveUsers}
               renderItem={({ item }) => (
-                <View className="flex flex-row w-full bg-primary-400 px-6 py-3 items-center border border-primary-600">
+                <View className="flex flex-row w-full bg-primary-400 px-4 py-2 items-center border border-primary-600">
                   <View className="flex-1 flex-col items-start justify-center">
                     <Text className="text-base text-white">{item.name}</Text>
                     <Text className="text-primary-100 leading-none">
@@ -134,7 +134,7 @@ export default function UsersPage({ navigation }) {
             <FlatList
               data={activeUsers}
               renderItem={({ item }) => (
-                <View className="flex flex-row w-full bg-primary-400 px-6 py-3 items-center border border-primary-600">
+                <View className="flex flex-row w-full bg-primary-400 px-4 py-2 items-center border border-primary-600">
                   <View className="flex-1 flex-col items-start justify-center">
                     <Text className="text-base text-white">{item.name}</Text>
                     <Text className="text-primary-100 leading-none">
@@ -154,13 +154,15 @@ export default function UsersPage({ navigation }) {
               )}
             />
           )}
-          <Fab
-            onPress={() =>
-              navigation.navigate("CadastreUserPage", { updateUsers })
-            }
-          >
-            <View>
-              <Icon name="plus" size={36} color="#59A093" />
+
+          <Fab onPress={() =>
+            navigation.navigate("CadastreUserPage", { updateUsers })
+          }>
+            <View className="flex flex-row justify-center items-center">
+              <Icon name="plus" size={24} color="#59A093" />
+              <Text className="text-white pl-2">
+                Cadastrar novo funcionário
+              </Text>
             </View>
           </Fab>
         </View>

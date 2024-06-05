@@ -8,7 +8,7 @@ namespace TimeSheet.Common.CQRS {
             _serviceProvider = serviceProvider;
         }
 
-        public async Task<TQueryResult> Handle<TQuery, TQueryResult>(TQuery query)
+        public async Task<TQueryResult?> Handle<TQuery, TQueryResult>(TQuery query)
             where TQuery : IQuery
             where TQueryResult : IQueryResult {
 

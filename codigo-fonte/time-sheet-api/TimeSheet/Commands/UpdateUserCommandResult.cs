@@ -1,5 +1,4 @@
-﻿using FluentResults;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace TimeSheet.Commands {
     public class UpdateUserCommandResult : ICommandResult {
