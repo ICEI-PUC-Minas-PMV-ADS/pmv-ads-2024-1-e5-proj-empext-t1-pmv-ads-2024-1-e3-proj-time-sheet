@@ -3,8 +3,8 @@
 namespace TimeSheet.Builders {
     public class WorkJourneyInProgressBuilder {
 
-        private Result<WorkJourneyInProgress> _result;
-        private WorkJourneyInProgress _workJourneyInProgress;
+        private Result<WorkJourneyInProgress>? _result;
+        private WorkJourneyInProgress? _workJourneyInProgress;
         public WorkJourneyInProgressBuilder CreateNew() {
             _result = new Result<WorkJourneyInProgress>();
             _workJourneyInProgress = new WorkJourneyInProgress();

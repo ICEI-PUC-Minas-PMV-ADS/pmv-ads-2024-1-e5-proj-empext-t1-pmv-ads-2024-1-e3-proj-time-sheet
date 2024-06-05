@@ -21,7 +21,6 @@ builder.Services.AddScoped<WorkJourneyInProgressRepository>();
 builder.Services.AddScoped<WorkJourneyInProgressBuilder>();
 builder.Services.AddScoped<WorkJourneyRepository>();
 builder.Services.AddScoped<WorkJourneyBuilder>();
-builder.Services.AddScoped<PendingJourneyEntryRepository>();
 
 builder.Services.UseQueries();
 builder.Services.UseCommands();
@@ -39,14 +38,11 @@ builder.Services.RegisterCommandHandler<StartLunchTimeCommand, StartLunchTimeCom
 builder.Services.RegisterCommandHandler<FinishLunchTimeCommand, FinishLunchTimeCommandHandler, FinishLunchTimeCommandResult>();
 builder.Services.RegisterCommandHandler<AddWorkJourneyCommand, AddWorkJourneyCommandHandler, AddWorkJourneyCommandResult>();
 builder.Services.RegisterCommandHandler<UpdateWorkJourneyCommand, UpdateWorkJourneyCommandHandler, UpdateWorkJourneyCommandResult>();
-builder.Services.RegisterCommandHandler<RegisterPendingJourneyEntryCommand, RegisterPendingJourneyEntryCommandHandler, RegisterPendingJourneyEntryCommandResult>();
-builder.Services.RegisterCommandHandler<RemovePendingJourneyEntryCommand, RemovePendingJourneyEntryCommandHandler, RemovePendingJourneyEntryCommandResult>();
 builder.Services.RegisterQueryHandler<GetUsersQuery, GetUsersQueryHandler, GetUsersQueryResult>();
 builder.Services.RegisterQueryHandler<GetUserQuery, GetUserQueryHandler, GetUserQueryResult>();
 builder.Services.RegisterQueryHandler<GetWorkJourneyInProgressQuery, GetWorkJourneyInProgressQueryHandler, GetWorkJourneyInProgressQueryResult>();
 builder.Services.RegisterQueryHandler<GetWorkJourneysQuery, GetWorkJourneysQueryHandler, GetWorkJourneysQueryResult>();
 builder.Services.RegisterQueryHandler<GetAllWorkJourneysQuery, GetAllWorkJourneysQueryHandler, GetAllWorkJourneysQueryResult>();
-builder.Services.RegisterQueryHandler<GetPendingEntriesQuery, GetPendingEntriesQueryHandler, GetPendingEntriesQueryResult>();
 
 builder.Services.AddAuthentication(opt => {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

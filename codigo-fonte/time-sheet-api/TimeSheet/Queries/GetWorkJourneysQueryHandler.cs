@@ -7,7 +7,7 @@ namespace TimeSheet.Queries {
             _workJourneyRepository = workJourneyRepository;
         }
 
-        public async Task<GetWorkJourneysQueryResult> Handle(GetWorkJourneysQuery query) {
+        public async Task<GetWorkJourneysQueryResult?> Handle(GetWorkJourneysQuery query) {
 
             var WorkJourneys = (await _workJourneyRepository.GetWorkJourneys(query.UserId, query.Year, query.Month)).ToList();
             var workJourneysResult = new List<GetWorkJourneyResult>();

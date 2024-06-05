@@ -26,11 +26,6 @@ namespace TimeSheet.Queries {
                 LunchTime = user.LunchTime,
             };
         }
-        public static GetUserQueryResult Empty() {
-            return new GetUserQueryResult {
-                Id = Guid.Empty,
-            };
-        }
 
         #endregion
     }

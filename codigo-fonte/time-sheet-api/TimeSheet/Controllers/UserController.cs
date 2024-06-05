@@ -21,9 +21,10 @@ namespace TimeSheet.Controllers {
         [Route("authenticated")]
         public async Task<IActionResult> Authenticated() {
 
-            if(!User.Identity.IsAuthenticated) {
+            if (User.Identity is null ||
+                User.Identity.IsAuthenticated is false) {
                 return Unauthorized();
-            }
+            } 
 
             var userId = User.Claims
                 .FirstOrDefault(c => c.Type == ClaimTypes.Sid);

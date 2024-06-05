@@ -6,14 +6,14 @@
         public GetUserQueryHandler(UserRepository repository) {
             _repository = repository;
         }
-        public async Task<GetUserQueryResult> Handle(GetUserQuery query) {
+        public async Task<GetUserQueryResult?> Handle(GetUserQuery query) {
 
             var user = await _repository.
                 FindUser(query.UserId);
 
             if (user is null)
             {
-                return GetUserQueryResult.Empty();
+                return null;
             }
 
             return GetUserQueryResult.FromUser(user);
