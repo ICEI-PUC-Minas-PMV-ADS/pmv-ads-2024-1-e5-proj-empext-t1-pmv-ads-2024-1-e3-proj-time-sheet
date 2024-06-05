@@ -17,43 +17,51 @@
 
         public async Task<AuthenticateCommandResult> Handle(AuthenticateCommand command) {
 
-            var cpf = command.CPF;
+            try {
 
-            CPFValidations.Normalize(ref cpf);
+                var cpf = command.CPF;
 
-            var user = await _repository
-                .FindUser(cpf);
+                CPFValidations.Normalize(ref cpf);
 
-            if (user is null) {
+                var user = await _repository.FindUser(cpf);
+
+                if (user is null) {
+                    return new AuthenticateCommandResult {
+                        Message = "Usuário ou senha incorretos.",
+                        Status = AuthenticateCommandStatus.UserNotFound
+                    };
+                }
+
+                if (user.Status is Models.UserStatus.Inactive) {
+                    return new AuthenticateCommandResult {
+                        Message = "Usuário desabilitado",
+                        Status = AuthenticateCommandStatus.UserDisabled
+                    };
+                }
+
+                if (!_passwordService
+                    .VerifyPassword(command.Password, user.Password)) {
+                    return new AuthenticateCommandResult {
+                        Message = "Usuário ou senha incorretos.",
+                        Status = AuthenticateCommandStatus.UserNotFound
+                    };
+                }
+
+                var token = _tokenService.GenerateToken(user);
+
                 return new AuthenticateCommandResult {
-                    Message = "Usuário ou senha incorretos.",
-                    Status = AuthenticateCommandStatus.UserNotFound
+                    Id = user.Id,
+                    Token = token,
+                    Status = AuthenticateCommandStatus.UserAuthenticated,
+                    Message = $"Usuário '{user.Name}' autenticado."
+                };
+
+            } catch(Exception exc) {
+                return new AuthenticateCommandResult {
+                    Message = $"{exc.Message} | {exc.GetType()}",
+                    Status = AuthenticateCommandStatus.Error
                 };
             }
-
-            if (user.Status is Models.UserStatus.Inactive) {
-                return new AuthenticateCommandResult {
-                    Message = "Usuário desabilitado",
-                    Status = AuthenticateCommandStatus.UserDisabled
-                };
-            }
-
-            if (!_passwordService
-                .VerifyPassword(command.Password, user.Password)) {
-                return new AuthenticateCommandResult {
-                    Message = "Usuário ou senha incorretos.",
-                    Status = AuthenticateCommandStatus.UserNotFound
-                };
-            }
-
-            var token = _tokenService.GenerateToken(user);
-
-            return new AuthenticateCommandResult {
-                Id = user.Id,
-                Token = token,
-                Status = AuthenticateCommandStatus.UserAuthenticated,
-                Message = $"Usuário '{user.Name}' autenticado."
-            };
         }
     }
 }

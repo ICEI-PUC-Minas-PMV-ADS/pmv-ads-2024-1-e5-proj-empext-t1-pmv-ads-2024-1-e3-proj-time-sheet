@@ -17,7 +17,7 @@ namespace TimeSheet.UnitTests.Commands {
         [TestMethod]
         public void Handle_UserThatNotExists_ReturnsFailureWithUserNotFoundStatus() {
             
-            var command = new DisableUserCommand { UserId = Guid.NewGuid() };
+            var command = new DisableUserCommand { UserId = Guid.NewGuid(), CurrentId = Guid.NewGuid() };
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
@@ -25,9 +25,19 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
+        public void Handle_CurrentUser_ReturnsFailureWithCurrentUserStatus() {
+
+            var command = new DisableUserCommand { UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"), CurrentId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402") };
+            var commandResult = _handler.Handle(command).RunSync();
+
+            Assert.IsNotNull(commandResult);
+            Assert.AreEqual(commandResult.Status, DisableUserCommandResultStatus.CurrentUser);
+        }
+
+        [TestMethod]
         public void Handle_UserAlreadyDisabled_ReturnsFailureWithUserAlreadyDisabledStatus() {
 
-            var command = new DisableUserCommand { UserId = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a") };
+            var command = new DisableUserCommand { UserId = Guid.Parse("b6a5e02a-40cd-4a47-960c-1a189ecd821a"), CurrentId = Guid.NewGuid() };
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);
@@ -37,7 +47,7 @@ namespace TimeSheet.UnitTests.Commands {
         [TestMethod]
         public void Handle_UserActived_ReturnsFailureWithUserDisabledStatus() {
 
-            var command = new DisableUserCommand { UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402") };
+            var command = new DisableUserCommand { UserId = Guid.Parse("ba56273d-0c8b-4ea6-90ac-691494d1f402"), CurrentId = Guid.NewGuid() };
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);

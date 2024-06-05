@@ -25,9 +25,19 @@ namespace TimeSheet.UnitTests.Commands {
         }
 
         [TestMethod]
+        public void Handle_TryDeleteCurrentUser_ReturnsFailureWithUserNotFoundStatus() {
+
+            var command = new DeleteUserCommand { UserId = Guid.Parse("b6a5e04a-60cd-4a47-960c-1a189ecd221a"), CurrentId = Guid.Parse("b6a5e04a-60cd-4a47-960c-1a189ecd221a") };
+            var commandResult = _handler.Handle(command).RunSync();
+
+            Assert.IsNotNull(commandResult);
+            Assert.AreEqual(commandResult.Status, DeleteUserCommandResultStatus.UserNotDeleted);
+        }
+
+        [TestMethod]
         public void Handle_ValidUser_ReturnsSuccessWithUserDeletedStatus() {
 
-            var command = new DeleteUserCommand { UserId = Guid.Parse("b6a5e04a-60cd-4a47-960c-1a189ecd221a") };
+            var command = new DeleteUserCommand { UserId = Guid.Parse("b6a5e04a-60cd-4a47-960c-1a189ecd221a"), CurrentId = Guid.NewGuid() };
             var commandResult = _handler.Handle(command).RunSync();
 
             Assert.IsNotNull(commandResult);

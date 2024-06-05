@@ -13,7 +13,7 @@
 
             if (user is null)
             {
-                return null;
+                return GetUserQueryResult.Empty();
             }
 
             return GetUserQueryResult.FromUser(user);

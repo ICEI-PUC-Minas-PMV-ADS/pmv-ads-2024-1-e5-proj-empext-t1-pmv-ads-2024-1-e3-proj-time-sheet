@@ -13,7 +13,7 @@ namespace TimeSheet.Commands {
         UserNotFound,
         LunchTimeNotStarted,
         LunchTimeAlreadyFinished,
-        Erro,
+        Error,
         LunchTimeFinished
     }
 }

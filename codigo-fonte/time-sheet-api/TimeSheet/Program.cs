@@ -33,7 +33,6 @@ builder.Services.RegisterCommandHandler<CreateUserCommand, CreateUserCommandHand
 builder.Services.RegisterCommandHandler<UpdateUserCommand, UpdateUserCommandHandler, UpdateUserCommandResult>();
 builder.Services.RegisterCommandHandler<ChangeUserPasswordCommand, ChangeUserPasswordCommandHandler, ChangeUserPasswordCommandResult>();
 builder.Services.RegisterCommandHandler<DeleteUserCommand, DeleteUserCommandHandler, DeleteUserCommandResult>();
-builder.Services.RegisterCommandHandler<VerifyTokenCommand, VerifyTokenCommandHandler, VerifyTokenCommandResult>();
 builder.Services.RegisterCommandHandler<StartWorkJourneyCommand, StartWorkJourneyCommandHandler, StartWorkJourneyCommandResult>();
 builder.Services.RegisterCommandHandler<FinishWorkJourneyCommand, FinishWorkJourneyCommandHandler, FinishWorkJourneyCommandResult>();
 builder.Services.RegisterCommandHandler<StartLunchTimeCommand, StartLunchTimeCommandHandler, StartLunchTimeCommandResult>();
