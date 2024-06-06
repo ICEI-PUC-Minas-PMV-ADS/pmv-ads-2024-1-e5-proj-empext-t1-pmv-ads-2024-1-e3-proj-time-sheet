@@ -31,7 +31,7 @@ export default function EditUserPage({ navigation }) {
   const [waitingResponse, setWaitingResponse] = React.useState(false);
 
   var lunchTime = parseToTimeValue(item.lunchTime);
-  var totalTime = parseToTimeValue(item.totalTime);
+  var totalTime = parseToTimeValue(item.workTime);
 
   const { userData} = React.useContext(AuthContext);
   const [myId, setMyId] = React.useState(userData.id)
@@ -74,7 +74,7 @@ export default function EditUserPage({ navigation }) {
 
   /* TotalTime Input */
 
-  const totalTimeInput = useInput(item.totalTime);
+  const totalTimeInput = useInput(item.workTime);
   totalTimeInput.setValidation(
     timeValidations.timeIsBlank,
     "O tempo total de trabalho não pode estar em branco."

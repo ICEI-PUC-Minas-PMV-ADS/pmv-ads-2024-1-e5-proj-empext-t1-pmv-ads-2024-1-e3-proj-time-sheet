@@ -33,7 +33,7 @@ const months = [
   "Dezembro",
 ];
 
-export default function TimeSheetPage() {
+export default function TimeSheetPage({ navigation }) {
   const { userData } = React.useContext(AuthContext);
   const { getUserName, users } = React.useContext(UserContext) ?? {
     getUserName: null,
@@ -194,8 +194,10 @@ export default function TimeSheetPage() {
               renderItem={({ item }) => (
                 <ExpandableUserJourneyView
                   userName={getUserName(item.userId)}
+                  userId={item.userId}
                   workJourneys={item.workJourneys}
                   expanded={expanded}
+                  navigation={navigation}
                 />
               )}
             />
@@ -204,9 +206,9 @@ export default function TimeSheetPage() {
               className="w-full"
               data={workJourneys}
               renderItem={({ item }) => (
-                <View className="flex flex-row items-center bg-primary-400 border border-primary-600 py-2 pl-4">
-                  <View className="flex justify-center items-center w-10 h-10 bg-primary-600 rounded">
-                    <Text className="text-xl font-bold text-white">
+                <View className="flex flex-row items-center bg-primary-400 border border-primary-600 p-2">
+                  <View className="flex justify-center items-center w-8 h-8 bg-primary-600 rounded">
+                    <Text className="text-base font-bold text-white">
                       {item.date.split("-")[2]}
                     </Text>
                   </View>
@@ -249,7 +251,7 @@ export default function TimeSheetPage() {
   );
 }
 
-function ExpandableUserJourneyView({ userName, workJourneys, expanded }) {
+function ExpandableUserJourneyView({ userName, userId, workJourneys, expanded, navigation }) {
   const [isExpanded, setIsExpanded] = React.useState(expanded);
 
   React.useEffect(() => {
@@ -286,7 +288,7 @@ function ExpandableUserJourneyView({ userName, workJourneys, expanded }) {
           <Text className="text-base text-white">{stats.certificates}</Text>
         </View>
         <View>
-          <Pressable className="flex justify-center items-center bg-primary-200 rounded" style={{ height: 24, width: 24 }}>
+          <Pressable onPress={() => navigation.navigate("TimeSheetDetailsPage", { workJourneys, userId })} className="flex justify-center items-center bg-primary-200 rounded" style={{ height: 24, width: 24 }}>
             <Icon name="pencil" size={20} color="white" />
           </Pressable>
         </View>

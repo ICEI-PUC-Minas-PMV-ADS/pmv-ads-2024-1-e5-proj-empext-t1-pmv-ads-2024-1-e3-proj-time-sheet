@@ -12,6 +12,10 @@ import Button from "../components/Button";
 import ErrorMessage from "../components/ErrorMessage";
 import { useInput } from "../hooks/useInput";
 import { addJourney } from "../services/WorkJourneyService";
+import { timeValidations } from "../common/validations";
+import CustomModal from "../components/CustomModal";
+import RefreshContext from "../contexts/RefreshContext";
+import { convertPartialTime } from "../common/utils";
 
 const months = [
   "Janeiro",
@@ -28,17 +32,60 @@ const months = [
   "Dezembro",
 ];
 
-export default function AddWorkJourneyPage({ navigation }) {
+export default function TimeSheetAddPage({ navigation }) {
   const [calendarVisible, setCalendarVisible] = React.useState(false);
   const [calendarValue, setCalendarValue] = React.useState(new dayjs());
   const [isMedicalCertificate, setIsMedicalCertificate] = React.useState(false);
   const [isWaitingResponse, setIsWaitingResponse] = React.useState(false);
+  const [modalContent, setModalContent] = React.useState(null);
+  const [modalVisible, setModalVisible] = React.useState(false);
+
+  const { updateRefresh } = React.useContext(RefreshContext);
 
   const dateInput = useInput(new dayjs());
-  const startTimeInput = useInput("00:00");
-  const startLunchTimeInput = useInput("00:00");
-  const finishTimeInput = useInput("00:00");
-  const finishLunchTimeInput = useInput("00:00");
+  const startTimeInput = useInput("08:00");
+  startTimeInput.setValidation(
+    timeValidations.timeIsBlank,
+    "O tempo de início da jornada não pode estar em branco."
+  );
+  startTimeInput.setValidation(
+    timeValidations.timeIsOutsideTimeBounds,
+    "O tempo de início da jornada precisa estar dentro do limite de 0h às 24h."
+  );
+
+  const startLunchTimeInput = useInput("12:00");
+  startLunchTimeInput.setValidation(
+    timeValidations.timeIsBlank,
+    "O tempo de saída para almoço não pode estar em branco."
+  );
+  startLunchTimeInput.setValidation(
+    timeValidations.timeIsOutsideTimeBounds,
+    "O tempo de saída para almoço precisa estar dentro do limite de 0h às 24h."
+  );
+
+  const finishTimeInput = useInput("17:00");
+  finishTimeInput.setValidation(
+    timeValidations.timeIsBlank,
+    "O tempo final da jornada não pode estar em branco."
+  );
+  finishTimeInput.setValidation(
+    timeValidations.timeIsOutsideTimeBounds,
+    "O tempo final da jornada precisa estar dentro do limite de 0h às 24h."
+  );
+
+  const finishLunchTimeInput = useInput("13:00");
+  finishLunchTimeInput.setValidation(
+    timeValidations.timeIsBlank,
+    "O tempo de retorno do almoço não pode estar em branco."
+  );
+  finishLunchTimeInput.setValidation(
+    timeValidations.timeIsOutsideTimeBounds,
+    "O tempo de retorno do almoço precisa estar dentro do limite de 0h às 24h."
+  );
+  finishLunchTimeInput.setValidation(
+    (finishLunch) => finishLunch > startTimeInput.value ? 0 : 1,
+    "O tempo de retorno não pode ser igual ou menos ao tempo de saída."
+  );
 
   const route = useRoute();
   const { userId } = route.params;
@@ -55,16 +102,53 @@ export default function AddWorkJourneyPage({ navigation }) {
 
     setIsWaitingResponse(true);
 
-    addJourney(userId, dateInput.date, startTimeInput.value, finishTimeInput.value, startLunchTimeInput.value, finishLunchTimeInput.value, isMedicalCertificate)
-      .then(result => {
-        if (result.status === "WorkJourneyAdded") {
+    dateInput.validate(dateInput.value);
+    startTimeInput.validate(convertPartialTime(startTimeInput.value));
+    startLunchTimeInput.validate(convertPartialTime(startLunchTimeInput.value));
+    finishTimeInput.validate(convertPartialTime(finishTimeInput.value));
+    finishLunchTimeInput.validate(convertPartialTime(finishLunchTimeInput.value));
 
+    if (!dateInput.value ||
+      !startTimeInput.value ||
+      !startLunchTimeInput.value ||
+      !finishLunchTimeInput.value ||
+      !finishTimeInput.value) {
+
+      setIsWaitingResponse(false);
+
+      return;
+    }
+
+    addJourney(userId, dateInput.value,
+      startTimeInput.value,
+      finishTimeInput.value,
+      startLunchTimeInput.value,
+      finishLunchTimeInput.value, isMedicalCertificate)
+      .then(result => {
+        switch (result.status) {
+          case "WorkJourneyAdded":
+            setModalContent(<WorkJourneyAddedModalContent goBack={() =>{ updateRefresh(); navigation.pop(2); }} />);
+            setModalVisible(true);
+            break;
+          case "WorkJourneyAlreadyMarked":
+            setModalContent(<WorkJourneyAlreadyMarkedModalContent goBack={() => setModalVisible(false)} />)
+            setModalVisible(true);
+            break;
+          default:
+            setModalContent(<ServerErrorModalContent goBack={() => setModalVisible(false)} />)
+            setModalVisible(true);
+            break;
         }
-      });
+
+        setIsWaitingResponse(false);
+      })
   }
 
   return (
     <View className="flex-1 bg-primary-600">
+
+      <CustomModal visible={modalVisible}>{modalContent}</CustomModal>
+
       <Header></Header>
 
       {calendarVisible && (
@@ -104,10 +188,10 @@ export default function AddWorkJourneyPage({ navigation }) {
             <Text className="text-base text-white">Atestado médico</Text>
           ) : (
             <>
-            <Text className="text-base text-white">{startTimeInput.value}</Text>
-            <Text className="text-base text-white">{startLunchTimeInput.value}</Text>
-            <Text className="text-base text-white">{finishLunchTimeInput.value}</Text>
-            <Text className="text-base text-white">{finishTimeInput.value}</Text>
+              <Text className="text-base text-white">{startTimeInput.value}</Text>
+              <Text className="text-base text-white">{startLunchTimeInput.value}</Text>
+              <Text className="text-base text-white">{finishLunchTimeInput.value}</Text>
+              <Text className="text-base text-white">{finishTimeInput.value}</Text>
             </>
           )}
 
@@ -209,17 +293,21 @@ export default function AddWorkJourneyPage({ navigation }) {
 
             <View className="flex flex-row items-center mb-2">
               <Checkbox color="#1E3F42"
-                status={ isMedicalCertificate ? "checked" : "unchecked"}
+                status={isMedicalCertificate ? "checked" : "unchecked"}
                 onPress={() => setIsMedicalCertificate(!isMedicalCertificate)} />
               <Text className="text-sm font-bold">Atestado médico?</Text>
             </View>
 
-            <Button title="Registrar Ponto" color="primary-600" onPress={submitJourney} />
+            <Button title="Registrar Ponto" color="primary-600" onPress={submitJourney}
+              disabled={isWaitingResponse}
+              isRunning={isWaitingResponse} />
             <Button
+              onPress={() => navigation.goBack()}
               className="mt-2"
               title="Voltar"
               color="primary-600"
               type="outline"
+              disabled={isWaitingResponse}
             />
           </View>
         </AdjustableModal>
@@ -243,6 +331,64 @@ function InputCalendar({ label, placeholder, value, onPress }) {
           <Icon name="calendar-month" size={24} color="#1E3F42" />
         </Pressable>
       </View>
+    </View>
+  );
+}
+
+function WorkJourneyAlreadyMarkedModalContent({ goBack }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-xl font-bold text-danger-600 mb-1">
+        Já existe um registro nessa data
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Já existe um registro para essa data, selecione outra data.
+      </Text>
+      <Button
+        title="Voltar"
+        color="primary-600"
+        type="outline"
+        onPress={goBack}
+      />
+    </View>
+  );
+}
+
+function WorkJourneyAddedModalContent({ goBack }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-2xl font-bold text-primary-800 mb-1">
+        Ponto Registrado
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Ponto registrado com sucesso, volte para a tela de folha de pontos para gerar um relatório.
+      </Text>
+      <Button
+        title="Ok"
+        color="primary-600"
+        type="outline"
+        onPress={goBack}
+      />
+    </View>
+  );
+}
+
+function ServerErrorModalContent({ goBack }) {
+  return (
+    <View className="flex flex-col">
+      <Text className="text-xl font-bold text-danger-600 mb-1">
+        Erro ao se comunicar com o servidor
+      </Text>
+      <Text className="text-sm font-semibold mb-5">
+        Verifique sua conexão com a internet e tente novamente.
+      </Text>
+      <Button
+        className="mt-5"
+        title="Ok"
+        color="primary-600"
+        type="outline"
+        onPress={goBack}
+      />
     </View>
   );
 }

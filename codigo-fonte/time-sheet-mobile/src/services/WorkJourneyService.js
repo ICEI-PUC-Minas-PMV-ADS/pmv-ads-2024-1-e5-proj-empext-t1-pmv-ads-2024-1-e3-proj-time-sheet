@@ -307,20 +307,30 @@ export async function addJourney(userId, date, startTime, endTime, startLunchTim
   try {
     var response = await ApiService.sendRequest(
       "/workjourney/addjourney",
-      "GET",
+      "POST",
       {
         userId: userId,
-        date: date,
+        date: date.format('YYYY-MM-DD'),
         startTime: startTime,
         endTime: endTime,
         startLunchTime: startLunchTime,
         endLunchTime: endLunchTime,
-        journeyType: journeyType
+        journeyType: journeyType ? 1 : 0
       },
       token
     );
 
     if (!response.ok) {
+
+      var json = await response.text();
+      var data = JSON.parse(json);
+
+      if (response.status === 400) {
+        result.message = data.message;
+        result.status = data.status;
+        
+        return result;
+      }
 
       result.message = "Error ao se comunicar com o servidor.";
       result.status = "Error";

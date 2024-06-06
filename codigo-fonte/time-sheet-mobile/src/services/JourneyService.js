@@ -31,7 +31,7 @@ export function calculateJourneyStats(userTotalTime, workJourneys) {
         }
     });
 
-    var expectWorkTime = (days * userTotalTime) * 60;
+    var expectWorkTime = ((days - certificates) * userTotalTime) * 60;
     var extraTime = Math.max(totalMinutes - expectWorkTime, 0);
     var extraTimeHours = Math.floor(extraTime / 60);
     var extraTimeMinutes = extraTime % 60;
