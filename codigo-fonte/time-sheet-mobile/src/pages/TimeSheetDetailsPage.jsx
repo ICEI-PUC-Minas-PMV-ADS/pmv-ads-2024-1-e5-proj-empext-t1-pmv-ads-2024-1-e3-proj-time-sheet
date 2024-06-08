@@ -67,7 +67,7 @@ export default function TimeSheetDetailsPage({ navigation }) {
                         )}
 
                         <View>
-                            <Pressable className="flex justify-center items-center bg-primary-200 rounded" style={{ height: 24, width: 24 }}>
+                            <Pressable onPress={() => navigation.navigate("TimeSheetEditPage", { userId, journeyData: item })} className="flex justify-center items-center bg-primary-200 rounded" style={{ height: 24, width: 24 }}>
                                 <Icon name="pencil" size={20} color="white" />
                             </Pressable>
                         </View>

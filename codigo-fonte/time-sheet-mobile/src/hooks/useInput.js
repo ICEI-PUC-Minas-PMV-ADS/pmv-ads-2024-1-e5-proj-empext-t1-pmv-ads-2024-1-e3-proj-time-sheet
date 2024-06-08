@@ -4,6 +4,13 @@ export function useInput(initialValue = null) {
   const [value, setValue] = React.useState(initialValue);
   const [errorMessage, setErrorMessage] = React.useState(null);
   const [errorVisible, setErrorVisible] = React.useState(false);
+  const [ignoreError, setIgnoreError] = React.useState(false);
+
+  function skipValidation(opc) {
+    setIgnoreError(opc);
+    setErrorMessage(null);
+    setErrorVisible(false);
+  }
 
   const validations = [];
 
@@ -16,17 +23,23 @@ export function useInput(initialValue = null) {
     setErrorVisible(false);
     setValue(value);
 
-    for (let validation of validations) {
-      if (validation.action(value)) {
-        setErrorMessage(validation.message);
-        setErrorVisible(true);
-        setValue(null);
-        return false;
+    if (!ignoreError) {
+      for (let validation of validations) {
+        if (validation.action(value)) {
+          setErrorMessage(validation.message);
+          setErrorVisible(true);
+          setValue(null);
+          return false;
+        }
       }
     }
 
     return true;
   }
 
-  return { value, errorMessage, errorVisible, setValidation, validate };
+  React.useEffect(() => {
+    validate(value);
+  }, [ignoreError])
+
+  return { value, errorMessage, errorVisible, setValidation, validate, skipValidation };
 }
