@@ -6,7 +6,6 @@
 
 <h6 align="right">Criado em 28 de fevereiro de 2024<br><a href="https://www.pucminas.br/PucVirtual/Paginas/default.aspx">PUC Minas Virtual</a></h6>
 
-
 `Análise e Desenvolvimento de Sistemas`
 
 `Projeto: Análise e Projeto de Sistemas de Software`
