@@ -93,46 +93,60 @@ export default function TimeSheetPage({ navigation }) {
   const createPDF = async () => {
     console.log(workJourneys)
     const htmlContent = `
-      <h2>Registro de Pontos dos Funcionários</h2>
-      <table id="pdf-content">
-        <thead>
-            <tr>
-                <th>Dia</th>
-                <th>Nome do Funcionário</th>
-                <th>Ponto de Entrada</th>
-                <th>Entrada Almoço</th>
-                <th>Saída Almoço</th>
-                <th>Fim do Expediente</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>03/08/2024</td>
-                <td>João Silva</td>
-                <td>08:00</td>
-                <td>13:00</td>
-                <td>13:45</td>
-                <td>18:00</td>
-            </tr>
-            <tr>
-                <td>03/08/2024</td>
-                <td>Maria Oliveira</td>
-                <td>08:15</td>
-                <td>13:00</td>
-                <td>14:00</td>
-                <td>18:15</td>
-            </tr>
-            <tr>
-                <td>03/08/2024</td>
-                <td>Carlos Souza</td>
-                <td>08:30</td>
-                <td>12:45</td>
-                <td>13:30</td>
-                <td>18:00</td>
-            </tr>
-            
-        </tbody>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tabela de Registro de Ponto</title>
+      <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: center;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+        .assinatura {
+          margin-top: 80px;
+          font-style: italic;
+        }
+      </style>
+    </head>
+    <div id="pdf-content">
+    <body >
+
+    <h2>Nome da Empresa</h2>
+    <p>Nome do Funcionário</p>
+
+    <table>
+      <tr>
+        <th>Dia</th>
+        <th>Ponto de Entrada</th>
+        <th>Entrada do Almoço</th>
+        <th>Saída do Almoço</th>
+        <th>Saída do Expediente</th>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td>08:00</td>
+        <td>12:00</td>
+        <td>13:00</td>
+        <td>19:00</td>
+      </tr>
     </table>
+
+    <p class="assinatura funcionario">Assinatura do Funcionário: ____________________________________.</p>
+    <p class="assinatura">Assinatura do Dono da Empresa:______________________________________.</p>
+
+    </body>
+    </div>
+    </html>
     `;
   
     if (Platform.OS === 'web') {
