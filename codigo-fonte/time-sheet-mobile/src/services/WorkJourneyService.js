@@ -328,7 +328,7 @@ export async function addJourney(userId, date, startTime, endTime, startLunchTim
       if (response.status === 400) {
         result.message = data.message;
         result.status = data.status;
-        
+
         return result;
       }
 
@@ -340,6 +340,57 @@ export async function addJourney(userId, date, startTime, endTime, startLunchTim
 
     result.message = "Registro adicionado";
     result.status = "WorkJourneyAdded";
+
+    return result;
+  } catch (err) {
+    result.message = "Error ao se comunicar com o servidor.";
+    result.status = "Error";
+    return result;
+  }
+}
+
+export async function updateJourney(workJourneyId, date, startTime, endTime, startLunchTime, endLunchTime, journeyType) {
+  var result = {};
+  const token = await AsyncStorage.getItem("@TimeSheet:userToken");
+
+  console.log(startTime);
+
+  try {
+    var response = await ApiService.sendRequest(
+      "/workjourney/updatejourney",
+      "POST",
+      {
+        workJourneyId: workJourneyId,
+        date: date.format('YYYY-MM-DD'),
+        startJourney: startTime,
+        finishJourney: endTime,
+        startLunchTime: startLunchTime,
+        finishLunchTime: endLunchTime,
+        journeyType: journeyType ? 1 : 0
+      },
+      token
+    );
+
+    if (!response.ok) {
+
+      var json = await response.text();
+      var data = JSON.parse(json);
+
+      if (response.status === 400) {
+        result.message = data.message;
+        result.status = data.status;
+
+        return result;
+      }
+
+      result.message = "Error ao se comunicar com o servidor.";
+      result.status = "Error";
+
+      return result;
+    }
+
+    result.message = "Registro alterado";
+    result.status = "WorkJourneyChanged";
 
     return result;
   } catch (err) {
