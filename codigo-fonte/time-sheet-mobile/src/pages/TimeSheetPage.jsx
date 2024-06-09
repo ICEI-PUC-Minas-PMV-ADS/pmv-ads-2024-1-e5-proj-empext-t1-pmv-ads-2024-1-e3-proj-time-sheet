@@ -91,6 +91,24 @@ export default function TimeSheetPage({ navigation }) {
 
     // ----------------- Create PDF Function
     const createPDF = async () => {
+      console.log(workJourneys)
+      const htmlContent = `
+       <h2>Registro de Pontos dos Funcionários</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Dia<th>
+            <th>Nome do Funcionário<th>
+            <th>Ponto de Entrada<th>
+            <th>Entrada do almoço<th>
+            <th>Saída do almoço<th>
+            <th>Fim do Expediente<th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+       </table>
+      `
 
     }
   
