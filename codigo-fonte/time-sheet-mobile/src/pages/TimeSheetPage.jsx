@@ -93,25 +93,79 @@ export default function TimeSheetPage({ navigation }) {
     const createPDF = async () => {
       console.log(workJourneys)
       const htmlContent = `
-       <h2>Registro de Pontos dos Funcionários</h2>
-       <table>
-        <thead>
-          <tr>
-            <th>Dia<th>
-            <th>Nome do Funcionário<th>
-            <th>Ponto de Entrada<th>
-            <th>Entrada do almoço<th>
-            <th>Saída do almoço<th>
-            <th>Fim do Expediente<th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-       </table>
-      `
-
-    }
-  
+        <h2>Registro de Pontos dos Funcionários</h2>
+        <table id="pdf-content">
+          <thead>
+              <tr>
+                  <th>Dia</th>
+                  <th>Nome do Funcionário</th>
+                  <th>Ponto de Entrada</th>
+                  <th>Entrada Almoço</th>
+                  <th>Saída Almoço</th>
+                  <th>Fim do Expediente</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>03/08/2024</td>
+                  <td>João Silva</td>
+                  <td>08:00</td>
+                  <td>13:00</td>
+                  <td>13:45</td>
+                  <td>18:00</td>
+              </tr>
+              <tr>
+                  <td>03/08/2024</td>
+                  <td>Maria Oliveira</td>
+                  <td>08:15</td>
+                  <td>13:00</td>
+                  <td>14:00</td>
+                  <td>18:15</td>
+              </tr>
+              <tr>
+                  <td>03/08/2024</td>
+                  <td>Carlos Souza</td>
+                  <td>08:30</td>
+                  <td>12:45</td>
+                  <td>13:30</td>
+                  <td>18:00</td>
+              </tr>
+              
+          </tbody>
+      </table>
+      `;
+    
+      if (Platform.OS === 'web') {
+        const html2canvas = require("html2canvas")
+        // Adicionar o conteúdo HTML ao DOM
+        const container = document.createElement('div');
+        container.innerHTML = htmlContent;
+        document.body.appendChild(container);
+    
+        // Esperar o elemento ser renderizado e então capturar
+        const element = document.getElementById('pdf-content');
+        const canvas = await html2canvas(element, {
+          scale: 2
+        });
+        const imgData = canvas.toDataURL('image/png');
+    
+        // Criar o PDF e adicionar a imagem
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const imgProps = doc.getImageProperties(imgData);
+        const pdfWidth = doc.internal.pageSize.getWidth();
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+        doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        doc.save('document.pdf');
+    
+        // Remover o conteúdo HTML do DOM
+        document.body.removeChild(container);
+      } else {
+        // Geração de PDF no ambiente nativo
+        const { uri } = await Print.printToFileAsync({ html: htmlContent });
+        console.log("File has been saved to:", uri);
+        await shareAsync(uri, { UTI: ".pdf", mimeType: "application/pdf" });
+      }
+    };
   
 
 
