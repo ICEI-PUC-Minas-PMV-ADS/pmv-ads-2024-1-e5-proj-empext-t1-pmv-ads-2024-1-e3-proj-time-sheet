@@ -38,6 +38,13 @@
                     };
                 }
 
+                if (user.CPF != command.CPF && await _repository.UserExists(command.CPF)) {
+                    return new UpdateUserCommandResult {
+                        Message = "Já existe um usuário com esse CPF.",
+                        Status = UpdateUserCommandResultStatus.UserAlreadyExists
+                    };
+                }
+
                 user.CPF = result.Value.CPF;
                 user.Name = result.Value.Name;
                 user.Role = result.Value.Role;

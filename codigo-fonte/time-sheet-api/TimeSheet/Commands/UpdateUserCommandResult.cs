@@ -10,6 +10,7 @@ namespace TimeSheet.Commands {
 
     public enum UpdateUserCommandResultStatus {
         UserNotFound,
+        UserAlreadyExists,
         InvalidUserData,
         UserUpdated,
         Error
