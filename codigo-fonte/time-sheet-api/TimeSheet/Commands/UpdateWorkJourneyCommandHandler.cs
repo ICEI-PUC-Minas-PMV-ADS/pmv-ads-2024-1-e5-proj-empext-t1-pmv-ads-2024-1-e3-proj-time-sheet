@@ -53,6 +53,17 @@ namespace TimeSheet.Commands {
                     };
                 }
 
+                var wj2 = (await _repository
+                    .GetWorkJourneys(workJourney.UserId, workJourneyBuild.Value.Date.Year, workJourneyBuild.Value.Date.Month))
+                    .FirstOrDefault(wj => wj.Date == workJourneyBuild.Value.Date);
+
+                if (wj2 is not null && workJourney.Id != wj2.Id) {
+                    return new UpdateWorkJourneyCommandResult {
+                        Message = "Já existe uma jornada de trabalho no dia informado.",
+                        Status = UpdateWorkJourneyCommandResultStatus.WorkJourneyAlreadyMarked
+                    };
+                }
+
                 workJourney.Date = workJourneyBuild.Value.Date;
                 workJourney.StartTime = workJourneyBuild.Value.StartTime;
                 workJourney.StartLunchTime = workJourneyBuild.Value.StartLunchTime;

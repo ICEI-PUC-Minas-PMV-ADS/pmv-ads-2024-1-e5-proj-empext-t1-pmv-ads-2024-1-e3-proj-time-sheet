@@ -23,6 +23,8 @@ export default function Input({
         <MaskedTextInput
           className="w-full border border-primary-600 rounded-lg pl-1.5 h-9"
           value={value}
+          editable={!disabled}
+          disabled={disabled}
           onChangeText={(text, rawText) => {
             setInputValue(text);
           }}

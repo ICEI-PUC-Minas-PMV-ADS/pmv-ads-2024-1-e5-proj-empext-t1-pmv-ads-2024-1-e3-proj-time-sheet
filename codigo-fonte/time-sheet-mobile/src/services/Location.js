@@ -19,6 +19,4 @@ export default function Location(){
     } else{
         return(false)
     }
-
-
 }

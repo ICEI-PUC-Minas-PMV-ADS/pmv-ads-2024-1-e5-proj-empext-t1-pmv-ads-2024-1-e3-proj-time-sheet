@@ -48,7 +48,7 @@ export async function createUser(
         name: name,
         password: password,
         role: role ? 0 : 1,
-        totalTime: parseFloat(totalTime),
+        workTime: parseFloat(totalTime),
         lunchTime: parseFloat(lunchTime),
       },
       token
@@ -192,7 +192,7 @@ export async function UpdateUser(id, name, cpf, totalTime, lunchTime, role) {
         userId: id,
         name: name,
         cpf: cpf,
-        totalTime: totalTime,
+        workTime: totalTime,
         lunchTime: lunchTime,
         role: role,
       },

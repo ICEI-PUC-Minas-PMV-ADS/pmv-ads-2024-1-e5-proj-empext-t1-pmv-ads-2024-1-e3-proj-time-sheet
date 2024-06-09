@@ -117,3 +117,19 @@ export function calculateTimeDiference(date1, date2) {
     minutes: diffMinutes
   };
 }
+
+export function convertPartialTime(value) {
+
+  var hours = "00";
+  var minutes = "00";
+
+  if (value.includes(":")) {
+    hours = value.split(":")[0];
+    minutes = value.split(":")[1];
+  } else {
+    hours = value;
+    minutes = "00"
+  }
+
+  return `${hours.padStart("0", 2)}:${minutes.padEnd("0", 2)}`
+}

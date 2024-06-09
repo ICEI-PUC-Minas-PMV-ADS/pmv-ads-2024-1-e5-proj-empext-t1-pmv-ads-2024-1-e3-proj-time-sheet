@@ -9,6 +9,8 @@ import * as AuthService from "./src/services/AuthService";
 import { NativeWindStyleSheet } from "nativewind";
 import RefreshContext from "./src/contexts/RefreshContext";
 
+import { registerRootComponent } from "expo";
+
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
@@ -26,39 +28,32 @@ export default function App() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
 
-
   function validateUser() {
     setIsLoading(true);
     delay(1.3).then(() => {
-      AuthService.verifyToken()
-        .then((isTokenValid) => {
-          if (isTokenValid) {
-            AuthService.getAuthenticatedUserData().then((data) => {
-              if (data) {
-                setUserData(data);
-                setIsSignedIn(true);
-                setIsLoading(false);
-                setIsAdministrator(data.role === "Administrator");
-              } else {
-                setIsSignedIn(false);
-                setIsLoading(false);
-              }
-            });
-          } else {
-            setIsSignedIn(false);
-            setIsLoading(false);
-          }
-        })
-        .catch((err) => {
+      AuthService.getAuthenticatedUserData().then((result) => {
+        if (result.status === "UserFound") {
+          setUserData(result.userData);
+          setIsSignedIn(true);
           setIsLoading(false);
-        });
+          setIsAdministrator(result.userData.role === "Administrator");
+        } else {
+          setIsSignedIn(false);
+          setIsLoading(false);
+        }
+      }).catch((err) => {
+        setIsSignedIn(false);
+        setIsLoading(false);
+      });
     });
   }
 
   React.useEffect(() => validateUser(), []);
-  function updateRefresh(){
+  
+  function updateRefresh() {
     setRefresh(!refresh);
   }
+
   if (isLoading) return <LoadingPage />;
 
   return (
@@ -66,10 +61,12 @@ export default function App() {
       <AuthContext.Provider
         value={{ isSignedIn, isAdministrator, validateUser, userData }}
       >
-        <RefreshContext.Provider value={{refresh, updateRefresh}}>
-        <Routes />       
+        <RefreshContext.Provider value={{ refresh, updateRefresh }}>
+          <Routes />
         </RefreshContext.Provider>
       </AuthContext.Provider>
     </SafeAreaProvider>
   );
 }
+
+registerRootComponent(App)

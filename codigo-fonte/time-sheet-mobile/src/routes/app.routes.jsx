@@ -7,14 +7,17 @@ import * as UserService from "../services/UserService";
 import AuthContext from "../contexts/AuthContext";
 import WorkJourneyPage from "../pages/WorkJourneyPage";
 import TimeSheetPage from "../pages/TimeSheetPage";
+import TimeSheetDetailsPage from "../pages/TimeSheetDetailsPage";
 import LoginPage from "../pages/LoginPage";
 import ChangePasswordPage from "../pages/ChangePasswordPage";
 import UsersPage from "../pages/UsersPage";
 import CadastreUserPage from "../pages/CadastreUserPage";
 import EditUserPage from "../pages/EditUserPage";
 import EditUserPasswordPage from "../pages/EditUserPasswordPage";
-import AddWorkJourneyPage from "../pages/AddWorkJourneyPage";
+import AddWorkJourneyPage from "../pages/TimeSheetAddPage";
 import UserContext from "../contexts/UserContext";
+import TimeSheetAddPage from "../pages/TimeSheetAddPage";
+import TimeSheetEditPage from "../pages/TimeSheetEditPage";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -178,7 +181,9 @@ function TimeSheetStack({ navigation }) {
   return (
     <Stack.Navigator
       screenOptions={({ route }) => {
-        if (route.name === "AddWorkJourneyPage") {
+        if (route.name === "TimeSheetAddPage" ||
+            route.name === "TimeSheetEditPage"
+        ) {
           navigation.setOptions(screenOptionsHideTab);
           return screenOptionsHideTab;
         } else {
@@ -188,7 +193,9 @@ function TimeSheetStack({ navigation }) {
       }}
     >
       <Stack.Screen name="TimeSheetPage" component={TimeSheetPage}/>
-      <Stack.Screen name="AddWorkJourneyPage" component={AddWorkJourneyPage} />
+      <Stack.Screen name="TimeSheetDetailsPage" component={TimeSheetDetailsPage} />
+      <Stack.Screen name="TimeSheetAddPage" component={TimeSheetAddPage}/>
+      <Stack.Screen name="TimeSheetEditPage" component={TimeSheetEditPage}/>
     </Stack.Navigator>
   );
 }

@@ -17,7 +17,7 @@
                     continue;
                 }
 
-                var journeys = (await _repository.GetWorkJourneys(user.Id, query.Year, query.Month)).ToList();
+                var journeys = (await _repository.GetWorkJourneys(user.Id, query.Year, query.Month)).OrderBy(j => j.Date).ToList();
                 var journeysResult = new List<GetWorkJourneyResult>();
 
                 if (journeys.Count == 0)
