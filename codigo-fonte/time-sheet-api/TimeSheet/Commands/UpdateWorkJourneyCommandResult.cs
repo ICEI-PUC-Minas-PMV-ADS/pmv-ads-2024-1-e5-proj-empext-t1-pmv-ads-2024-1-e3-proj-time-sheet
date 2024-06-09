@@ -10,6 +10,7 @@ namespace TimeSheet.Commands {
     public enum UpdateWorkJourneyCommandResultStatus {
         WorkJourneyNotFound,
         WorkJourneyUpdated,
+        WorkJourneyAlreadyMarked,
         Error
     }
 }

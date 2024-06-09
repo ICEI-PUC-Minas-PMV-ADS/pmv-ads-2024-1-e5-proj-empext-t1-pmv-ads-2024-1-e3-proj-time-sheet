@@ -9,7 +9,7 @@ namespace TimeSheet.Queries {
 
         public async Task<GetWorkJourneysQueryResult?> Handle(GetWorkJourneysQuery query) {
 
-            var WorkJourneys = (await _workJourneyRepository.GetWorkJourneys(query.UserId, query.Year, query.Month)).ToList();
+            var WorkJourneys = (await _workJourneyRepository.GetWorkJourneys(query.UserId, query.Year, query.Month)).OrderBy(j => j.Date).ToList();
             var workJourneysResult = new List<GetWorkJourneyResult>();
 
             WorkJourneys.ForEach(workJourney => {
