@@ -1,13 +1,20 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, ActivityIndicator } from "react-native";
 
-export default function Fab({ children, onPress, position, ...rest }) {
+export default function Fab({
+  children,
+  onPress,
+  position,
+  isLoading = false,
+  ...rest
+}) {
   return (
     <TouchableOpacity
       {...rest}
       onPress={onPress}
       className="p-3 rounded-full bg-primary-400 shadow border border-primary-600"
       activeOpacity={0.8}
+      disabled={isLoading}
       style={
         position
           ? {
@@ -24,7 +31,11 @@ export default function Fab({ children, onPress, position, ...rest }) {
             }
       }
     >
-      {children}
+      {isLoading ? (
+        <ActivityIndicator color="#FFF" size="small" />
+      ) : (
+        children 
+      )}
     </TouchableOpacity>
   );
 }

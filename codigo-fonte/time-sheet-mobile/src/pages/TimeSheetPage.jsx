@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import {
   Pressable,
   Text,
@@ -17,6 +17,13 @@ import { Checkbox } from "react-native-paper";
 import * as WorkJourneyService from "../services/WorkJourneyService";
 import RefreshContext from "../contexts/RefreshContext";
 import { calculateJourneyStats } from "../services/JourneyService";
+
+import * as Print from "expo-print";
+import { shareAsync } from "expo-sharing";
+
+import { Platform } from 'react-native';
+import jsPDF from 'jspdf';
+// import html2canvas from 'html2canvas';
 
 const months = [
   "Janeiro",
@@ -82,6 +89,16 @@ export default function TimeSheetPage({ navigation }) {
     }
   }
 
+  // ----------------- Create PDF Function
+
+  
+
+  
+  
+
+
+  //------------------------
+
   React.useEffect(() => {
     updateDate(new moment());
 
@@ -103,7 +120,7 @@ export default function TimeSheetPage({ navigation }) {
       updateJourneys();
       updateRefresh();
     }
-  }, [refresh])
+  }, [refresh]);
 
   return (
     <View className="flex-1 bg-primary-600">
@@ -131,7 +148,6 @@ export default function TimeSheetPage({ navigation }) {
         )}
 
         <View className="flex-1 w-full items-center">
-
           {isAdministrator ? (
             <View className="flex w-full flex-row items-center bg-primary-800 border  border-b-white p-2">
               <View className="flex justify-center items-center w-8 h-8 bg-primary-400 rounded">
@@ -152,7 +168,6 @@ export default function TimeSheetPage({ navigation }) {
                 />
               </View>
             </View>
-
           ) : (
             <View className="flex w-full flex-row items-center bg-primary-800 border  border-b-white p-2">
               <View className="flex justify-center items-center w-8 h-8 bg-primary-400 rounded">
@@ -173,7 +188,6 @@ export default function TimeSheetPage({ navigation }) {
                 />
               </View>
             </View>
-
           )}
 
           {waitingResponse ? (
@@ -239,12 +253,10 @@ export default function TimeSheetPage({ navigation }) {
           )}
         </View>
       </View>
-      <Fab>
+      <Fab onPress={createPDF}>
         <View className="flex flex-row justify-center items-center">
           <Icon name="calendar-export" size={24} color="#59A093" />
-          <Text className="text-white pl-2">
-            Gerar relatório de horas
-          </Text>
+          <Text className="text-white pl-2">Gerar relatório de horas</Text>
         </View>
       </Fab>
     </View>
@@ -264,9 +276,7 @@ function ExpandableUserJourneyView({ userName, userId, workJourneys, expanded, n
     <View className="w-full">
       <View className="flex flex-row justify-between items-center bg-primary-200 w-full px-2 py-1">
         <View className="flex-1 flex-column justify-start">
-          <Text className="text-base text-white font-semibold">
-            {userName}
-          </Text>
+          <Text className="text-base text-white font-semibold">{userName}</Text>
         </View>
         <Checkbox
           color="white"

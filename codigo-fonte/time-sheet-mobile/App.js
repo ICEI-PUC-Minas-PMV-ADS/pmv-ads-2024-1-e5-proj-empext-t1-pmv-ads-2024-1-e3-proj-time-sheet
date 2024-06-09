@@ -9,6 +9,8 @@ import * as AuthService from "./src/services/AuthService";
 import { NativeWindStyleSheet } from "nativewind";
 import RefreshContext from "./src/contexts/RefreshContext";
 
+import { registerRootComponent } from "expo";
+
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
@@ -66,3 +68,5 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
+
+registerRootComponent(App)
