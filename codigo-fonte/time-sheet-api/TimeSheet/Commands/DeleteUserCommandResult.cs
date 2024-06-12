@@ -12,6 +12,7 @@ namespace TimeSheet.Commands {
         UserNotFound,
         UserDeleted,
         UserNotDeleted,
+        MasterUserCannotBeDeleted,
         Error
     }
 }

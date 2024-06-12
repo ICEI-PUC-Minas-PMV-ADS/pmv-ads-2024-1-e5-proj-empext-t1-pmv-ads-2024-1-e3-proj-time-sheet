@@ -11,6 +11,7 @@ namespace TimeSheet.Commands {
         UserNotFound,
         WorkJourneyAdded,
         WorkJourneyAlreadyMarked,
+        InvalidData,
         Error
     }
 }

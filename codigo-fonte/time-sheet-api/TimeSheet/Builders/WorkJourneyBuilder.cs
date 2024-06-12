@@ -13,13 +13,13 @@ namespace TimeSheet.Builders {
 
             return this;
         }
-        public WorkJourneyBuilder WithMedicalCertificateType() {
+        public WorkJourneyBuilder WithExcusedAbsenceType() {
 
             if (_result is null || _workJourney is null) {
                 throw new InvalidOperationException("É necessário chamar o método 'CreateNew' primeiro.");
             }
 
-            _workJourney.JourneyType = WorkJourneyType.MedicalCertificate;
+            _workJourney.JourneyType = WorkJourneyType.ExcusedAbsence;
 
             return this;
         }

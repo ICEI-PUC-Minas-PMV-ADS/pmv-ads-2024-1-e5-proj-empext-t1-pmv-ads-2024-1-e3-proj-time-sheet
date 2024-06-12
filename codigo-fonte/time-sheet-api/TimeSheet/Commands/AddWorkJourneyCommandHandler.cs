@@ -40,12 +40,12 @@ namespace TimeSheet.Commands {
 
                 FluentResults.Result<WorkJourney>? workJourneyBuild = null;
 
-                if (command.JourneyType == WorkJourneyType.MedicalCertificate) {
+                if (command.JourneyType is WorkJourneyType.ExcusedAbsence) {
 
                     workJourneyBuild = _builder
                     .CreateNew()
                     .WithDate(command.Date)
-                    .WithMedicalCertificateType()
+                    .WithExcusedAbsenceType()
                     .Build();
 
                 } else { 
@@ -61,8 +61,8 @@ namespace TimeSheet.Commands {
 
                 if (workJourneyBuild.IsFailed) {
                     return new AddWorkJourneyCommandResult {
-                        Message = "Error",
-                        Status = AddWorkJourneyCommandResultStatus.Error
+                        Message = "Algumas informações não estão válidas.",
+                        Status = AddWorkJourneyCommandResultStatus.InvalidData
                     };
                 }
 

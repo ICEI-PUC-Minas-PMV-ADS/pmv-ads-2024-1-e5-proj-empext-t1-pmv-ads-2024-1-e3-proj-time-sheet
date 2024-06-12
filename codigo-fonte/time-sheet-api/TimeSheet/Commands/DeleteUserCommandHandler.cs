@@ -22,6 +22,13 @@ namespace TimeSheet.Commands {
                     };
                 }
 
+                if (user.Id == Guid.Parse(MasterUserConfig.UserGuid)) {
+                    return new DeleteUserCommandResult {
+                        Message = "Não é possível deletar o usuário master.",
+                        Status = DeleteUserCommandResultStatus.MasterUserCannotBeDeleted
+                    };
+                }
+
                 if (command.CurrentId == user.Id) {
                     return new DeleteUserCommandResult {
                         Message = "Usuário não pode deletar o própio usuário",

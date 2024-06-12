@@ -129,6 +129,15 @@ namespace TimeSheet.Controllers {
         [Route("changepassword")]
         public async Task<IActionResult> ChangePassword([FromBody] ChangeUserPasswordCommand command) {
 
+            var userId = User.Claims
+                .FirstOrDefault(c => c.Type == ClaimTypes.Sid);
+
+            if (userId is not null) {
+                command.AuthenticatedUserId = Guid.Parse(userId.Value);
+            } else {
+                command.AuthenticatedUserId = Guid.Empty;
+            }
+
             var commandResult = await _commandHandler
                 .Handle<ChangeUserPasswordCommand, ChangeUserPasswordCommandResult>(command);
 

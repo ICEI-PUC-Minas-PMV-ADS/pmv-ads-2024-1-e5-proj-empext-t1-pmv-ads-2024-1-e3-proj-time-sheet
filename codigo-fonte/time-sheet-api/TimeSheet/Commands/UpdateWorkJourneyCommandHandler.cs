@@ -29,12 +29,12 @@ namespace TimeSheet.Commands {
 
                 FluentResults.Result<WorkJourney>? workJourneyBuild = null;
 
-                if (command.JourneyType == WorkJourneyType.MedicalCertificate) {
+                if (command.JourneyType == WorkJourneyType.ExcusedAbsence) {
 
                     workJourneyBuild = _builder
                         .CreateNew()
                         .WithDate(command.Date)
-                        .WithMedicalCertificateType()
+                        .WithExcusedAbsenceType()
                         .Build();
                 } else {
                     workJourneyBuild = _builder
