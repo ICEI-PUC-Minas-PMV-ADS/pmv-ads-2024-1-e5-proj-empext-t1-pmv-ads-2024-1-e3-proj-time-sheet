@@ -12,6 +12,6 @@
 
     public enum WorkJourneyType {
         Normal,
-        MedicalCertificate
+        ExcusedAbsence
     }
 }

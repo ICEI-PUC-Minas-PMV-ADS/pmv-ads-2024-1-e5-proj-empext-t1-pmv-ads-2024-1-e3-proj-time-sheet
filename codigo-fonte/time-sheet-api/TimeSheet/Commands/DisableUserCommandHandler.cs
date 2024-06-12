@@ -19,6 +19,13 @@
                     };
                 }
 
+                if (user.Id == Guid.Parse(MasterUserConfig.UserGuid)) {
+                    return new DisableUserCommandResult {
+                        Message = "Não é possível desativar o usuário master.",
+                        Status = DisableUserCommandResultStatus.MasterUserCannotBeDisabled
+                    };
+                }
+
                 if (command.CurrentId == user.Id) {
                     return new DisableUserCommandResult {
                         Message = "Impossível desabilitar o próprio usuário",

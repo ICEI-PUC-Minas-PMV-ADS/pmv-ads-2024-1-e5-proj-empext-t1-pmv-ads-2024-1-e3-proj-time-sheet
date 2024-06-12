@@ -11,6 +11,7 @@ namespace TimeSheet.Commands {
     public enum ChangeUserPasswordCommandResultStatus {
         UserNotFound,
         InvalidPassword,
+        MasterUserPassCannotBeChanged,
         PasswordChanged,
         Error
     }

@@ -11,6 +11,7 @@ namespace TimeSheet.Commands {
         UserAlreadyDisabled,
         UserNotFound,
         CurrentUser,
+        MasterUserCannotBeDisabled,
         UserDisabled,
         Error
     }

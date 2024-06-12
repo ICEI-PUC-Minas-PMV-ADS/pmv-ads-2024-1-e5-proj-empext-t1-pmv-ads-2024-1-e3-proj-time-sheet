@@ -5,16 +5,15 @@
             var passwordServices = new PasswordService();
 
             if (!context.Users
-                .Any(u => u.Name == "admin" &&
-                          u.CPF == "00000000000")) {
+                .Any(u => u.Id == Guid.Parse(MasterUserConfig.UserGuid))) {
 
                 context.Users.Add(new User {
-                    Id = Guid.Parse("fd87aebe-6584-4163-8b2f-e6296d1a8e62"),
-                    Name = "admin",
-                    CPF = "00000000000",
-                    WorkTime = 8,
-                    LunchTime = 2,
-                    Password = passwordServices.EncryptPassword("admin@123"),
+                    Id = Guid.Parse(MasterUserConfig.UserGuid),
+                    Name = MasterUserConfig.UserName,
+                    CPF = MasterUserConfig.UserCPF,
+                    WorkTime = MasterUserConfig.UserWorkTime,
+                    LunchTime = MasterUserConfig.UserLunchTime,
+                    Password = passwordServices.EncryptPassword(MasterUserConfig.UserPassword),
                     Role = Models.UserRole.Administrator,
                     Status = Models.UserStatus.Active
                 });
