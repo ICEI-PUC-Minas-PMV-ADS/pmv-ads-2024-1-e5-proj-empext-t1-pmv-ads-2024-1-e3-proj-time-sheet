@@ -34,8 +34,15 @@
                         .FindUser(command.AuthenticatedUserId);
 
                     if (user.Id == Guid.Parse(MasterUserConfig.UserGuid) &&
-                        authenticatedUser is not null &&
-                        authenticatedUser.Role != UserRole.Administrator) {
+                        (authenticatedUser is null ||
+                         authenticatedUser.Role != UserRole.Administrator)) {
+                        return new ChangeUserPasswordCommandResult {
+                            Message = "Não é possível alterar a senha do usuário master.",
+                            Status = ChangeUserPasswordCommandResultStatus.MasterUserPassCannotBeChanged
+                        };
+                    }
+                } else {
+                    if (user.Id == Guid.Parse(MasterUserConfig.UserGuid)) {
                         return new ChangeUserPasswordCommandResult {
                             Message = "Não é possível alterar a senha do usuário master.",
                             Status = ChangeUserPasswordCommandResultStatus.MasterUserPassCannotBeChanged
@@ -49,28 +56,28 @@
                     .EncryptPassword()
                     .Build();
 
-            if (result.IsFailed) {
+                if (result.IsFailed) {
+                    return new ChangeUserPasswordCommandResult {
+                        Message = result.Errors[0].Message,
+                        Status = ChangeUserPasswordCommandResultStatus.InvalidPassword
+                    };
+                }
+
+                user.Password = result.Value.Password;
+
+                await _repository.SaveChanges();
+
                 return new ChangeUserPasswordCommandResult {
-                    Message = result.Errors[0].Message,
-                    Status = ChangeUserPasswordCommandResultStatus.InvalidPassword
+                    Message = "Senha alterada com sucesso.",
+                    Status = ChangeUserPasswordCommandResultStatus.PasswordChanged
                 };
-            }
 
-            user.Password = result.Value.Password;
-
-            await _repository.SaveChanges();
-
-            return new ChangeUserPasswordCommandResult {
-                Message = "Senha alterada com sucesso.",
-                Status = ChangeUserPasswordCommandResultStatus.PasswordChanged
-            };
-
-        } catch(Exception exc) {
+            } catch (Exception exc) {
                 return new ChangeUserPasswordCommandResult {
                     Message = $"{exc.Message} | {exc.GetType()}",
                     Status = ChangeUserPasswordCommandResultStatus.Error
-    };
-}
+                };
+            }
         }
     }
 }
