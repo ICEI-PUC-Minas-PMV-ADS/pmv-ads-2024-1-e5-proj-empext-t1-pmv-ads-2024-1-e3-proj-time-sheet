@@ -36,9 +36,10 @@
                         Message = result.Errors[0].Message,
                         Status = UpdateUserCommandResultStatus.InvalidUserData
                     };
-                }
+                }        
 
-                if (user.CPF != command.CPF && await _repository.UserExists(command.CPF)) {
+                if (user.CPF != result.Value.CPF &&
+                    await _repository.UserExists(result.Value.CPF)) {
                     return new UpdateUserCommandResult {
                         Message = "Já existe um usuário com esse CPF.",
                         Status = UpdateUserCommandResultStatus.UserAlreadyExists
