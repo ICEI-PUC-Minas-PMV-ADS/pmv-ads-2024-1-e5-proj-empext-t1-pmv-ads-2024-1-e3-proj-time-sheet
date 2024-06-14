@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Animated, ScrollView } from "react-native";
+import { View, Text, Animated, ScrollView, TextInput } from "react-native";
 import Header from "../components/Header";
 import Fab from "../components/Fab";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -9,9 +9,27 @@ import { useDateTime } from "../hooks/useDateTime";
 import { calcularTempoDecorrido, parseToDate } from "../common/utils";
 import * as WorkJourneyService from "../services/WorkJourneyService";
 import AuthContext from "../contexts/AuthContext";
-import react from "react";
+import { createProofPDF } from "../services/pdfCreator";
 import RefreshContext from "../contexts/RefreshContext";
 import { useLocation } from "../hooks/useLocation";
+import CustomModal from "../components/CustomModal";
+import Button from "../components/Button";
+import moment from "moment-timezone";
+
+const months = [
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro",
+];
 
 const status = {
   notInitialized: 0,
@@ -23,8 +41,7 @@ const status = {
 
 const workJourneyStartedModalData = {
   title: "Jornada de trabalho iniciada",
-  message:
-    "Lembre de voltar aqui para finaliza-la ou iniciar seu horário de almoço.",
+  message: "Lembre de voltar aqui para finaliza-la ou iniciar seu horário de almoço.",
   iconName: "clock-outline",
 };
 
@@ -46,6 +63,12 @@ const lunchTimeFinishedModalData = {
   iconName: "food-apple-outline",
 };
 
+const serverErrorModalData = {
+  title: "Erro ao se comunicar com o servidor",
+  message: "Verifique sua conexão com a internet e tente novamente.",
+  iconName: "alert-circle-outline",
+};
+
 export default function WorkJourneyPage() {
   const [waitingResponse, setWaitingResponse] = React.useState();
   const [WorkJourneyInProgress, setWorkJourneyInProgress] =
@@ -60,10 +83,12 @@ export default function WorkJourneyPage() {
   const { date, formatDate, time, formatTime } = useDateTime();
   const { userData } = React.useContext(AuthContext);
   const [serverTime, setServerTime] = React.useState();
+  const [just, setJust] = React.useState("Não finalizei meu registro de ponto.");
   const { visible, showNotification } = useNotification(5);
   const [messageModalData, setMessageModalData] = React.useState(null);
-  const {updateRefresh} = React.useContext(RefreshContext);
-  const {locationValid,checkLocation} = useLocation();
+  const { updateRefresh } = React.useContext(RefreshContext);
+  const { locationValid, checkLocation } = useLocation();
+  const [modalVisible, setModalVisible] = React.useState(false);
 
   function updateElapsedTime(WorkJourneyInProgress, currentStatus) {
     var totalHours = 0;
@@ -144,16 +169,31 @@ export default function WorkJourneyPage() {
         setWorkJourneyInProgress(result);
         switch (result.status) {
           case "WorkJourneyStarted":
-            setCurrentStatus(status.workJourneyStarted);
-            updateElapsedTime(result, status.workJourneyStarted);
+            if (result.date !== serverTime.date) {
+              setModalVisible(true);
+              setCurrentStatus(status.notInitialized);
+            } else {
+              setCurrentStatus(status.workJourneyStarted);
+              updateElapsedTime(result, status.workJourneyStarted);
+            }
             break;
           case "LunchTimeStarted":
-            setCurrentStatus(status.lunchTimeStarted);
-            updateElapsedTime(result, status.lunchTimeStarted);
+            if (result.date !== serverTime.date) {
+              setModalVisible(true);
+              setCurrentStatus(status.notInitialized);
+            } else {
+              setCurrentStatus(status.lunchTimeStarted);
+              updateElapsedTime(result, status.lunchTimeStarted);
+            }
             break;
           case "LunchTimeFinished":
-            setCurrentStatus(status.lunchTimeFinished);
-            updateElapsedTime(result, status.lunchTimeFinished);
+            if (result.date !== serverTime.date) {
+              setModalVisible(true);
+              setCurrentStatus(status.notInitialized);
+            } else {
+              setCurrentStatus(status.lunchTimeFinished);
+              updateElapsedTime(result, status.lunchTimeFinished);
+            }
             break;
           case "WorkJourneyFinished":
             if (result.date !== serverTime.date) {
@@ -174,6 +214,20 @@ export default function WorkJourneyPage() {
     });
   }
 
+  function saveWorkJourneyInProgress() {
+
+    const date = new moment();
+
+    WorkJourneyService.journeys(date.year(), date.month() + 1).then(
+      (result) => {
+        createProofPDF(date, userData, WorkJourneyInProgress, result.workJourneys, just)
+          .then(() => {
+            setModalVisible(false);
+          })
+      }
+    );
+  }
+
   function startWorkJourney() {
     setWaitingResponse(true);
 
@@ -181,6 +235,10 @@ export default function WorkJourneyPage() {
       if (result.status === "WorkJourneyStarted") {
         setCurrentStatus(status.workJourneyStarted);
         setMessageModalData(workJourneyStartedModalData);
+        showNotification();
+        updateWorkJourneyInProgress();
+      } else {
+        setMessageModalData(serverErrorModalData);
         showNotification();
         updateWorkJourneyInProgress();
       }
@@ -196,6 +254,10 @@ export default function WorkJourneyPage() {
         setMessageModalData(lunchTimeStartedModalData);
         showNotification();
         updateWorkJourneyInProgress();
+      } else {
+        setMessageModalData(serverErrorModalData);
+        showNotification();
+        updateWorkJourneyInProgress();
       }
     });
   }
@@ -207,6 +269,10 @@ export default function WorkJourneyPage() {
       if (result.status === "LunchTimeFinished") {
         setCurrentStatus(status.lunchTimeFinished);
         setMessageModalData(lunchTimeFinishedModalData);
+        showNotification();
+        updateWorkJourneyInProgress();
+      } else {
+        setMessageModalData(serverErrorModalData);
         showNotification();
         updateWorkJourneyInProgress();
       }
@@ -223,15 +289,15 @@ export default function WorkJourneyPage() {
         showNotification();
         updateWorkJourneyInProgress();
         updateRefresh();
+      } else {
+        setMessageModalData(serverErrorModalData);
+        showNotification();
+        updateWorkJourneyInProgress();
       }
     });
   }
 
   function updateServerTime() {
-   
-   
-  
-    
 
     WorkJourneyService.serverTime().then((result) => {
       if (result.status === "Success") {
@@ -243,6 +309,9 @@ export default function WorkJourneyPage() {
           date: result.date,
           time: result.time,
         });
+      } else {
+        setMessageModalData(serverErrorModalData);
+        showNotification();
       }
     });
   }
@@ -255,24 +324,24 @@ export default function WorkJourneyPage() {
     return () => clearInterval(intervalId);
   }, []);
 
-  React.useEffect(()=>{
-    function updateLocation(){
-      checkLocation().then((result)=>{
-        if(!result){
+  React.useEffect(() => {
+    function updateLocation() {
+      checkLocation().then((result) => {
+        if (!result) {
           setMessageModalData({
-          title:"Localização inválida",
-          message:"Você precisa estar na empresa para bater o ponto!",
-          iconName:"map-marker-off"
-        })
-      }  
-    })
+            title: "Localização inválida",
+            message: "Você precisa estar na empresa para bater o ponto!",
+            iconName: "map-marker-off"
+          })
+        }
+      })
     }
     updateLocation();
     const intervalId = setInterval(updateLocation, 30000);
 
     return () => clearInterval(intervalId);
 
-  },[])
+  }, [])
 
   React.useEffect(() => {
     if (serverTime !== undefined) {
@@ -283,6 +352,77 @@ export default function WorkJourneyPage() {
   return (
     <View className="flex-1 bg-primary-600">
       <Header />
+
+      <CustomModal visible={modalVisible}>
+        <View className="flex flex-col">
+          <Text className="text-2xl font-bold text-primary-400 mb-1">
+            Jornada perdida
+          </Text>
+          <Text className="text-sm font-semibold mb-5">
+            Você esqueceu de finalizar sua jornada anterior,
+            por favor salve o registro e envie para o administrador.
+          </Text>
+
+          <View className="flex flex-col grow mb-2">
+            <Text className="mb-1">
+              Início da jornada de trabalho
+            </Text>
+            <View className="flex items-center justify-center bg-primary-400 rounded-lg py-2">
+              <Text className="text-stone-200 text-xl font-bold">{WorkJourneyInProgress?.startTime}</Text>
+            </View>
+          </View>
+
+          <View className="flex flex-col grow mb-2">
+            <Text className="mb-1">
+              Início do horário de almoço
+            </Text>
+            <View className="flex items-center justify-center bg-primary-400 rounded-lg py-2">
+              <Text className="text-stone-200 text-xl font-bold">{currentStatus >= status.lunchTimeStarted ? WorkJourneyInProgress?.startLunchTime : "Não registrado"}</Text>
+            </View>
+          </View>
+
+          <View className="flex flex-col grow mb-2">
+            <Text className="mb-1">
+              Final do horário de almoço
+            </Text>
+            <View className="flex items-center justify-center bg-primary-400 rounded-lg py-2">
+              <Text className="text-stone-200 text-xl font-bold">{currentStatus >= status.lunchTimeFinished ? WorkJourneyInProgress?.endLunchTime : "Não registrado"}</Text>
+            </View>
+          </View>
+
+          <View className="flex flex-col grow mb-2">
+            <Text className="mb-1">
+              Final da jornada de trabalho
+            </Text>
+            <View className="flex items-center justify-center bg-primary-400 rounded-lg py-2">
+              <Text className="text-stone-200 text-xl font-bold">{currentStatus >= status.workJourneyFinished ? WorkJourneyInProgress?.endTime : "Não registrado"}</Text>
+            </View>
+          </View>
+
+          <View className="flex flex-col grow mb-2">
+            <Text className="mb-1">
+              Justificativa (Opcional)
+            </Text>
+            <TextInput
+              className="border border-primary-400 rounded-lg p-2 items-start"
+              onChangeText={(text) => setJust(text)}
+              editable
+              multiline
+              numberOfLines={4}
+              maxLength={150}>Não finalizei meu registro de ponto.
+            </TextInput>
+          </View>
+
+          <Button
+            onPress={saveWorkJourneyInProgress}
+            className="mt-5"
+            title="Salvar"
+            color="primary-600"
+            type="outline"
+          />
+        </View>
+      </CustomModal>
+
 
       <View
         className="flex flex-col bg-primary-400 pt-3 shadow drop-shadow-xl border-b-2 border-primary-600"
@@ -384,7 +524,7 @@ export default function WorkJourneyPage() {
             </View>
           )}
       </ScrollView>
-  
+
       {locationValid && currentStatus === status.notInitialized && (
         <Fab position={{ right: 20, bottom: 20 }} onPress={startWorkJourney}>
           <View className="flex flex-row justify-center items-center">
@@ -425,10 +565,10 @@ export default function WorkJourneyPage() {
         </Fab>
       )}
 
-      {!locationValid && (
+      {(visible || !locationValid) && (
         <MessageModal
           title={messageModalData?.title}
-          message={messageModalData?.message}          
+          message={messageModalData?.message}
           iconName={messageModalData?.iconName}
         />
       )}

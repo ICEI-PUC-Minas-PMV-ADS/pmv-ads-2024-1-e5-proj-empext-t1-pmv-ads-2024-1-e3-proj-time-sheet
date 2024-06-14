@@ -10,6 +10,7 @@ import { useInput } from "../hooks/useInput";
 import { passwordValidations } from "../common/validations";
 import { useRoute } from "@react-navigation/native";
 import * as AuthService from "../services/AuthService";
+import { AlertModalContent, InfoModalContent } from "../components/ModalContents";
 
 const logo = require("../../assets/logo.png");
 
@@ -70,14 +71,36 @@ export default function EditUserPasswordPage({ navigation }) {
 
     AuthService.changepassword(item.cpf, password).then((result) => {
       switch (result.status) {
-        case "UserPasswordChanged":
+        case "PasswordChanged":
           setModalContent(
-            <PasswordChangedModalContent goBack={() => navigation.goBack()} />
+            <InfoModalContent
+              title="Senha alterada com sucesso"
+              message="A nova senha será necessária para o próximo acesso."
+              goBack={navigation.goBack} />
+          );
+          break;
+        case "MasterUserPassCannotBeChanged":
+          setModalContent(
+            <AlertModalContent
+              title="Senha não pode ser alterada"
+              message={result.message}
+              goBack={navigation.goBack} />
+          );
+          break;
+        case "UserNotFound":
+          setModalContent(
+            <AlertModalContent
+              title="Funcionário não encontrado"
+              message="Nenhum funcionário encontrado com esse CPF."
+              goBack={() => setModalVisible(false)} />
           );
           break;
         default:
           setModalContent(
-            <ServerErrorModalContent goBack={() => navigation.goBack()} />
+            <AlertModalContent
+              title="Erro ao se comunicar com o servidor"
+              message="Verifique sua conexão com a internet e tente novamente."
+              goBack={navigation.goBack} />
           );
           break;
       }
@@ -156,46 +179,6 @@ export default function EditUserPasswordPage({ navigation }) {
           </View>
         </AdjustableModal>
       </View>
-    </View>
-  );
-}
-
-function PasswordChangedModalContent({ goBack }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-3xl font-bold text-primary-800 mb-1">
-        Senha alterada
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        A nova senha será necessária para o próximo acesso.
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
-        onPress={goBack}
-      />
-    </View>
-  );
-}
-
-function ServerErrorModalContent({ goBack }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-xl font-bold text-danger-600 mb-1">
-        Erro ao se comunicar com o servidor
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Verifique sua conexão com a internet e tente novamente.
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
-        onPress={goBack}
-      />
     </View>
   );
 }

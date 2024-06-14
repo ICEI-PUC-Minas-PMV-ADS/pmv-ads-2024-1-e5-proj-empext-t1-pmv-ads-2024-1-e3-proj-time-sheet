@@ -87,22 +87,14 @@ export async function disableUser(id) {
       token
     );
 
-    if (!response.ok) {
-      if (response.status === 404) {
-        result.message = "Usuário Inválido";
-        result.status = "UserNotFound";
-      } else {
-        result.message = "Error ao se comunicar com o servidor.";
-        result.status = "Error";
-      }
+    var json = await response.text();
+    var data = JSON.parse(json);
 
-      return result;
-    }
-
-    result.message = "Usuários desabilitado com sucesso";
-    result.status = "Success";
+    result.message = data.message;
+    result.status = data.status;
 
     return result;
+    
   } catch (err) {
     result.message = "Error ao se comunicar com o servidor.";
     result.status = "Error";
@@ -122,22 +114,14 @@ export async function enableUser(id) {
       token
     );
 
-    if (!response.ok) {
-      if (response.status === 404) {
-        result.message = "Usuário Inválido";
-        result.status = "UserNotFound";
-      } else {
-        result.message = "Error ao se comunicar com o servidor.";
-        result.status = "Error";
-      }
+    var json = await response.text();
+    var data = JSON.parse(json);
 
-      return result;
-    }
-
-    result.message = "Usuário habilitado com sucesso";
-    result.status = "Success";
+    result.message = data.message;
+    result.status = data.status;
 
     return result;
+    
   } catch (err) {
     result.message = "Error ao se comunicar com o servidor.";
     result.status = "Error";
@@ -157,22 +141,14 @@ export async function deleteUser(id) {
       token
     );
 
-    if (!response.ok) {
-      if (response.status === 404) {
-        result.message = "Usuário Inválido";
-        result.status = "UserNotFound";
-      } else {
-        result.message = "Error ao se comunicar com o servidor.";
-        result.status = "Error";
-      }
+    var json = await response.text();
+    var data = JSON.parse(json);
 
-      return result;
-    }
-
-    result.message = "Usuário deletado com sucesso";
-    result.status = "Success";
+    result.message = data.message;
+    result.status = data.status;
 
     return result;
+
   } catch (err) {
     result.message = "Error ao se comunicar com o servidor.";
     result.status = "Error";
@@ -185,6 +161,7 @@ export async function UpdateUser(id, name, cpf, totalTime, lunchTime, role) {
   const token = await AsyncStorage.getItem("@TimeSheet:userToken");
 
   try {
+
     var response = await ApiService.sendRequest(
       "/user/update",
       "PUT",
@@ -199,17 +176,6 @@ export async function UpdateUser(id, name, cpf, totalTime, lunchTime, role) {
       token
     );
 
-    if (!response.ok) {
-      if (response.status === 404) {
-        result.message = "usuário não encontrado";
-        result.status = "UserNotFound";
-      } else {
-        result.message = "Error ao se comunicar com o servidor.";
-        result.status = "Error";
-      }
-
-      return result;
-    }
     var json = await response.text();
     var data = JSON.parse(json);
 
@@ -217,6 +183,7 @@ export async function UpdateUser(id, name, cpf, totalTime, lunchTime, role) {
     result.status = data.status;
 
     return result;
+
   } catch (err) {
     result.message = "Error ao se comunicar com o servidor.";
     result.status = "Error";

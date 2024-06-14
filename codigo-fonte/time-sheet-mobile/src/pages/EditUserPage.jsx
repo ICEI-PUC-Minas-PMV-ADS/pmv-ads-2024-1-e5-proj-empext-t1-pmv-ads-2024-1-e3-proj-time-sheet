@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Text, View, Image, Pressable, ActivityIndicator } from "react-native";
-import { useRoute, useFocusEffect } from "@react-navigation/native";
+import React from "react";
+import { Text, View, Image, Pressable } from "react-native";
+import { useRoute } from "@react-navigation/native";
 import { Checkbox } from "react-native-paper";
 import Header from "../components/Header";
 import AdjustableModal from "../components/AdjustableModal";
@@ -17,6 +17,7 @@ import {
   timeValidations,
 } from "../common/validations";
 import { useInput } from "../hooks/useInput";
+import { AlertModalContent, InfoModalContent } from "../components/ModalContents";
 import * as UserService from "../services/UserService";
 import AuthContext from "../contexts/AuthContext";
 
@@ -24,7 +25,7 @@ const logo = require("../../assets/logo.png");
 
 export default function EditUserPage({ navigation }) {
   const route = useRoute();
-  const { item, updateUsers} = route.params;
+  const { item, updateUsers } = route.params;
   const [modalVisible, setModalVisible] = React.useState(false);
   const [modalContent, setModalContent] = React.useState(null);
   const [role, setRole] = React.useState(item.role === "Administrator");
@@ -33,7 +34,7 @@ export default function EditUserPage({ navigation }) {
   var lunchTime = parseToTimeValue(item.lunchTime);
   var totalTime = parseToTimeValue(item.workTime);
 
-  const { userData} = React.useContext(AuthContext);
+  const { userData } = React.useContext(AuthContext);
   const [myId, setMyId] = React.useState(userData.id)
 
   /* Name Input */
@@ -105,6 +106,11 @@ export default function EditUserPage({ navigation }) {
     navigation.goBack();
   }
 
+  function hideModal() {
+    updateModalContent();
+    setModalVisible(false);
+  }
+
   function updateUser() {
     cpfInput.validate(cpfInput.value);
     nameInput.validate(nameInput.value);
@@ -130,44 +136,99 @@ export default function EditUserPage({ navigation }) {
       lunchTimeInput.value,
       role ? 0 : 1
     ).then((result) => {
-      if (result.status === "UserUpdated") {
-        updateModalContent("confirm-user-updated");
-        setModalVisible(true);
+
+      switch (result.status) {
+        case "UserUpdated":
+          setModalContent(
+            <InfoModalContent
+              title="Funcionário atualizado"
+              message="As informações do funcionário foram atualizadas."
+              goBack={goBack} />
+          );
+          break;
+        case "UserAlreadyExists":
+          setModalContent(
+            <AlertModalContent
+              title="CPF já cadastrado"
+              message="Já existe um funcionário com esse CPF cadastrado."
+              goBack={() => setModalVisible(false)} />
+          );
+          break;
+        case "InvalidUserData":
+          setModalContent(
+            <AlertModalContent
+              title="Informações inválidas"
+              message="Verifique as informações preenchidas e tente novamente."
+              goBack={() => setModalVisible(false)} />
+          );
+          break;
+        default:
+          setModalContent(
+            <AlertModalContent
+              title="Erro ao se comunicar com o servidor"
+              message="Verifique sua conexão com a internet e tente novamente."
+              goBack={goBack} />
+          );
+          break;
       }
 
+      setModalVisible(true);
       setWaitingResponse(false);
     });
   }
 
   function disableUser() {
     setWaitingResponse(true);
-    if(item.id != myId){
+    if (item.id !== myId) {
       UserService.disableUser(item.id).then((result) => {
-        if (result.status === "Success") {
-          updateModalContent("confirm-user-disabled");
+
+        switch (result.status) {
+          case "UserDisabled":
+            updateModalContent("confirm-user-disabled");
+            break;
+          case "MasterUserCannotBeDisabled":
+            updateModalContent("master-user-cannot-be-disabled");
+            break;
+          case "CurrentUser":
+            updateModalContent("current-user-cannot-be-disabled");
+            break;
+          default:
+            updateModalContent("error");
+            break;
         }
-        
       });
 
-    }else{
-      updateModalContent("user-not-disabled");
+    } else {
+      updateModalContent("current-user-cannot-be-disabled");
     }
+
     setWaitingResponse(false);
-    
   }
 
   function deleteUser() {
     setWaitingResponse(true);
-    if (item.id != myId){
+    if (item.id !== myId) {
       UserService.deleteUser(item.id).then((result) => {
-        if (result.status === "Success") {
-          updateModalContent("confirm-user-deleted");
+
+        switch (result.status) {
+          case "UserDeleted":
+            updateModalContent("confirm-user-deleted");
+            break;
+          case "MasterUserCannotBeDeleted":
+            updateModalContent("master-user-cannot-be-deleted");
+            break;
+          case "UserNotDeleted":
+            updateModalContent("current-user-cannot-be-deleted");
+            break;
+          default:
+            updateModalContent("error");
+            break;
         }
-        
       });
-    }else{
-      updateModalContent("user-not-delete");
+    } else {
+      updateModalContent("current-user-cannot-be-deleted");
     }
+
     setWaitingResponse(false);
   }
 
@@ -187,9 +248,36 @@ export default function EditUserPage({ navigation }) {
           />
         );
         break;
+      case "current-user-cannot-be-disabled":
+        setModalContent(
+          <AlertModalContent
+            title="Funcionário atualmente logado"
+            message="Faça login com outro usuário para se desabilitar do aplicativo."
+            goBack={hideModal} />
+        );
+        break;
+      case "master-user-cannot-be-disabled":
+        setModalContent(
+          <AlertModalContent
+            title="Funcionário administrador"
+            message="Não é possível desabilitar esse funcionário do aplicativo."
+            goBack={hideModal} />
+        );
+        break;
       case "confirm-user-disabled":
         setModalContent(
-          <ConfirmUserDisabledModalContent backAction={goBack} />
+          <InfoModalContent
+            title="Funcionário desabilitado"
+            message="Volte para a lista de funcionários para reabilita-lo."
+            goBack={goBack} />
+        );
+        break;
+      case "confirm-user-deleted":
+        setModalContent(
+          <InfoModalContent
+            title="Funcionário excluído"
+            message="Funcionário excluído permanentemente da plataforma."
+            goBack={goBack} />
         );
         break;
       case "delete-user":
@@ -200,25 +288,37 @@ export default function EditUserPage({ navigation }) {
           />
         );
         break;
-      case "confirm-user-deleted":
-        setModalContent(<ConfirmUserDeletedModalContent backAction={goBack} />);
+      case "current-user-cannot-be-deleted":
+        setModalContent(
+          <AlertModalContent
+            title="Funcionário atualmente logado"
+            message="Faça login com outro usuário para se excluir do aplicativo."
+            goBack={hideModal} />
+        );
         break;
-      case "confirm-user-updated":
-        setModalContent(<ConfirmUserUpdatedModalContent backAction={goBack} />);
+      case "master-user-cannot-be-deleted":
+        setModalContent(
+          <AlertModalContent
+            title="Funcionário administrador"
+            message="Não é possível excluir esse funcionário do aplicativo."
+            goBack={hideModal} />
+        );
         break;
-      case "user-not-disabled":
-        setModalContent(<UserNotUpdatedModalContent backAction={() => setModalVisible(false)} />);
+      case "error":
+        setModalContent(
+          <AlertModalContent
+            title="Erro ao se comunicar com o servidor"
+            message="Verifique sua conexão com a internet e tente novamente."
+            goBack={goBack} />
+        );
         break;
-        case "user-not-delete":
-          setModalContent(<UserNotDeleteModalContent backAction={() => setModalVisible(false)} />);
-          break;
       default:
         setModalContent(
           <OptionsModalContent
             changePasswordAction={changeUserPassword}
             disableAction={() => updateModalContent("disable-user")}
             deleteAction={() => updateModalContent("delete-user")}
-            backAction={() => setModalVisible(false)}
+            backAction={hideModal}
           ></OptionsModalContent>
         );
         break;
@@ -240,7 +340,7 @@ export default function EditUserPage({ navigation }) {
           source={logo}
         />
       </View>
-      <View className="flex-1 w-full flex-col justify-end items-center mt-20 border">
+      <View className="flex-1 w-full flex-col justify-end items-center mt-20">
         <AdjustableModal keyboardVerticalOffset={-200}>
           <View className="flex h-full w-full">
             <View className="flex flex-row justify-between align-center">
@@ -452,27 +552,6 @@ function DisableUserModalContent({
   );
 }
 
-function ConfirmUserDisabledModalContent({ backAction }) {
-  return (
-    <View>
-      <Text className="text-2xl font-bold text-primary-800 mb-1">
-        Funcionário desabilitado
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Volte para a lista de funcionários para reabilita-lo.
-      </Text>
-      <Divider />
-      <Button
-        className="mt-5"
-        title="Ok"
-        type="outline"
-        color="primary-400"
-        onPress={backAction}
-      />
-    </View>
-  );
-}
-
 function DeleteUserModalContent({ deleteAction, backAction }) {
   return (
     <View>
@@ -480,7 +559,7 @@ function DeleteUserModalContent({ deleteAction, backAction }) {
         Excluir funcionário?
       </Text>
       <Text className="text-sm font-semibold mb-5">
-        Essa ação deleta o usuário da plataforma e é irreversível.
+        Essa ação exclui o usuário do aplicativo e é irreversível.
       </Text>
       <Button
         style={{ backgroundColor: "#dc2626" }}
@@ -502,86 +581,6 @@ function DeleteUserModalContent({ deleteAction, backAction }) {
         title="Voltar"
         type="outline"
         color="primary-400"
-        onPress={backAction}
-      />
-    </View>
-  );
-}
-
-function ConfirmUserDeletedModalContent({ backAction }) {
-  return (
-    <View>
-      <Text className="text-3xl font-bold text-primary-800 mb-1">
-        Funcionário deletado
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Funcionário deletado permanentemente da plataforma.
-      </Text>
-      <Divider />
-      <Button
-        className="mt-5"
-        title="Ok"
-        type="outline"
-        color="primary-400"
-        onPress={backAction}
-      />
-    </View>
-  );
-}
-
-function ConfirmUserUpdatedModalContent({ backAction }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-3xl font-bold text-primary-800 mb-1">
-        Funcionário atualizado
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        O funcionário atualizado com sucesso
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
-        onPress={backAction}
-      />
-    </View>
-  );
-}
-function UserNotUpdatedModalContent({ backAction }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-3xl font-bold text-primary-800 mb-1">
-        Funcionário não desabilitado
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Faça login com outro usuário para desabilitar este funcionário!
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
-        onPress={backAction}
-      />
-    </View>
-  );
-}
-
-function UserNotDeleteModalContent({ backAction }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-3xl font-bold text-primary-800 mb-1">
-        Funcionário não Excluido
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Faça login com outro usuário para excluir este funcionário!
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
         onPress={backAction}
       />
     </View>

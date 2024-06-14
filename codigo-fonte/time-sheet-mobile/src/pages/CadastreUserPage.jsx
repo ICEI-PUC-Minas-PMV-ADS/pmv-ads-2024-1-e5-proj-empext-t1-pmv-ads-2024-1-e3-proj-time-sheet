@@ -17,7 +17,7 @@ import {
   timeValidations,
 } from "../common/validations";
 import * as UserService from "../services/UserService";
-import MessageModal from "../components/MessageModal";
+import { AlertModalContent, InfoModalContent } from "../components/ModalContents";
 
 const logo = require("../../assets/logo.png");
 
@@ -156,17 +156,36 @@ export default function CadastreUserPage({ navigation }) {
     ).then((result) => {
       switch (result.status) {
         case "UserCreated":
-          setModalContent(<UserCreatedModalContent goBack={goBack} />);
+          setModalContent(
+            <InfoModalContent
+              title="Funcionário cadastrado"
+              message="O funcionário já pode entrar no aplicativo usando a senha de acesso."
+              goBack={navigation.goBack} />
+          );
+          break;
+        case "InvalidUserData":
+          setModalContent(
+            <AlertModalContent
+              title="Informações inválidas"
+              message="Verifique os campos preenchidos e tente novamente."
+              goBack={() => setModalVisible(false)} />
+          );
           break;
         case "UserAlreadyExists":
           setModalContent(
-            <UserAlreadyExistsModalContent
-              goBack={() => setModalVisible(false)}
-            />
+            <AlertModalContent
+              title="Funcionário já cadastrado"
+              message="Já existe um funcionário cadastrado com esse CPF."
+              goBack={() => setModalVisible(false)} />
           );
           break;
         default:
-          setModalContent(<ServerErrorModalContent goBack={goBack} />);
+          setModalContent(
+            <AlertModalContent
+              title="Erro ao se comunicar com o servidor"
+              message="Verifique sua conexão com a internet e tente novamente."
+              goBack={navigation.goBack} />
+          );
           break;
       }
 
@@ -294,67 +313,6 @@ export default function CadastreUserPage({ navigation }) {
           </View>
         </AdjustableModal>
       </View>
-    </View>
-  );
-}
-
-function UserAlreadyExistsModalContent({ goBack }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-2xl font-bold text-danger-600 mb-1">
-        Funcionário já cadastrado
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Já existe um funcionário com esse CPF cadastrado no sistema.
-      </Text>
-      <Button
-        className="mt-5"
-        title="Alterar dados"
-        color="primary-600"
-        type="outline"
-        onPress={goBack}
-      />
-    </View>
-  );
-}
-
-function UserCreatedModalContent({ goBack }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-2xl font-bold text-primary-800 mb-1">
-        Funcionário cadastrado
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Funcionário cadastrado com sucesso, e já pode acessar o app usando a
-        senha de acesso.
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
-        onPress={goBack}
-      />
-    </View>
-  );
-}
-
-function ServerErrorModalContent({ goBack }) {
-  return (
-    <View className="flex flex-col">
-      <Text className="text-xl font-bold text-danger-600 mb-1">
-        Erro ao se comunicar com o servidor
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        Verifique sua conexão com a internet e tente novamente.
-      </Text>
-      <Button
-        className="mt-5"
-        title="Ok"
-        color="primary-600"
-        type="outline"
-        onPress={goBack}
-      />
     </View>
   );
 }

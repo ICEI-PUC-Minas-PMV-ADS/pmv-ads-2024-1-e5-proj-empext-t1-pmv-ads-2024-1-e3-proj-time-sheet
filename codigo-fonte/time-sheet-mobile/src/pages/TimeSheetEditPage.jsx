@@ -151,8 +151,6 @@ export default function TimeSheetEditPage({ navigation }) {
         startLunchTimeInput.skipValidation(isMedicalCertificate);
         finishLunchTimeInput.skipValidation(isMedicalCertificate);
         finishTimeInput.skipValidation(isMedicalCertificate);
-
-        console.log(isMedicalCertificate);
     }, [isMedicalCertificate])
 
     return (
@@ -306,7 +304,7 @@ export default function TimeSheetEditPage({ navigation }) {
                             <Checkbox color="#1E3F42"
                                 status={isMedicalCertificate ? "checked" : "unchecked"}
                                 onPress={() => setIsMedicalCertificate(!isMedicalCertificate)} />
-                            <Text className="text-sm font-bold">Atestado médico?</Text>
+                            <Text className="text-sm font-bold">Falta justificada?</Text>
                         </View>
 
                         <Button title="Registrar Ponto" color="primary-600" onPress={submitJourney}

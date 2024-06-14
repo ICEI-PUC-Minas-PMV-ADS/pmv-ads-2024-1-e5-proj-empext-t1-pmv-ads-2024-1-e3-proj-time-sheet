@@ -24,7 +24,7 @@ export default function LoginPage({ navigation }) {
   const [errorVisible, setErrorVisible] = React.useState(false);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
   const insets = useSafeAreaInsets();
-  
+
   const { validateUser } = React.useContext(AuthContext);
 
   function handleCpfInput(input) {
@@ -57,18 +57,18 @@ export default function LoginPage({ navigation }) {
       setWaitingResponse(false);
     });
   }
-  async function requestPermission () {
-       
+  async function requestPermission() {
+
     let { status } = await Local.requestForegroundPermissionsAsync();
-    console.log(status)
+
     if (status !== 'granted') {
-      console.log('Permission to access location was denied');
-      return;
+      // todo
     }
+
   }
-  useEffect(()=>{
+  useEffect(() => {
     requestPermission();
-  },[])
+  }, [])
 
   return (
     <View className="flex-1 justify-start items-center bg-primary-600">
