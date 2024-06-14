@@ -1,6 +1,5 @@
 import * as ApiService from "./ApiService.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Location from "./Location.js";
 
 export async function authenticate(cpf, password) {
   var result = {};
@@ -39,7 +38,6 @@ export async function authenticate(cpf, password) {
     return result;
   }
 }
-
 export async function logout() {
   await AsyncStorage.removeItem("@TimeSheet:userCPF");
   await AsyncStorage.removeItem("@TimeSheet:userToken");
@@ -97,24 +95,13 @@ export async function changepassword(cpf, password) {
 
 
     var json = await response.text();
-    var userData = JSON.parse(json);
+    var data = JSON.parse(json);
 
-    if (!response.ok) {
-      if (response.status === 404) {
-        result.message = "CPF inválido.";
-        result.status = "UserNotFound";
-      } else {
-        result.message = "Error ao se comunicar com o servidor.";
-        result.status = "Error";
-      }
-
-      return result;
-    }
-
-    result.message = "Senha alterada com sucesso.";
-    result.status = "UserPasswordChanged";
+    result.message = data.message;
+    result.status = data.status;
 
     return result;
+
   } catch (err) {
     result.message = "Error ao se comunicar com o servidor.";
     result.status = "Error";

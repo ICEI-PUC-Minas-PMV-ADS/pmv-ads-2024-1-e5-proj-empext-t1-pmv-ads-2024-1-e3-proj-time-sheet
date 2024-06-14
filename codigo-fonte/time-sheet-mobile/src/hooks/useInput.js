@@ -4,7 +4,9 @@ export function useInput(initialValue = null) {
   const [value, setValue] = React.useState(initialValue);
   const [errorMessage, setErrorMessage] = React.useState(null);
   const [errorVisible, setErrorVisible] = React.useState(false);
-  const [ignoreError, setIgnoreError] = React.useState(false);
+  const [ignoreError, setIgnoreError] = React.useState(undefined);
+  const isFirstRender = React.useRef(true);
+
 
   function skipValidation(opc) {
     setIgnoreError(opc);
@@ -38,7 +40,13 @@ export function useInput(initialValue = null) {
   }
 
   React.useEffect(() => {
-    validate(value);
+
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+    } else {
+      validate(value);
+    }
+      
   }, [ignoreError])
 
   return { value, errorMessage, errorVisible, setValidation, validate, skipValidation };

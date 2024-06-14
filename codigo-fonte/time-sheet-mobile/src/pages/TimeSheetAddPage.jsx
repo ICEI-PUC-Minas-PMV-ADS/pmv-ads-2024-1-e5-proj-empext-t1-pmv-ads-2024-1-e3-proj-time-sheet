@@ -185,7 +185,7 @@ export default function TimeSheetAddPage({ navigation }) {
         </View>
         <View className="flex-1 flex-row justify-around">
           {isMedicalCertificate ? (
-            <Text className="text-base text-white">Atestado médico</Text>
+            <Text className="text-base text-white">Falta justificada</Text>
           ) : (
             <>
               <Text className="text-base text-white">{startTimeInput.value}</Text>
@@ -295,7 +295,7 @@ export default function TimeSheetAddPage({ navigation }) {
               <Checkbox color="#1E3F42"
                 status={isMedicalCertificate ? "checked" : "unchecked"}
                 onPress={() => setIsMedicalCertificate(!isMedicalCertificate)} />
-              <Text className="text-sm font-bold">Atestado médico?</Text>
+              <Text className="text-sm font-bold">Falta justificada?</Text>
             </View>
 
             <Button title="Registrar Ponto" color="primary-600" onPress={submitJourney}

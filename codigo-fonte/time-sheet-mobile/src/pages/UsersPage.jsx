@@ -6,13 +6,11 @@ import Fab from "../components/Fab";
 import CustomModal from "../components/CustomModal";
 import Button from "../components/Button";
 import Divider from "../components/Divider";
-import { useFocusEffect, useRoute } from "@react-navigation/native";
 import UserContext from "../contexts/UserContext";
+import { AlertModalContent, InfoModalContent } from "../components/ModalContents";
 
 import * as UserService from "../services/UserService";
 import { FlatList } from "react-native";
-import AuthContext from "../contexts/AuthContext";
-
 
 export default function UsersPage({ navigation }) {
   const [currentPage, setCurrentPage] = React.useState("user-active");
@@ -22,27 +20,39 @@ export default function UsersPage({ navigation }) {
   const [activeUsers, setActiveUsers] = React.useState(null);
   const [inactiveUsers, setInactiveUsers] = React.useState(null);
   const [waitingResponse, setWaitingResponse] = React.useState(false);
-
-
-
-  const route = useRoute();
   const { users, updateUsers } = React.useContext(UserContext);
 
   function enableUser(userId, userName) {
     setWaitingResponse(true);
 
     UserService.enableUser(userId).then((result) => {
-      if (result.status === "Success") {
-        setModalContent(
-          <ConfirmUserEnabledModalContent
-            userName={userName}
-            backAction={() => {
-              setModalVisible(false);
-              setCurrentPage("user-active");
-              updateUsers();
-            }}
-          />
-        );
+      switch (result.status) {
+        case "UserEnabled":
+          setModalContent(
+            <InfoModalContent
+              title={userName}
+              message="O Funcionário foi habilitado e já pode acessar a plataforma novamente."
+              goBack={() => {
+                setModalVisible(false);
+                setCurrentPage("user-active");
+                updateUsers();
+              }}
+            />
+          );
+          break;
+        default:
+          setModalContent(
+            <AlertModalContent
+              title="Erro ao se comunicar com o servidor"
+              message="Verifique sua conexão com a internet e tente novamente."
+              goBack={() => {
+                setModalVisible(false);
+                setCurrentPage("user-active");
+                updateUsers();
+              }}
+            />
+          );
+          break;
       }
 
       setWaitingResponse(false);
@@ -205,27 +215,6 @@ function EnableUserModalContent({
         disabled={waitingResponse}
         isRunning={waitingResponse}
         title="Voltar"
-        type="outline"
-        color="primary-400"
-        onPress={backAction}
-      />
-    </View>
-  );
-}
-
-function ConfirmUserEnabledModalContent({ userName, backAction }) {
-  return (
-    <View>
-      <Text className="text-2xl font-bold text-primary-800 mb-1">
-        {userName}
-      </Text>
-      <Text className="text-sm font-semibold mb-5">
-        O Funcionário foi habilitado e já pode acessar a plataforma novamente.
-      </Text>
-      <Divider />
-      <Button
-        className="mt-5"
-        title="Ok"
         type="outline"
         color="primary-400"
         onPress={backAction}

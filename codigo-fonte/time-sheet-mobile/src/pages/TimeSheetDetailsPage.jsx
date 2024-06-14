@@ -4,19 +4,11 @@ import { useRoute } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Header from "../components/Header";
 import Fab from "../components/Fab";
-import RefreshContext from "../contexts/RefreshContext";
 
 export default function TimeSheetDetailsPage({ navigation }) {
 
     const route = useRoute();
-    const { userId, workJourneys } = route.params;
-    const { refresh } = React.useContext(RefreshContext);
-
-    React.useEffect(() => {
-
-        
-
-    }, [refresh]);
+    const { userId, userName, date, workJourneys } = route.params;
 
     return (
         <View className="flex-1 bg-primary-600">
@@ -26,8 +18,8 @@ export default function TimeSheetDetailsPage({ navigation }) {
                     <Icon name="chevron-left" size={36} color="#1E3F42" />
                 </Pressable>
                 <View className="flex justify-center items-center">
-                    <Text className="text-xl text-primary-800 font-bold">Gabriel Almeida</Text>
-                    <Text className="text-base text-primary-800 font-bold">Março 2024</Text>
+                    <Text className="text-xl text-primary-800 font-bold">{userName}</Text>
+                    <Text className="text-base text-primary-800 font-bold">{date}</Text>
                 </View>
                 <View className="w-10"></View>
             </View>
@@ -55,7 +47,7 @@ export default function TimeSheetDetailsPage({ navigation }) {
 
                         {item.journeyType === 1 ? (
                             <View className="flex-1 flex-row justify-around w-80 pr-4">
-                                <Text className="text-base text-white font-semibold">Atestado médico</Text>
+                                <Text className="text-base text-white font-semibold">Falta justificada</Text>
                             </View>
                         ) : (
                             <View className="flex-1 flex-row justify-around w-80 pr-4">
