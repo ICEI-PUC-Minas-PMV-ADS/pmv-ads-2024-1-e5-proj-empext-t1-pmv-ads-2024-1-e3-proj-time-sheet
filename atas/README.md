@@ -38,3 +38,13 @@ O objetivo dessa ata foi documentar formalmente o encontro do aluno Bruno Selas 
 
 > Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Ata%20de%20reuni%C3%A3o%20-%20Etapa%203.pdf)  
 > Acesse o feedback do cliente aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Feedback%20do%20cliente%20-%20Apresenta%C3%A7%C3%A3o%20do%20produto%20-%20Etapa%203.mp4)
+>
+ ## Ata de reunião - Etapa 04
+
+**Data**: `13 de Maio de 2024`
+
+### Objetivo
+O objetivo desta ata foi documentar formalmente o encontro do aluno Bruno Selas com o cliente Luis Paulo Ribeiro Varandas para apresentação dos avanços do projeto na Etapa 4 que inclui o desenvolvimento das novas features: Verificação de geolocalização para registro de ponto, geração de relatórios PDFs e alterações/abono de pontos dos funcionários, bem como corrigir bugs encontrados na plataforma e disponibilizar uma nova versão funcional da aplicação para o cliente testar.
+
+> Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Ata%20do%20projeto%20etapa%204.pdf)  
+> Acesse o feedback do cliente aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Feedback%20do%20cliente%20-%20Apresenta%C3%A7%C3%A3o%20do%20produto%20-%20Etapa%203.mp4)
