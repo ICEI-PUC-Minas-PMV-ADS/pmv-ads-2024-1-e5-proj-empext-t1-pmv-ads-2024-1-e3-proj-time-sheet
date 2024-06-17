@@ -2038,3 +2038,93 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
     <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/102563767/0220e88c-c988-49d9-b352-0f7d5790c773"/></td>
   </tr>
 </table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-026<br>Teste de Geolocalização</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+     <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">❌</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">17/06/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-027<br>Gerar relatórios em PDF dos registros de pontol</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+     <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">❌</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">17/06/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-028<br>Edição/Abono por meio de declarações dos pontos.</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+  </tr>
+     <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Bruno Selas</td>
+    <td width="100"><strong>Status</strong></td>
+    <td width="50" align="center">❌</td>
+    <td width="100"><strong>Data</strong></td>
+    <td width="150">17/06/2024</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><video src=""/></td>
+  </tr>
+</table>
