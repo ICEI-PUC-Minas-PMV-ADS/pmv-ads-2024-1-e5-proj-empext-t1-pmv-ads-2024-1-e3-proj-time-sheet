@@ -1135,6 +1135,99 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-026<br>Teste de Geolocalização</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o sistema é capaz de usar a localização do dispositivo para habilitar o registro de ponto.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Edglei/Rayane</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Falha</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-009/RF-010:O funcionário deve conseguir registrar o início e o final da sua jornada de trabalho/O funcionário deve conseguir registrar a saída e o retorno do horário de almoço</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Dar o aceite de uso de localização do dispositivo.<br>
+      4. Clicar em "Registro de ponto" na barra de navegação.<br>
+      5. Clicar no botão de registro de jornada.<br>
+      6. Receber o aviso de localização. <br>
+      7. Fazer o registro da jornada. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00.000.000-00"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve retornar uma mensagem de erro caso o dispositivo não esteja na localização correta ou caso contrario prosseguir com o registro.</td>
+  </tr>
+</table>
+
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-027<br>Gerar relatórios em PDF dos registros de ponto</th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o sistema gera relatorios PDFs dos registros de pontos.</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Raul Oliveira</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Exito</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-013: O admin deve coseguir gerar relatórios dos registros de pontos</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "folhas de ponto" na barra de navegação.<br>
+      3. Selecionar o funcionario ou o grupo de funcionarios desejados.<br>
+      4. Clicar no botão "Gerar relatório de horas". <br>
+      5. Abrir a página de vizualização de PDF do dispositivo. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00.000.000-00"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve gerar com exito o PDF formatado e com as informações corretas do funcionario selecionado.</td>
+  </tr>
+</table>
+
+
+
 # Evidências de Testes de Software
 
 Abaixo estão as evidências dos testes propostos no Plano de Testes, os registros foram retirados da aplicação em funcionamento nos dispositivos dos desenvolvedores do projeto.
