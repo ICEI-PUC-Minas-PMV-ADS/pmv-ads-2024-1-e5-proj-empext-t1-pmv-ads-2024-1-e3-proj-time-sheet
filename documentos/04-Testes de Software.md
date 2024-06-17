@@ -1226,6 +1226,52 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
 </table>
 
+<br/>
+
+<table>
+  <tr>
+    <th colspan="2" width="1000">CT-028<br>Edição/Abono por meio de declarações dos pontos. </th>
+  </tr>
+  <tr>
+    <td width="150"><strong>Descrição</strong></td>
+    <td>Este caso de teste verificar se o sistema possibilita a edição ou abono de registros de ponto .</td>
+  </tr>
+  <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Raul Oliveira/Bruno Selas</td>
+  </tr>
+  <tr>
+    <td><strong>Tipo do Teste</strong></td>
+    <td width="430">Exito</td>
+  </tr> 
+  <tr>
+    <td><strong>Requisitos associados</strong></td>
+    <td>RF-014: O admin deve conseguir acrescentar um registro de ponto ao funcionário</td>
+  </tr>
+  <tr>
+    <td><strong>Passos</strong></td>
+    <td>
+      1. Abrir o aplicativo.<br>
+      2. Fazer login com um usuário administrador.<br>
+      3. Clicar em "folhas de ponto" na barra de navegação.<br>
+      3. Selecionar o funcionario e clicar no lápis de edição ao lado de seu nome.<br>
+      4. Selecionar o dia em que se deseja realizar alteração ou abono". <br>
+      5. Prencher os campos de alteração corretamente. <br>
+      </td>
+  </tr>
+    <tr>
+    <td><strong>Dados de teste</strong></td>
+    <td>
+      - <strong>CPF:</strong> "00.000.000-00"<br>
+      - <strong>Senha:</strong> "Admin@123"<br>
+  </tr>
+    <tr>
+    <td><strong>Critérios de êxito</strong></td>
+    <td>O sistema deve realizar a alteração e/ou o abono do potno selecionado pelo admin.</td>
+  </tr>
+</table>
+
+
 
 
 # Evidências de Testes de Software
