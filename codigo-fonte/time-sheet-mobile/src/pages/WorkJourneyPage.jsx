@@ -87,7 +87,7 @@ export default function WorkJourneyPage() {
   const { visible, showNotification } = useNotification(5);
   const [messageModalData, setMessageModalData] = React.useState(null);
   const { updateRefresh } = React.useContext(RefreshContext);
-  const { locationValid, checkLocation } = useLocation();
+  const { location, checkLocation } = useLocation();
   const [modalVisible, setModalVisible] = React.useState(false);
 
   function updateElapsedTime(WorkJourneyInProgress, currentStatus) {
@@ -327,10 +327,18 @@ export default function WorkJourneyPage() {
   React.useEffect(() => {
     function updateLocation() {
       checkLocation().then((result) => {
-        if (!result) {
+
+        if (result === 1) {
           setMessageModalData({
             title: "Localização inválida",
             message: "Você precisa estar na empresa para bater o ponto!",
+            iconName: "map-marker-off"
+          })
+        } else
+        if (result === 2) {
+          setMessageModalData({
+            title: "Localização bloqueada",
+            message: "Você precisa permitir o uso da localização nas configurações.",
             iconName: "map-marker-off"
           })
         }
@@ -525,7 +533,7 @@ export default function WorkJourneyPage() {
           )}
       </ScrollView>
 
-      {locationValid && currentStatus === status.notInitialized && (
+      {(location === 0) && currentStatus === status.notInitialized && (
         <Fab position={{ right: 20, bottom: 20 }} onPress={startWorkJourney}>
           <View className="flex flex-row justify-center items-center">
             <Icon name="clock-outline" size={24} color="#59A093" />
@@ -534,7 +542,7 @@ export default function WorkJourneyPage() {
         </Fab>
       )}
 
-      {locationValid && !visible && currentStatus === status.workJourneyStarted && (
+      {(location === 0) && !visible && currentStatus === status.workJourneyStarted && (
         <View className="flex">
           <Fab position={{ right: 20, bottom: 20 }} onPress={startLunchTime}>
             <View className="flex flex-row justify-center items-center">
@@ -545,7 +553,7 @@ export default function WorkJourneyPage() {
         </View>
       )}
 
-      {locationValid && !visible && currentStatus === status.lunchTimeStarted && (
+      {(location === 0) && !visible && currentStatus === status.lunchTimeStarted && (
         <Fab position={{ right: 20, bottom: 20 }} onPress={finishLunchTime}>
           <View className="flex flex-row justify-center items-center">
             <Icon name="food-apple-outline" size={24} color="#59A093" />
@@ -554,7 +562,7 @@ export default function WorkJourneyPage() {
         </Fab>
       )}
 
-      {locationValid && !visible && currentStatus === status.lunchTimeFinished && (
+      {(location === 0) && !visible && currentStatus === status.lunchTimeFinished && (
         <Fab position={{ right: 20, bottom: 20 }} onPress={finishWorkJourney}>
           <View className="flex flex-row justify-center items-center">
             <Icon name="clock-check-outline" size={24} color="#59A093" />
@@ -565,7 +573,7 @@ export default function WorkJourneyPage() {
         </Fab>
       )}
 
-      {(visible || !locationValid) && (
+      {((messageModalData !== null) && (visible || location !== 0)) && (
         <MessageModal
           title={messageModalData?.title}
           message={messageModalData?.message}
