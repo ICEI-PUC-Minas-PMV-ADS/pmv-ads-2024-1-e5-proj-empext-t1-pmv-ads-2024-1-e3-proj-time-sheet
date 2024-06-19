@@ -1143,7 +1143,7 @@ Este documento tem como objetivo apresentar uma estratégia detalhada para a rea
   </tr>
   <tr>
     <td width="150"><strong>Descrição</strong></td>
-    <td>Este caso de teste verificar se o sistema é capaz de usar a localização do dispositivo para habilitar o registro de ponto.</td>
+    <td>Este caso de teste verificar se o sistema é capaz de usar a localização do dispositivo para habilitar/desabilitar o registro de ponto.</td>
   </tr>
   <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
