@@ -2047,19 +2047,19 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
-    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+    <td colspan="5">O sistema deve impedir ou permitir o funcionário de bater o ponto mediante sua localização.</td>
   </tr>
      <tr>
     <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Bruno Selas</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">❌</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
     <td width="150">17/06/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo apresentou o comportamento esperado, critério de exito: A aplicação não permitiu o registro do ponto pela localização fora da empresa.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
@@ -2077,19 +2077,19 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
-    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+    <td colspan="5">O sistema deve gerar um arquivo PDF formatado e com os registros corretos.</td>
   </tr>
      <tr>
     <td><strong>Responsável pelo Teste</strong></td>
     <td width="430">Bruno Selas</td>
     <td width="100"><strong>Status</strong></td>
-    <td width="50" align="center">❌</td>
+    <td width="50" align="center">✅</td>
     <td width="100"><strong>Data</strong></td>
     <td width="150">17/06/2024</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo apresentou o comportamento esperado, critério de exito: A aplicação gerou o PDF formatado e com os dados corretos.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
@@ -2107,7 +2107,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
-    <td colspan="5">O sistema deve mostrar uma mensagem para o usuário impedindo de excluir a si mesmo.</td>
+    <td colspan="5">O sistema deve que o Adm Edite/Abone pontos por meio de declarações.</td>
   </tr>
      <tr>
     <td><strong>Responsável pelo Teste</strong></td>
@@ -2119,7 +2119,7 @@ Abaixo estão as evidências dos testes propostos no Plano de Testes, os registr
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação permite que o ADM exclua sua própria conta do sistema.</td>
+    <td colspan="5">Teste realizado na plataforma IOS onde o mesmo não apresentou o comportamento esperado, critério de falha: A aplicação é capaz de editar registros de ponto porém não é capaz de realizar abono de faltas justificadas: (feature segue em review).</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
