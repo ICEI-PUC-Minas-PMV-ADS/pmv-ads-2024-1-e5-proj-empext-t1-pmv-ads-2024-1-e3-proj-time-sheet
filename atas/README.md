@@ -57,8 +57,8 @@ O objetivo desta ata foi documentar formalmente o encontro do aluno Bruno Selas 
 ### Objetivo
 O objetivo desta ata foi documentar formalmente o encontro final do aluno Bruno Selas com o cliente Luis Paulo Ribeiro Varandas para apresentação dos da versão de deploy 1.0 do projeto para aprovação do cliente.
 
-> Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/ADS%20-%20Ata%20de%20Reunião%20-%20Entrega%20Final-2.pdf)  
-> Acesse o feedback do cliente aqui: [link]()
+> Acesse a ata completa aqui: [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/blob/main/atas/Ata%20do%20projeto%20etapa%205%20final.pdf)  
+> Acesse o feedback final do cliente aqui: [link](...)
 
 
 
