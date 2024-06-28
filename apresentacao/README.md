@@ -20,6 +20,7 @@ Geolocalização: Utilizamos medidas de localização seguras para garantir tran
 # Conclusão
 O Sistema de Ponto Eletrônico que desenvolvemos para o Laticínios Triunfo é uma ferramenta essencial para otimizar a gestão de recursos humanos, promovendo eficiência, transparência e satisfação tanto para a empresa quanto para os colaboradores. Estamos orgulhosos de contribuir para o sucesso dessa tradicional instituição. 
 
+Acesse o feedback final do cliente aqui: [link](https://youtu.be/3F6Bq1nn-UQ)
 
 
 
